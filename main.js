@@ -17,3 +17,5 @@ const observerCards = new IntersectionObserver((entries) => {
 
 const hiddenCards = document.querySelectorAll('.cards');
 hiddenCards.forEach((el) => observerCards.observe(el));
+
+document.getElementById("year").textContent = new Date().getFullYear();
