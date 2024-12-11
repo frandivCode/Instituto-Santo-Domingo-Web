@@ -2,30 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Instituto Santo Domingo | Hermanas Dominicas</title>
 </head>
 
 <body>
     <nav class="menu">
-        <img src="assets/logo-colegio.png" alt="logo-colegio" class="logo">
+        <img src="assets/logo-colegio.png" alt="logo-colegio" class="logo" />
         <section class="menu__container">
             <ul class="menu__list">
                 <li class="menu__item">
                     <a href="#" class="menu__link">Inicio</a>
                 </li>
 
-                <li class="menu__item  menu__item--show">
-                    <a href="#" class="menu__link">Colegio <img src="assets/arrow.svg"
-                            class="menu__arrow menu__arrow--first"></a>
+                <li class="menu__item menu__item--show">
+                    <a href="#" class="menu__link">Colegio
+                        <img src="assets/arrow.svg" class="menu__arrow menu__arrow--first" /></a>
 
                     <ul class="menu_nesting">
                         <li class="menu__inside">
                             <a href="#" class="menu__link menu__link--inside">Niveles <img src="assets/arrow.svg"
-                                    class="menu__arrow"></a>
+                                    class="menu__arrow" /></a>
                             <ul class="menu__niveles sub-menu">
                                 <li><a href="#" class="link__niveles">Inicial</a></li>
                                 <li><a href="#" class="link__niveles">Primario</a></li>
@@ -35,11 +35,15 @@
                         </li>
 
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Institucional <img src="assets/arrow.svg"
-                                    class="menu__arrow"></a>
+                            <a href="#" class="menu__link menu__link--inside">Institucional
+                                <img src="assets/arrow.svg" class="menu__arrow" /></a>
                             <ul class="menu__institucional sub-menu">
-                                <li><a href="#" class="link__institucional">Ex Alumnos</a></li>
-                                <li><a href="#" class="link__institucional">El Colegio</a></li>
+                                <li>
+                                    <a href="#" class="link__institucional">Ex Alumnos</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="link__institucional">El Colegio</a>
+                                </li>
                                 <li><a href="#" class="link__institucional">Historia</a></li>
                                 <li><a href="#" class="link__institucional">Galería</a></li>
                             </ul>
@@ -52,7 +56,7 @@
                 </li>
             </ul>
             <div class="menu__hamburguer">
-                <img src="/assets/hamburguer.svg" class="menu_img">
+                <img src="/assets/hamburguer.svg" class="menu_img" />
             </div>
         </section>
         <div class="cellphone-emergency">
@@ -68,44 +72,124 @@
     </nav>
 
     <section class="hero__main">
+        <div class="wave-dos"></div>
         <div class="hero__content">
             <div class="hero__brand">
-                <img src="./assets/ui-logo.png" class="img-escudo">
+                <img src="./assets/ui-logo.png" class="img-escudo" alt="imagen-del-escudo-del-colegio" />
                 <h1 class="hero__title">Instituto Santo Domingo</h1>
-                <img src="./assets/ui-logo.png" class="img-escudo">
+                <img src="./assets/ui-logo.png" class="img-escudo" alt="imagen-del-escudo-del-colegio" />
             </div>
-            <p class="hero__text">"Formando corazones con fé, conocimiento y amor"</p>
+            <p class="hero__text">
+                "Formando corazones con fé, conocimiento y amor"
+            </p>
             <button class="hero__button">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front text">Conócenos</span>
             </button>
         </div>
-        <div class="hero__img"></div>
     </section>
 
-    <main class="container-main">
-        <section class="education-levels">
-            <h2>Niveles de Educación</h2>
-            <div class="cards-container">
-
-                <div class="card-content card">
+    <main class="container__main">
+        <div class="wave"></div>
+        <section class="education__levels">
+            <h2 class="hidden">Niveles de Educación</h2>
+            <div class="separador"></div>
+            <div class="cards__container">
+                <div class="card__content cards">
                     <h3>Inicial</h3>
                     <p>Desarrollo integral para los más pequeños.</p>
                 </div>
-                <div class="card-content card">
+                <div class="card__content cards">
                     <h3>Primario</h3>
                     <p>Una base sólida para el aprendizaje continuo.</p>
                 </div>
-
-                <div class="card-content card">
+                <div class="card__content cards">
                     <h3>Secundario</h3>
                     <p>Preparación académica y personal para el futuro.</p>
                 </div>
-                <div class="card-content card">
-                    <h3>Terciario</h3>
-                    <p>Especialización profesional y académica.</p>
+            </div>
+        </section>
+        <section class="container__presentacion">
+            <img src="./img/imagen-del-santo-domingo.jpg" alt="santo domingo de guzman" class="img__presentacion">
+            <div class="order__content">
+                <div class="content__presentacion">
+                    <span>Hermanas Dominicas</span>
+                    <h3>Instituto Santo Domingo</h3>
+                    <div class="separador"></div>
                 </div>
+                <div class="parrafos__historia">
+                    <p class="paragraph-one paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Voluptate
+                        suscipit quos perferendis non
+                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                        totam, maxime quia officia quidem.
+                    </p>
+                    <p class="paragraph-two paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Voluptate
+                        suscipit quos perferendis non
+                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                        totam, maxime quia officia quidem.
+                    </p>
+                    <p class="paragraph-three paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Voluptate
+                        suscipit quos perferendis non
+                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                        totam, maxime quia officia quidem.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <h3 class="title__destacable">¿Qué nos caracteriza?</h3>
+        <section class="destacable__container">
+            <div class="card__destacable">Historia</div>
+            <div class="card__destacable">Objetivo</div>
+            <div class="card__destacable">Nivel Académico</div>
+            <div class="card__destacable">Formación intregal de la persona</div>
+            <div class="card__destacable">Preparar el corazón y la inteligencia</div>
+            <div class="card__destacable">Infraestructura</div>
+        </section>
+
+        <section class="contact__section">
+            <div class="order-contact">
+                <h2>Contacto</h2>
+                <div class="separador"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="order-emails">
+                    <p class="title_emails">E-mails:</p>
+                    <p><span>Inicial:</span> direccioninicial@gmail.com.ar</p>
+                    <p><span>Primario:</span> direccionprimario@gmail.com.ar</p>
+                    <p><span>Secundario: </span> direccionsecundario@gmail.com.ar</p>
+                    <p><span>Terciario:</span> direccionterciario@gmail.com.ar</p>
+                    <p class="address-school">José Ignacio Peralta 249 | Villa de Soto | Córdoba</p>
+                </div>
+
+                <form class="contact-form">
+                    <label for="name">Nombre y Apellido <span class="red-asterisco">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre y apellido" required>
+
+                    <label for="subject">Tipo de Asunto <span class="red-asterisco">*</span></label>
+                    <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+
+                    <label for="type">Tipo de Consulta</label>
+                    <select id="type" name="type">
+                        <option value="admin">Consulta Administrativa</option>
+                        <option value="inicial">Nivel Inicial</option>
+                        <option value="primario">Nivel Primario</option>
+                        <option value="secundario">Nivel Secundario</option>
+                    </select>
+
+                    <label for="phone">Teléfono <span class="red-asterisco">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" required>
+
+                    <label for="message">Mensaje <span class="red-asterisco">*</span></label>
+                    <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </section>
 
@@ -113,10 +197,10 @@
 
     <!-- Agregar contacto y mapa para saber como llegar al colegio. -->
 
+    <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>
