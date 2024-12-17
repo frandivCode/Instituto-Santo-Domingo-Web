@@ -12,9 +12,12 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // Mostrar Cards
-const observerCards = new IntersectionObserver((entries) => {
+const observerCards = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-        entry.target.classList.toggle('shows', entry.isIntersecting);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('shows');
+            observer.unobserve(entry.target);
+        }
     });
 });
 

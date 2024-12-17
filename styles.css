@@ -136,6 +136,8 @@ body {
     font-size: 15px;
     display: block;
     padding: 7px 0;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .menu__arrow {
@@ -217,6 +219,8 @@ body {
     border-radius: 50%;
     padding: 4px;
     transition: transform 0.3s ease, color 0.3s ease;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .icons-nav ion-icon:hover {
@@ -800,8 +804,8 @@ body {
 .social__icons ion-icon {
     cursor: pointer;
     font-size: 27px;
-    color: #c0c0c0;
-    background-color: #000000;
+    color: #ffffff;
+    background-color: #800020;
     border-radius: 50%;
     padding: 5px;
     transition: transform 0.3s ease, color 0.3s ease-in-out;
@@ -859,7 +863,7 @@ body {
 .by {
     font-size: .95rem;
     display: block;
-    width: 25ch;
+    width: 24ch;
     border-right: 2px solid black;
     overflow: hidden;
     white-space: nowrap;
@@ -893,7 +897,7 @@ body {
 }
 
 
-/* HTML NIVEL INICIAL */
+/* === HTML NIVEL INICIAL === */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 .body-principal {
@@ -1435,9 +1439,333 @@ body {
 }
 
 .bg-footer-principal {
-    background: linear-gradient(to bottom, rgba(165, 214, 255, 0.603), rgba(165, 215, 255, 0.6)),
-        url(./img-nivel-inicial/bg-amigable-infantil.jpg);
+    background: linear-gradient(to bottom, rgba(165, 214, 255, 0.603), rgba(165, 215, 255, 0.6)), url(./img-nivel-inicial/bg-amigable-infantil.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* === HTML NIVEL PRIMARIO === */
+
+.hero__nivel-primario {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.100)), url(./img-nivel-primario/bg-hero-section.jpg);
+}
+
+.content__hero-nivel-primario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    min-height: 60vh;
+    font-family: "Libre Baskerville", serif;
+}
+
+.heading__hero-nivel-primario {
+    color: #fff;
+    font-size: 3rem;
+    margin-block: 2rem;
+    border-bottom: 2px solid white;
+    letter-spacing: 5px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.text__hero-nivel-primario {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    animation: fadeIn 1.7s ease-in-out;
+}
+
+.button__hero-nivel-primario {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    gap: .5rem;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: solid 2px rgb(255, 255, 255);
+    border-radius: 50px;
+    border: none;
+    box-shadow: 1px 1px 15px 0#fff;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    animation: fadeIn 1.9s ease-in-out;
+}
+
+.button__hero-nivel-primario:hover {
+    background-color: #dddddd;
+}
+
+.button__hero-nivel-primario ion-icon {
+    font-size: 18px;
+    border-radius: 50%;
+    transition: all .5s ease;
+    transform: rotate(90deg);
+    animation: señalamiento 1s ease-in-out infinite normal;
+}
+
+
+@keyframes señalamiento {
+    0% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    50% {
+        transform: rotate(90deg) translateX(-2px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(0px);
+    }
+}
+
+/* Section Objetivo */
+
+.container__main-primario {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.objetivo-del-primario {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__objetivo-primario {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.order__content-objetivo {
+    margin-bottom: 1.5rem;
+}
+
+.content__objetivo-primario h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    color: #800020;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.content__objetivo-primario ion-icon {
+    font-size: 35px;
+}
+
+.content__objetivo-primario p {
+    max-width: 500px;
+    line-height: 1.5;
+    font-size: 15.5px;
+    margin: 15px 0;
+    color: #000000;
+    letter-spacing: .3px;
+    text-align: left;
+}
+
+.right__content-primario {
+    height: 100%;
+}
+
+.img-objetivo {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Section uniforme primario */
+.uniforme__nivel-primario {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.order__content-uniforme {
+    margin-bottom: 2rem;
+}
+
+.order__content-uniforme h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #800020;
+    letter-spacing: .3px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.order__content-uniforme ion-icon {
+    font-size: 35px;
+
+}
+
+.order__list-uniforme {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 2.5rem 0;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    color: #000000;
+    background-color: #e9e9e9;
+    border: 1px solid #cbcbcb;
+}
+
+.order__list-uniforme h3 {
+    color: #800020;
+    font-size: 24px;
+}
+
+.uniforme__formal,
+.uniforme__informal {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card__uniforme-primario {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.479);
+    text-align: left;
+    height: 100%;
+}
+
+.card__uniforme-primario h4 {
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #800020;
+}
+
+.list__uniforme-primario {
+    padding: 25px;
+}
+
+.list__uniforme-primario li {
+    list-style-type: disc;
+}
+
+/* Galeria */
+.galeria__eventos {
+    padding: 2rem 0;
+    min-height: 100vh;
+    margin: 3rem 0;
+}
+
+.galeria__titulo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #800020;
+}
+
+.galeria__titulo ion-icon {
+    font-size: 35px;
+}
+
+/* Grid estilo bento */
+.galeria__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.galeria__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.galeria__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria__item.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.evento7 {
+    grid-column: 1/2;
+}
+
+.evento8 {
+    grid-column: 2/4;
+}
+
+.evento9 {
+    grid-column: span 3;
+}
+
+.galeria__item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria__item:hover .galeria__descripcion {
+    opacity: 1;
+}
+
+.horarios__nivel-primario {
+    text-align: left;
+    margin-block: 4rem;
+}
+
+.horarios__nivel-primario h2 {
+    color: #800020;
+    letter-spacing: .3px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+.horarios__nivel-primario p {
+    font-size: 20px;
+    margin-top: 1.5rem;
+    color: #333;
+    font-weight: 600;
 }
