@@ -11,11 +11,14 @@
 
 <body>
     <nav class="menu">
-        <img src="assets/logo-colegio.png" alt="logo-colegio" class="logo" />
+        <a href="../index.html"><img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" /></a>
         <section class="menu__container">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#caracterizacion" class="menu__link scroll-link" id="home">Sobre nosotros</a>
+                    <a href="../index.html" class="menu__link scroll-link" id="home">Inicio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../index.html#caracterizacion" class="menu__link scroll-link" id="home">Sobre nosotros</a>
                 </li>
 
                 <li class="menu__item menu__item--show">
@@ -27,11 +30,11 @@
                             <a href="#niveles" class="menu__link menu__link--inside scroll-link">Niveles <img
                                     src="../assets/arrow.svg" class="menu__arrow" /></a>
                             <ul class="menu__niveles sub-menu">
-                                <li><a href="./pages/nivel-inicial.html" class="link__niveles">Inicial</a>
+                                <li><a href="./nivel-inicial.html" class="link__niveles">Inicial</a>
                                 </li>
-                                <li><a href="./pages/nivel-primario.html" class="link__niveles">Primario</a>
+                                <li><a href="./nivel-primario.html" class="link__niveles">Primario</a>
                                 </li>
-                                <li><a href="./pages/nivel-secundario.html" class="link__niveles">Secundario</a>
+                                <li><a href="#" class="link__niveles">Secundario</a>
                                 </li>
                             </ul>
                         </li>
@@ -41,20 +44,23 @@
                                 <img src="../assets/arrow.svg" class="menu__arrow" /></a>
                             <ul class="menu__institucional sub-menu">
                                 <li>
-                                    <a href="#exalumnos" class="link__institucional scroll-link">Ex Alumnos</a>
+                                    <a href="./exalumnos.html" class="link__institucional scroll-link">Ex Alumnos</a>
                                 </li>
                                 <li>
-                                    <a href="#elcolegio" class="link__institucional scroll-link">El Colegio</a>
+                                    <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
                                 </li>
-                                <li><a href="#historia" class="link__institucional scroll-link">Historia</a></li>
-                                <li><a href="#galeria" class="link__institucional scroll-link">Galería</a></li>
+                                <li><a href="./historia.html" class="link__institucional scroll-link">Historia</a>
+                                </li>
+                                <li><a href="./galeria-del-colegio.html"
+                                        class="link__institucional scroll-link">Galería</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
 
                 <li class="menu__item">
-                    <a href="#contacto" class="menu__link scroll-link">Contacto</a>
+                    <a href="../index.html#caracterizacion" class="menu__link scroll-link">Contacto</a>
                 </li>
             </ul>
             <div class="menu__hamburguer">
@@ -72,7 +78,190 @@
                     title="Instagram"></ion-icon></a>
         </div>
     </nav>
-    <script src="main.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero__nivel-secundario">
+        <div class="order__content-nivel-secundario">
+            <div class="content__hero-nivel-secundario">
+                <img src="../img-nivel-secundario/img-diploma.png" class="img-top_diploma">
+                <h1 class="heading__hero-nivel-secundario">Nivel Secundario</h1>
+                <p class="text__hero-nivel-secundario">En el nivel secundario del Instituto Santo Domingo, formamos
+                    estudiantes íntegros, preparados para los desafíos
+                    académicos y personales con una base sólida de valores.
+                </p>
+                <a href="#orientaciones" class="scroll-link">
+                    <button class="button__hero-nivel-secundario">Orientaciones<ion-icon
+                            name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </a>
+            </div>
+            <div class="img__right-egreso">
+                <img src="../img-nivel-secundario/book.png" alt="Icono animado de un diploma" class="book-brain">
+            </div>
+        </div>
+        <div class="quote-container">
+            <p class="quote">"La educación es el camino para formar personas con valores sólidos que transformen el
+                mundo."</p>
+        </div>
+    </section>
+
+    <main class="container__main-primario">
+        <section class="objetivo-del-primario" id="objetivo">
+            <div class="content__objetivo-primario">
+                <div class="order__content-objetivo">
+                    <h2 class="hidden">Objetivo <ion-icon name="checkmark-circle"></ion-icon></h2>
+                    <div class="separador hidden"></div>
+                </div>
+                <p class="hidden">
+                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                    tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
+                    doloremque deserunt? Fugiat, fugit neque.
+                </p>
+                <p class="hidden">
+                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                    tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
+                    doloremque deserunt? Fugiat, fugit neque.
+                </p>
+                <p class="hidden">
+                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                    tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
+                    doloremque deserunt? Fugiat, fugit neque.
+                </p>
+            </div>
+            <img src="../img-nivel-secundario/profesor-explicando.png" alt="niña mirando atentamente su cuaderno"
+                class="img-objetivo hidden teacher-explain">
+        </section>
+        <section class="uniforme__nivel-primario">
+            <div class="order__content-uniforme">
+                <h2 class="hidden">Uniformes<ion-icon name="shirt"></ion-icon></h2>
+                <div class="separador"></div>
+            </div>
+            <div class="order__list-uniforme">
+                <div class="uniforme__formal">
+                    <h3>Uniforme Formal</h3>
+                    <div class="card__uniforme-primario cards">
+                        <h4>Varones</h4>
+                        <ul class="list__uniforme-primario">
+                            <li>Camisa blanca, corbata cuadrillé.</li>
+                            <li>Chomba gris con el logo del colegio.</li>
+                            <li>Campera polar con el logo del colegio bordado.</li>
+                            <li>Zapatos mocasín negro y medias bordo.</li>
+                            <li>Sweater bordo escote en V y escudo bordado.</li>
+                            <li>Pantalón de vestir gris.</li>
+                        </ul>
+                    </div>
+                    <div class="card__uniforme-primario cards">
+                        <h4>Mujeres</h4>
+                        <ul class="list__uniforme-primario">
+                            <li>Camisa blanca, corbata cuadrillé.</li>
+                            <li>Chomba gris con el logo del colegio.</li>
+                            <li>Zapatos mocasín negro y medias bordo.</li>
+                            <li>Sweater bordo escote en V y escudo bordado.</li>
+                            <li>Campera polar con el logo del colegio bordado.</li>
+                            <li>Pollera.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="uniforme__informal">
+                    <h3>Uniforme Informal</h3>
+                    <div class="card__uniforme-primario cards">
+                        <h4>Varones</h4>
+                        <ul class="list__uniforme-primario">
+                            <li>Remera blanca o gris con el logo del colegio.</li>
+                            <li>Sweater bordo escote en V y escudo bordado.</li>
+                            <li>Campera de acetato bordo con el logo del colegio.</li>
+                            <li>Short negro para <b>educación física.</b></li>
+                            <li>Zapatillas</li>
+                            <li>Pantalón gris.</li>
+                        </ul>
+                    </div>
+                    <div class="card__uniforme-primario cards">
+                        <h4>Mujeres</h4>
+                        <ul class="list__uniforme-primario">
+                            <li>Remera blanca o gris con el logo del colegio.</li>
+                            <li>Sweater bordo escote en V y escudo bordado.</li>
+                            <li>Campera de acetato bordo con el logo del colegio.</li>
+                            <li>Pollera negra para <b>educación física</b></li>
+                            <li>Zapatillas</li>
+                            <li>Pantalón gris.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Orientación -->
+        <section class="orientaciones" id="orientaciones">
+            <h2 class="orientaciones__titulo">Nuestras Orientaciones</h2>
+            <div class="orientaciones__contenedor">
+                <div class="orientacion orientacion--naturales">
+                    <h3>Ciencias Naturales</h3>
+                    <p>Explora el mundo natural y desarrolla conocimientos científicos.</p>
+                    <img src="../img-nivel-secundario/gravity.png" class="img-ciencias-naturales">
+                    <img src="../img-nivel-secundario/research.png" class="img-ciencias-naturales">
+                    <img src="../img-nivel-secundario/science.png" class="img-ciencias-naturales">
+                </div>
+                <div class="orientacion orientacion--sociales">
+                    <h3>Ciencias Sociales</h3>
+                    <p>Comprende la sociedad y su funcionamiento a lo largo del tiempo.</p>
+                    <img src="../img-nivel-secundario/redes-sociales.png" class="img-ciencias-sociales">
+                    <img src="../img-nivel-secundario/radio.png" class="img-ciencias-sociales">
+                    <img src="../img-nivel-secundario/periodico.png" class="img-ciencias-sociales">
+                </div>
+            </div>
+            <div class="orientacion-text-info">
+                <p class="info--orientacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum,
+                    molestias necessitatibus
+                    veritatis
+                    provident aliquam incidunt natus saepe sapiente atque facilis modi ex quae illo porro laborum quidem
+                    nam
+                    labore.
+                </p>
+                <p class="info--orientacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum,
+                    molestias necessitatibus
+                    veritatis
+                    provident aliquam incidunt natus saepe sapiente atque facilis modi ex quae illo porro laborum quidem
+                    nam
+                    labore.
+                </p>
+            </div>
+        </section>
+        <div class="horarios__nivel-primario">
+            <h2>Horario de Ingreso <ion-icon name="time"></ion-icon></h2>
+            <div class="separador"></div>
+            <p>Turno Mañana: 07:20hs a 12:30hs.</p>
+        </div>
+        <!-- Agregar section si se solicita -->
+    </main>
+    <footer class="container__footer">
+        <section class="section__links">
+            <div class="social__icons">
+                <a href="https://www.facebook.com/instituto.santodomingo" target="_blank"><ion-icon
+                        name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/isd_comunicacion" target="_blank"><ion-icon
+                        name="logo-instagram"></ion-icon></a>
+            </div>
+            <div class="list__links">
+                <a href="../index.html" class="scroll-link">Inicio</a>
+                <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
+                <a href="./galeria-del-colegio.html" class="scroll-link">Galería</a>
+                <a href="./exalumnos.html" class="scroll-link">Exalumnos</a>
+                <a href="./historia.html" class="scroll-link">Historia</a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section class="end__footer-section">
+            <div class="copyright">
+                <p class="copy">&copy; <span id="year">2024</span> Todos los derechos
+                    reservados.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" /></a>
+            </div>
+            <p class="by">Hecho con <span>❤️</span> por <a href="https://github.com/frandivCode">frandivCode</a></p>
+        </section>
+    </footer>
+    <script src="../main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

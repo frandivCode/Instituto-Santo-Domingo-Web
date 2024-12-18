@@ -1449,12 +1449,11 @@ body {
 
 .hero__nivel-primario {
     min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.100)), url(./img-nivel-primario/bg-hero-section.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.100)), url(./img-nivel-primario/bg-hero-section.jpg);
 }
 
 .content__hero-nivel-primario {
@@ -1768,4 +1767,273 @@ body {
     margin-top: 1.5rem;
     color: #333;
     font-weight: 600;
+}
+
+/* === HTML NIVEL SECUNDARIO === */
+
+.hero__nivel-secundario {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./img-nivel-secundario/blob-scene-haikei.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.order__content-nivel-secundario {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.content__hero-nivel-secundario {
+    display: flex;
+    min-height: 65vh;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.heading__hero-nivel-secundario {
+    font-size: 4rem;
+    color: #800020;
+    letter-spacing: 1px;
+}
+
+.text__hero-nivel-secundario {
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 500;
+}
+
+.img__right-egreso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-brain {
+    width: 12.5rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-top_diploma {
+    position: absolute;
+    width: 50px;
+    object-fit: cover;
+    top: 100px;
+    right: -18px;
+    transform: rotate(30deg);
+}
+
+.teacher-explain {
+    width: 400px;
+    object-fit: cover;
+    height: auto;
+}
+
+.button__hero-nivel-secundario {
+    background-color: #9B1C2B;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.button__hero-nivel-secundario:hover {
+    background-color: #7a0e18;
+    cursor: pointer;
+}
+
+.button__hero-nivel-secundario ion-icon {
+    font-size: 20px;
+    animation: señalamiento 1s ease-in-out infinite normal;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    color: #9B1C2B;
+}
+
+.quote-container {
+    min-height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 25px;
+}
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #4b4b4b;
+    max-width: 550px;
+}
+
+/* Section orientaciones secundario */
+.orientaciones {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.orientaciones__titulo {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: #800020;
+}
+
+.orientaciones__titulo::before,
+.orientaciones__titulo::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 240px;
+    height: 2px;
+    background-color: #333;
+}
+
+.orientaciones__titulo::before {
+    left: -252px;
+    transform: translateY(-50%);
+}
+
+.orientaciones__titulo::after {
+    right: -252px;
+    transform: translateY(-100%);
+}
+
+.orientaciones__contenedor {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    min-height: 50vh;
+}
+
+
+.orientacion h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.orientacion p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.orientacion--naturales::before,
+.orientacion--sociales::before {
+    content: '';
+    position: absolute;
+    top: -176px;
+    left: 50%;
+    width: 2px;
+    height: 160px;
+    background-color: #333;
+    transform: translateX(-50%);
+}
+
+.orientacion {
+    width: 300px;
+    padding: 30px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+.img-ciencias-naturales,
+.img-ciencias-sociales {
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.3s ease, filter 0.3s ease-in-out;
+}
+
+/* Posiciones para imágenes de CIENCIAS NATURALES */
+.orientacion--naturales .img-ciencias-naturales:nth-of-type(1) {
+    top: -20px;
+    left: -20px;
+}
+
+.orientacion--naturales .img-ciencias-naturales:nth-of-type(2) {
+    top: -20px;
+    right: -20px;
+}
+
+.orientacion--naturales .img-ciencias-naturales:nth-of-type(3) {
+    bottom: -20px;
+    right: -20px;
+}
+
+/* Posiciones para imágenes de CIENCIAS SOCIALES */
+.orientacion--sociales .img-ciencias-sociales:nth-of-type(1) {
+    top: -20px;
+    left: -20px;
+}
+
+.orientacion--sociales .img-ciencias-sociales:nth-of-type(2) {
+    top: -20px;
+    right: -20px;
+}
+
+.orientacion--sociales .img-ciencias-sociales:nth-of-type(3) {
+    bottom: -20px;
+    right: -20px;
+}
+
+.orientacion:hover .img-ciencias-naturales,
+.orientacion:hover .img-ciencias-sociales {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+    z-index: 10;
+}
+
+.orientacion-text-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.orientacion-text-info p {
+    max-width: 300px;
+    text-align: center;
+    padding: 35px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+.info--orientacion::before {
+    content: '';
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    width: 2px;
+    height: 75px;
+    background-color: #333;
+    transform: translateX(-50%);
 }
