@@ -7,6 +7,8 @@
     <link rel="icon" href="./assets/icon.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
     <title>Instituto Santo Domingo | Hermanas Dominicas</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -44,13 +46,17 @@
                                 <img src="assets/arrow.svg" class="menu__arrow" /></a>
                             <ul class="menu__institucional sub-menu">
                                 <li>
-                                    <a href="#exalumnos" class="link__institucional scroll-link">Ex Alumnos</a>
+                                    <a href="./pages/exalumnos.html" class="link__institucional scroll-link">Ex
+                                        Alumnos</a>
                                 </li>
                                 <li>
                                     <a href="#elcolegio" class="link__institucional scroll-link">El Colegio</a>
                                 </li>
-                                <li><a href="#historia" class="link__institucional scroll-link">Historia</a></li>
-                                <li><a href="#galeria" class="link__institucional scroll-link">Galería</a></li>
+                                <li><a href="./pages/historia.html" class="link__institucional scroll-link">Historia</a>
+                                </li>
+                                <li><a href="./pages/galeria-del-colegio.html"
+                                        class="link__institucional scroll-link">Galería</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -156,15 +162,75 @@
         <section class="container__destacable" id="caracterizacion">
             <h3 class="title__destacable">¿Qué nos caracteriza?</h3>
             <div class="content__destacable">
-                <div class="card__destacable">Historia</div>
-                <div class="card__destacable">Objetivo</div>
-                <div class="card__destacable">Nivel Académico</div>
-                <div class="card__destacable">Formación intregal de la persona</div>
-                <div class="card__destacable">Preparar el corazón y la inteligencia</div>
-                <div class="card__destacable">Infraestructura</div>
+                <button class="card__destacable" onclick="openModal('modalObjetivo')">Objetivo del Colegio</button>
+                <button class="card__destacable" onclick="openModal('modalNivelAcademico')">Nivel Académico</button>
+                <button class="card__destacable" onclick="openModal('modalFormacionIntegral')">Formación intregal de la
+                    persona</button>
+                <button class="card__destacable" onclick="openModal('modalPreparacion')">Preparar el corazón y la
+                    inteligencia</button>
             </div>
         </section>
-
+        <!-- Modals -->
+        <div id="modalObjetivo" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modalObjetivo')"><ion-icon
+                        name="close-outline"></ion-icon></button>
+                <h2 class="cards">Objetivo</h2>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+            </div>
+        </div>
+        <div id="modalNivelAcademico" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modalNivelAcademico')"><ion-icon
+                        name="close-outline"></ion-icon></button>
+                <h2 class="cards">Nivel Academico</h2>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+            </div>
+        </div>
+        <div id="modalFormacionIntegral" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modalFormacionIntegral')"><ion-icon
+                        name="close-outline"></ion-icon></button>
+                <h2 class="cards">Formación Integral de la Persona</h2>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+            </div>
+        </div>
+        <div id="modalPreparacion" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modalPreparacion')"><ion-icon
+                        name="close-outline"></ion-icon></button>
+                <h2 class="cards">Preparar el corazón y la inteligencia</h2>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+                <p class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum assumenda magnam dolores
+                    obcaecati
+                    dignissimos porro animi, nulla cumque corporis fuga sint nostrum, consequuntur officiis earum facere
+                    placeat neque dolorem repellat.</p>
+            </div>
+        </div>
         <section class="contact__section" id="contacto">
             <div class="order-contact">
                 <h2>Contacto</h2>
@@ -192,7 +258,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" id="form">
                     <label for="name">Nombre y Apellido <span class="red-asterisco">*</span></label>
                     <input type="text" id="name" name="name" placeholder="Ingresa tu nombre y apellido" required>
 
@@ -200,21 +266,25 @@
                     <input type="text" id="subject" name="subject" placeholder="Asunto" required>
 
                     <label for="type">Tipo de Consulta</label>
-                    <select id="type" name="type">
-                        <option value="admin">Consulta Administrativa</option>
-                        <option value="inicial">Nivel Inicial</option>
-                        <option value="primario">Nivel Primario</option>
-                        <option value="secundario">Nivel Secundario</option>
+                    <select id="type" name="type" required>
+                        <option value="Consulta Administrativa">Consulta Administrativa</option>
+                        <option value="Nivel Inicial">Nivel Inicial</option>
+                        <option value="Nivel Primario">Nivel Primario</option>
+                        <option value="Nivel Secundario">Nivel Secundario</option>
                     </select>
 
                     <label for="phone">Teléfono <span class="red-asterisco">*</span></label>
                     <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" required>
 
+                    <label for="email">Email <span class="red-asterisco">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+
                     <label for="message">Mensaje <span class="red-asterisco">*</span></label>
                     <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..."
                         required></textarea>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="button">Enviar</button>
+                    <p id="error" class="error"></p>
                 </form>
             </div>
         </section>
@@ -244,14 +314,16 @@
             <div class="footer-logo">
                 <img src="./assets/logo-colegio.png" alt="logo del colegio" class="logo">
             </div>
-            <p class="by">Hecho con <span>❤️</span> por <a href="https://github.com/frandivCode">frandivCode</a></p>
+            <p class="by">Hecho con <span>❤️</span> por <a href="https://github.com/frandivCode"
+                    target="_blank">frandivCode</a>
+            </p>
         </section>
     </footer>
-
-    <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
