@@ -175,4 +175,16 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('open');
 }
 
-errorElement.textContent = 'Número de teléfono inválido. Debe tener 10 dígitos, sin signos.';
+const lemas = document.querySelectorAll(".lema");
+let currentIndex = 0;
+
+setInterval(() => {
+    // Oculta el lema actual
+    lemas[currentIndex].classList.remove("active");
+
+    // Mueve al siguiente lema
+    currentIndex = (currentIndex + 1) % lemas.length;
+
+    // Muestra el siguiente lema
+    lemas[currentIndex].classList.add("active");
+}, 4000); // Cambia cada 4 segundos

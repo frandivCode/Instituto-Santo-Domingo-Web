@@ -36,7 +36,7 @@ body {
 
 /* SECTION NAV */
 .menu {
-    background-color: rgba(128, 0, 32, 0.900);
+    background-color: rgb(128, 0, 32);
     height: 100px;
     width: 100%;
     color: #fff;
@@ -45,6 +45,8 @@ body {
     align-items: center;
     padding: 0 10px;
     z-index: 1;
+    top: 0;
+    position: sticky;
 }
 
 .logo {
@@ -601,9 +603,10 @@ body {
 }
 
 .title__destacable {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     color: #800020;
+    margin: 1rem 0;
 }
 
 .content__destacable {
@@ -614,25 +617,42 @@ body {
     justify-content: center;
 }
 
-.card__destacable {
+.button__destacable {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #800020;
+    background-color: #161616;
     border-radius: 10px;
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    color: #fff;
+    color: #fafafa;
     border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
 
-.card__destacable:hover {
-    transform: translateY(-3px);
-    background-color: #ac002b;
+.button__destacable::before {
+    transition: all 0.3s ease;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #a30202;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.button__destacable:hover::before {
+    width: 300%;
+    height: 300%;
 }
 
 /* Section Contacto */
@@ -657,7 +677,7 @@ body {
 .title_emails {
     font-weight: bold;
     font-size: 20px;
-    margin-block-end: 1rem;
+    margin: 0 0 10px 7px;
 }
 
 .order-emails {
@@ -672,6 +692,7 @@ body {
 
 .order-emails>p:not(.title_emails, .address-school) {
     margin: 5px 0;
+    gap: 0.2rem;
 }
 
 .order-emails p span {
@@ -685,7 +706,8 @@ body {
 
 .icon-email ion-icon {
     margin: 0 5px;
-    font-size: 18px;
+    font-size: 22px;
+    color: #ac002b;
 }
 
 .address-school {
@@ -790,7 +812,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .social__icons {
@@ -2171,16 +2193,35 @@ body {
     visibility: visible;
 }
 
-.valid {
-    border: 2px solid green;
-    background-color: #e6ffe6;
-}
-
-.invalid {
-    border: 2px solid red;
-    background-color: #ffe6e6;
-}
-
 .error {
     color: red;
+}
+
+.lemas-container {
+    background-color: #800020;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lemas {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.lema {
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-family: "Libre Baskerville", serif;
+    position: absolute;
+}
+
+.lema.active {
+    opacity: 1;
 }

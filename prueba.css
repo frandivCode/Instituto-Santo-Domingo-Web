@@ -1,0 +1,41 @@
+/* Estilo básico del botón */
+.btn-hover {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Antes del hover */
+.btn-hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #ff5733;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+/* Efecto hover */
+.btn-hover:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.btn-hover:hover {
+    color: white;
+}
