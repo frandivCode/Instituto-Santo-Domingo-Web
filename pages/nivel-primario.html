@@ -5,80 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/icon.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <title>Nivel Primario | Instituto Santo Domingo</title>
 </head>
 
 <body>
-    <nav class="menu">
-        <a href="../index.html"><img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" /></a>
-        <section class="menu__container">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a href="../index.html" class="menu__link scroll-link" id="home">Inicio</a>
-                </li>
-                <li class="menu__item">
-                    <a href="../index.html#caracterizacion" class="menu__link scroll-link" id="home">Sobre nosotros</a>
-                </li>
-
-                <li class="menu__item menu__item--show">
-                    <a href="#elcolegio" class="menu__link scroll-link">Colegio
-                        <img src="../assets/arrow.svg" class="menu__arrow menu__arrow--first" /></a>
-
-                    <ul class="menu_nesting">
-                        <li class="menu__inside">
-                            <a href="#niveles" class="menu__link menu__link--inside scroll-link">Niveles <img
-                                    src="../assets/arrow.svg" class="menu__arrow" /></a>
-                            <ul class="menu__niveles sub-menu">
-                                <li><a href="./nivel-inicial.html" class="link__niveles">Inicial</a>
-                                </li>
-                                <li><a href="./nivel-primario.html" class="link__niveles">Primario</a>
-                                </li>
-                                <li><a href="./nivel-secundario.html" class="link__niveles">Secundario</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Institucional
-                                <img src="../assets/arrow.svg" class="menu__arrow" /></a>
-                            <ul class="menu__institucional sub-menu">
-                                <li>
-                                    <a href="./exalumnos.html" class="link__institucional scroll-link">Ex Alumnos</a>
-                                </li>
-                                <li>
-                                    <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
-                                </li>
-                                <li><a href="./historia.html" class="link__institucional scroll-link">Historia</a>
-                                </li>
-                                <li><a href="./galeria-del-colegio.html"
-                                        class="link__institucional scroll-link">Galería</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="menu__item">
-                    <a href="../index.html#contacto" class="menu__link scroll-link">Contacto</a>
-                </li>
-            </ul>
-            <div class="menu__hamburguer">
-                <img src="/assets/hamburguer.svg" class="menu_img" />
+    <header class="header">
+        <div class="info__header">
+            <div class="cellphone-emergency">
+                <ion-icon name="call-outline"></ion-icon>
+                <span>03549 48-0523</span>
             </div>
-        </section>
-        <div class="cellphone-emergency">
-            <ion-icon name="call-outline"></ion-icon>
-            <span>03549 48-0523</span>
+            <div class="icons-nav">
+                <span>Nuestras Redes</span>
+                <a href="https://www.facebook.com/instituto.santodomingo" target="_blank"><ion-icon name="logo-facebook"
+                        title="Facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/isd_comunicacion/" target="_blank"><ion-icon name="logo-instagram"
+                        title="Instagram"></ion-icon></a>
+            </div>
         </div>
-        <div class="icons-nav">
-            <a href="https://www.facebook.com/instituto.santodomingo" target="_blank"><ion-icon name="logo-facebook"
-                    title="Facebook"></ion-icon></a>
-            <a href="https://www.instagram.com/isd_comunicacion/" target="_blank"><ion-icon name="logo-instagram"
-                    title="Instagram"></ion-icon></a>
-        </div>
-    </nav>
+        <nav class="nav container">
+            <div class="nav__data">
+                <img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" />
+                <!-- Menu hamburguesa   -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
 
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Inicio</a></li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Niveles <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="nivel-inicial.html" class="dropdown__link">
+                                    Inicial
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    Primario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="nivel-secundario.html" class="dropdown__link">
+                                    Secundario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="nivel-terciario.html" class="dropdown__link">
+                                    Terciario
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#caracterizacion" class="nav__link scroll-link">Sobre nosotros</a></li>
+
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Institucional <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="exalumnos.html" class="dropdown__link">
+                                    Ex alumnos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../index.html#elcolegio" class="dropdown__link scroll-link">
+                                    El colegio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="historia.html" class="dropdown__link">
+                                    Historia
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="galeria-del-colegio.html" class="dropdown__link">
+                                    Galería
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../index.html#contacto" class="nav__link scroll-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <section class="hero__nivel-primario">
         <div class="content__hero-nivel-primario">

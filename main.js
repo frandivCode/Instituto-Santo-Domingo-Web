@@ -11,7 +11,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start'
+                    block: 'center'
                 });
             }
         }
@@ -185,6 +185,22 @@ setInterval(() => {
     // Mueve al siguiente lema
     currentIndex = (currentIndex + 1) % lemas.length;
 
-    // Muestra el siguiente lema
     lemas[currentIndex].classList.add("active");
-}, 4000); // Cambia cada 4 segundos
+}, 4000);
+
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
+
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu')
+
+        toggle.classList.toggle('show-icon')
+    })
+}
+
+showMenu('nav-toggle', 'nav-menu');
+
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = currentYear;
