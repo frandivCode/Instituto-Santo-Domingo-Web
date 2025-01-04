@@ -93,7 +93,7 @@ body {
     height: var(--header-height);
 }
 
-.nav__logo,
+
 .nav__burger,
 .nav__close {
     color: var(--white-color);
@@ -104,18 +104,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav__logo {
-    display: inline-flex;
-    align-items: center;
-    column-gap: .25rem;
-    font-weight: var(--font-semi-bold);
-}
-
-.nav__logo i {
-    font-weight: initial;
-    font-size: 1.25rem;
 }
 
 .nav__toggle {
@@ -140,12 +128,10 @@ body {
     opacity: 0;
 }
 
-/* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
     .nav__menu {
         position: absolute;
         left: 0;
-        top: 2.5rem;
         width: 100%;
         height: calc(100vh - 3.5rem);
         overflow: auto;
@@ -160,6 +146,8 @@ body {
 
     .nav__list {
         padding-top: 2.3rem;
+        background-color: var(--black-color);
+        overflow: hidden;
     }
 
     .logo {
@@ -175,6 +163,7 @@ body {
     display: flex;
     align-items: center;
     transition: background-color .3s;
+    padding: 1.3rem 1.5rem;
 }
 
 .nav__link:hover {
@@ -184,10 +173,9 @@ body {
 /* Show menu */
 .show-menu {
     opacity: 1;
-    top: 3.5rem;
+    top: 6.5rem;
     pointer-events: initial;
 }
-
 
 .show-icon .nav__burger {
     opacity: 0;
@@ -398,7 +386,15 @@ body {
 
 .icons-nav ion-icon {
     color: white;
-    font-size: 21px;
+    font-size: 23px;
+    background-color: #800020;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.3s ease, color 0.3s ease-in-out;
+}
+
+.icons-nav ion-icon:hover {
+    transform: scale(1.1);
 }
 
 @keyframes vibrate {
@@ -461,8 +457,8 @@ body {
 }
 
 .hero__text {
-    max-width: 500px;
-    font-size: 1.5rem;
+    max-width: 450px;
+    font-size: 1.3rem;
     text-align: left;
     font-weight: 500;
     font-family: "Georgia", serif;
@@ -567,76 +563,6 @@ body {
     position: relative;
 }
 
-.wave {
-    background: url(./img/wave-haikei.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 80vh;
-    top: 0;
-    right: 0;
-    left: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    z-index: -1;
-}
-
-.education__levels {
-    min-height: 80vh;
-    padding: 30px 50px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    flex-flow: column wrap;
-    font-family: "Urbanist", sans-serif;
-}
-
-.education__levels h2 {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.cards__container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.card__content {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border: 1px solid #b1b1b1;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, #ffffff, #c5c5c5);
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(43, 41, 41, 0.829);
-    transition: transform 2s ease, box-shadow 10s ease-in-out;
-}
-
-.card__content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 5px rgba(90, 90, 90, 0.815);
-}
-
-.card__content h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #000000;
-}
-
-.card__content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    font-weight: 600;
-    color: #000000;
-}
-
 .separador {
     border: 1px solid black;
     width: 100px;
@@ -666,14 +592,6 @@ body {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    .hidden,
-    .cards-hidden {
-        transition: none;
-    }
 }
 
 /* Section Presentacion */
@@ -818,6 +736,7 @@ body {
 .contact__section h2 {
     font-size: 3rem;
     font-family: "Urbanist", sans-serif;
+    color: #800020;
 }
 
 .title_emails {
@@ -970,7 +889,7 @@ body {
 
 .social__icons ion-icon {
     cursor: pointer;
-    font-size: 27px;
+    font-size: 23px;
     color: #ffffff;
     background-color: #800020;
     border-radius: 50%;
@@ -2372,4 +2291,12 @@ body {
 
 .lema.active {
     opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hidden,
+    .cards-hidden {
+        transition: none;
+    }
 }

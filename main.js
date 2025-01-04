@@ -1,3 +1,14 @@
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
+
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu')
+
+        toggle.classList.toggle('show-icon')
+    })
+}
+showMenu('nav-toggle', 'nav-menu');
 
 document.querySelectorAll('.scroll-link').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -46,12 +57,6 @@ const btnLeft = document.querySelector(".btn-left"),
     slider = document.querySelector("#slider"),
     sliderSection = document.querySelectorAll(".slider-section"),
     dots = document.querySelectorAll('.dot');
-
-console.log('btnLeft:', btnLeft);
-console.log('btnRight:', btnRight);
-console.log('slider:', slider);
-console.log('sliderSection:', sliderSection);
-console.log('dots:', dots);
 
 if (btnLeft && btnRight && slider && sliderSection.length > 0 && dots.length > 0) {
     btnLeft.addEventListener("click", () => moveToLeft());
@@ -187,20 +192,6 @@ setInterval(() => {
 
     lemas[currentIndex].classList.add("active");
 }, 4000);
-
-/*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
-
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('show-menu')
-
-        toggle.classList.toggle('show-icon')
-    })
-}
-
-showMenu('nav-toggle', 'nav-menu');
 
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
