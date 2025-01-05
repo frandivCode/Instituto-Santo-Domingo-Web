@@ -2326,6 +2326,7 @@ body {
     .container__presentacion {
         grid-template-columns: 1fr;
         justify-content: center;
+        min-height: 90vh;
     }
 
     .content__presentacion {
@@ -2381,8 +2382,7 @@ body {
     }
 
     .section__links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse;
         text-align: center;
         align-items: start;
         gap: 1rem;
@@ -2395,7 +2395,7 @@ body {
     }
 
     .end__footer-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         text-align: center;
         gap: 1rem;
@@ -2410,5 +2410,64 @@ body {
         text-align: center;
         border-right: none;
         animation: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .order-contact {
+        width: 100%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 15px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .title_emails {
+        font-size: 17px;
+    }
+
+    .address-school {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+    }
+
+    .map iframe {
+        width: 90%;
+        height: 300px;
+    }
+
+    .icon-email {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .icon-email ion-icon {
+        font-size: 15px;
+    }
+
+    .address-school ion-icon {
+        font-size: 15px;
     }
 }
