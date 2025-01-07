@@ -742,6 +742,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin: 0 0 10px 7px;
+    text-align: left;
 }
 
 .order-emails {
@@ -751,39 +752,43 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
-.order-emails>p:not(.title_emails, .address-school) {
-    margin: 5px 0;
-    gap: 0.2rem;
+.contact-info {
+    width: 100%;
 }
 
 .order-emails p span {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .icon-email {
     display: flex;
     align-items: center;
+    justify-content: start;
+    margin: 5px 0;
+    font-size: 16px;
+    gap: 2px;
 }
 
 .icon-email ion-icon {
     margin: 0 5px;
-    font-size: 22px;
+    font-size: 20px;
     color: #ac002b;
 }
 
 .address-school {
-    margin: 35px 3px 0 0;
-    font-size: 17px;
+    margin: 35px 0 0 0;
+    font-size: 16px;
     font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .address-school ion-icon {
-    font-size: 22px;
+    font-size: 20px;
     color: #ac002b;
 }
 
@@ -2326,7 +2331,7 @@ body {
     .container__presentacion {
         grid-template-columns: 1fr;
         justify-content: center;
-        min-height: 90vh;
+        min-height: 50vh;
     }
 
     .content__presentacion {
@@ -2335,6 +2340,9 @@ body {
 
     .order__content {
         align-items: center;
+        margin: 2.5rem 0;
+        min-height: 0;
+        gap: 2.5rem;
     }
 
     .parrafos__historia {
@@ -2403,7 +2411,7 @@ body {
 
     .copy {
         text-align: center;
-        margin-bottom: 10px;
+        font-size: 0.8em;
     }
 
     .by {
@@ -2413,7 +2421,11 @@ body {
     }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
+    .parrafos__historia {
+        padding: 0 20px;
+    }
+
     .order-contact {
         width: 100%;
     }
@@ -2440,12 +2452,16 @@ body {
     }
 
     .title_emails {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .address-school {
-        font-size: 14px;
-        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .icon-email {
+        font-size: 13px;
+        padding: 0 5px;
     }
 
     .map {
@@ -2458,16 +2474,60 @@ body {
         height: 300px;
     }
 
-    .icon-email {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
     .icon-email ion-icon {
-        font-size: 15px;
+        display: none;
     }
 
     .address-school ion-icon {
-        font-size: 15px;
+        display: none;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .hero__title {
+        font-size: 1.8rem;
+    }
+
+    .hero__text {
+        font-size: .9rem;
+        max-width: 256px;
+    }
+
+    .front {
+        font-size: .9rem;
+        padding: 7px 15px;
+    }
+
+    .parrafos__historia {
+        padding: 0 30px;
+    }
+
+    .button__destacable {
+        font-size: .9rem;
+        padding: 1rem;
+    }
+
+    .icon-email ion-icon {
+        line-height: 0;
+    }
+
+    .address-school ion-icon {
+        line-height: 0;
+    }
+
+    .lemas-container {
+        padding: 10px;
+    }
+
+    .lema {
+        font-size: 0.8rem;
+    }
+
+    .container__footer {
+        padding: 20px;
+    }
+
+    .list__links a {
+        font-size: 14px;
     }
 }
