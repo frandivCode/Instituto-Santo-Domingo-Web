@@ -651,7 +651,7 @@ body {
 }
 
 .paragraph {
-    font-size: 15.5px;
+    font-size: 16px;
     line-height: 1.7;
     text-align: left;
     max-width: 500px;
@@ -997,6 +997,7 @@ body {
 
 .hero__nivel-inicial {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1071,6 +1072,7 @@ body {
 /* Section Actividades*/
 .actividades {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -1132,6 +1134,7 @@ body {
 /* Section uniforme */
 .uniforme__nivel-inicial {
     min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
 }
 
@@ -1391,7 +1394,7 @@ body {
     z-index: 1;
 }
 
-/* .fade-in {
+.fade-in {
     animation: fadeIn 2s ease-in;
 }
 
@@ -1403,11 +1406,12 @@ body {
     100% {
         opacity: 1;
     }
-} */
+}
 
 /* Slider */
 .section__carrousel {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1540,6 +1544,7 @@ body {
 
 .hero__nivel-primario {
     min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.100)), url(./img-nivel-primario/bg-hero-section.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1559,10 +1564,8 @@ body {
 
 .heading__hero-nivel-primario {
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-block: 2rem;
-    border-bottom: 2px solid white;
-    letter-spacing: 5px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -1631,6 +1634,7 @@ body {
 
 .objetivo-del-primario {
     min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1660,9 +1664,9 @@ body {
 }
 
 .content__objetivo-primario p {
-    max-width: 500px;
-    line-height: 1.5;
-    font-size: 15.5px;
+    max-width: 550px;
+    line-height: 1.6;
+    font-size: 16px;
     margin: 15px 0;
     color: #000000;
     letter-spacing: .3px;
@@ -1677,12 +1681,13 @@ body {
     width: 500px;
     height: auto;
     object-fit: cover;
+    max-width: 100%;
 }
 
 /* Section uniforme primario */
 .uniforme__nivel-primario {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .order__content-uniforme {
@@ -1706,14 +1711,16 @@ body {
 
 .order__list-uniforme {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 2.5rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 1rem auto;
+    max-width: 1200px;
     gap: 1rem;
     padding: 2rem;
     border-radius: 15px;
     color: #000000;
     background-color: #e9e9e9;
     border: 1px solid #cbcbcb;
+    word-wrap: break-word;
 }
 
 .order__list-uniforme h3 {
@@ -1734,7 +1741,7 @@ body {
     padding: 1rem;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.479);
     text-align: left;
-    height: 100%;
+    min-height: 100%;
 }
 
 .card__uniforme-primario h4 {
@@ -1756,6 +1763,7 @@ body {
 .galeria__eventos {
     padding: 2rem 0;
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 3rem 0;
 }
 
@@ -1864,23 +1872,25 @@ body {
 
 .hero__nivel-secundario {
     min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     background-image: url(./img-nivel-secundario/blob-scene-haikei.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
 
 }
 
 .order__content-nivel-secundario {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .content__hero-nivel-secundario {
     display: flex;
-    min-height: 65vh;
     flex-flow: column wrap;
     align-items: start;
     justify-content: center;
@@ -1900,6 +1910,7 @@ body {
     line-height: 1.5;
     color: #333;
     font-weight: 500;
+    font-style: italic;
 }
 
 .img__right-egreso {
@@ -1909,7 +1920,7 @@ body {
 }
 
 .book-brain {
-    width: 12.5rem;
+    width: 13rem;
     height: auto;
     object-fit: cover;
 }
@@ -1918,8 +1929,8 @@ body {
     position: absolute;
     width: 50px;
     object-fit: cover;
-    top: 100px;
-    right: -18px;
+    top: 5px;
+    right: -15px;
     transform: rotate(30deg);
 }
 
@@ -1927,13 +1938,15 @@ body {
     width: 400px;
     object-fit: cover;
     height: auto;
+    max-width: 100%;
 }
 
 .button__hero-nivel-secundario {
     background-color: #9B1C2B;
     color: white;
-    font-size: 18px;
-    padding: 12px 30px;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 10px 20px;
     border: none;
     border-radius: 50px;
     display: flex;
@@ -1949,28 +1962,12 @@ body {
 }
 
 .button__hero-nivel-secundario ion-icon {
-    font-size: 20px;
+    font-size: 18px;
     animation: señalamiento 1s ease-in-out infinite normal;
     background-color: #fff;
     padding: 3px;
     border-radius: 50%;
     color: #9B1C2B;
-}
-
-.quote-container {
-    min-height: 35vh;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    padding: 25px;
-}
-
-.quote {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #4b4b4b;
-    max-width: 550px;
 }
 
 /* Section orientaciones secundario */
@@ -2108,7 +2105,7 @@ body {
 
 .orientacion-text-info p {
     max-width: 300px;
-    text-align: center;
+    text-align: left;
     padding: 35px;
     background: #f5f5f5;
     border: 1px solid #ddd;
@@ -2141,6 +2138,7 @@ body {
 
 .hero__historia {
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .hero__title-historia {
@@ -2306,6 +2304,10 @@ body {
 
 /* ============ BREAKPOINTS ============ */
 @media screen and (max-width:1024px) {
+    .paragraph {
+        font-size: 15px;
+    }
+
     .container__presentacion {
         gap: 0;
     }
@@ -2334,7 +2336,7 @@ body {
     }
 
     .heading__nivel-inicial {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .arcoiris-img {
@@ -2343,7 +2345,9 @@ body {
     }
 
     .paragraph__nivel-inicial {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
+        max-width: 600px;
+        text-align: center;
     }
 
     .container__main-inicial {
@@ -2399,12 +2403,76 @@ body {
         height: 8px;
         width: 8px;
     }
+
+    /* Nivel primario */
+    .heading__hero-nivel-primario {
+        font-size: 3.5rem;
+    }
+
+    .content__objetivo-primario p {
+        max-width: 450px;
+        font-size: 15px;
+    }
+
+    .container__main-primario {
+        padding: 0;
+    }
+
+    .img-objetivo {
+        width: 400px;
+        max-width: 100%;
+    }
+
+    /* Nivel secundario */
+    .heading__hero-nivel-secundario {
+        font-size: 3.5rem;
+    }
+
+    .img-top_diploma {
+        top: 0;
+        right: 30px;
+    }
+
+    .book-brain {
+        width: 12rem;
+    }
+
+    .teacher-explain {
+        width: 350px;
+    }
+
+    /* Linea de arriba title */
+    .orientaciones__titulo::before,
+    .orientaciones__titulo::after {
+        width: 40px;
+    }
+
+    /* Linea del titulo */
+    .orientaciones__titulo::after {
+        right: -50px;
+    }
+
+    .orientaciones__titulo::before {
+        left: -50px;
+    }
+
+    /* Linea que conecta a la orientacion */
+    .orientacion--naturales::before,
+    .orientacion--sociales::before {
+        top: -154px;
+        height: 153px;
+    }
+
+    /* Linea que conecta con el texto */
+    .info--orientacion::before {
+        top: -80px;
+    }
 }
 
 @media screen and (max-width:768px) {
 
     .hero__title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         max-width: 400px;
     }
 
@@ -2443,7 +2511,7 @@ body {
     }
 
     .content__presentacion h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .img-escudo {
@@ -2451,12 +2519,14 @@ body {
     }
 
     .paragraph {
-        font-size: 13.5px;
-        max-width: 400px;
+        font-size: 14px;
+        text-align: center;
+        max-width: 450px;
+        line-height: 1.6;
     }
 
     .title__destacable {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .content__destacable {
@@ -2469,7 +2539,11 @@ body {
     }
 
     .contact__section h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
+    }
+
+    .order-emails {
+        margin: 50px 0;
     }
 
     .contact-grid {
@@ -2529,19 +2603,18 @@ body {
     }
 
     .heading__nivel-inicial {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .arcoiris-img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         line-height: 0;
     }
 
     .paragraph__nivel-inicial {
-        font-size: 1rem;
+        font-size: 1.1rem;
         max-width: 500px;
-        text-align: center;
     }
 
     .actividades {
@@ -2559,6 +2632,7 @@ body {
 
     .texto-actividad h3 {
         font-size: 1rem;
+        text-align: start;
     }
 
     .texto-actividad p {
@@ -2636,11 +2710,235 @@ body {
         margin: 0;
         padding: 0;
     }
+
+    /* Nivel primario */
+    .hero__nivel-primario {
+        background-attachment: initial;
+    }
+
+    .heading__hero-nivel-primario {
+        font-size: 3rem;
+    }
+
+    .content__objetivo-primario {
+        margin-top: 2rem;
+    }
+
+    .order__content-objetivo {
+        margin-bottom: 1rem;
+    }
+
+    .content__objetivo-primario h2 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .content__objetivo-primario ion-icon {
+        font-size: 25px;
+    }
+
+    .content__objetivo-primario p {
+        margin: 10px 0;
+        line-height: 1.5;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    .objetivo-del-primario {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .order__content-uniforme {
+        margin-bottom: 1rem;
+    }
+
+    .img-objetivo {
+        max-width: 100%;
+    }
+
+    .order__content-uniforme h2 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .order__content-uniforme ion-icon {
+        font-size: 25px;
+    }
+
+    .order__list-uniforme {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .list__uniforme-primario {
+        padding: 20px;
+    }
+
+    .order__list-uniforme h3 {
+        font-size: 20px;
+    }
+
+    .uniforme__formal,
+    .uniforme__informal {
+        gap: 1rem;
+        margin: 10px 0;
+    }
+
+    .galeria__eventos {
+        margin: 2rem 0;
+    }
+
+    .galeria__titulo {
+        font-size: 2rem;
+    }
+
+    .galeria__titulo ion-icon {
+        font-size: 30px;
+    }
+
+    .horarios__nivel-primario h2 {
+        font-size: 2rem;
+    }
+
+    .horarios__nivel-primario p {
+        margin-top: 1rem;
+        font-size: 18px;
+    }
+
+    /* Nivel secundario */
+    .heading__hero-nivel-secundario {
+        font-size: 3rem;
+    }
+
+    .img-top_diploma {
+        width: 30px;
+        top: 7px;
+        right: 24px;
+    }
+
+    .content__hero-nivel-secundario {
+        gap: 1.5rem;
+    }
+
+    .book-brain {
+        width: 10rem;
+    }
+
+    .text__hero-nivel-secundario {
+        max-width: 465px;
+        font-size: 16px;
+    }
+
+    .button__hero-nivel-secundario {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .teacher-explain {
+        width: 250px;
+    }
+
+    .orientaciones__titulo {
+        font-size: 2rem;
+    }
+
+    /* Linea del titulo */
+    .orientaciones__titulo::after {
+        display: none;
+    }
+
+    .orientaciones__titulo::before {
+        display: none;
+    }
+
+    /* Linea que conecta a la orientacion */
+    .orientacion--naturales::before,
+    .orientacion--sociales::before {
+        top: -131px;
+        height: 131px;
+    }
+
+    .info--orientacion::before {
+        top: -91px;
+        height: 85px;
+    }
+
+    .img-ciencias-naturales,
+    .img-ciencias-sociales {
+        width: 40px;
+    }
+
+    .orientacion h3 {
+        font-size: 1.2rem;
+    }
+
+    .orientacion p {
+        font-size: 15px;
+    }
+
+    .orientacion {
+        padding: 20px;
+    }
+
+    .orientacion-text-info p {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:515px) {
+    .map iframe {
+        width: 90%;
+        height: 300px;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 425px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__content {
+        gap: 2rem;
+    }
+
+    .paragraph {
+        font-size: 13px;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+        max-width: 280px;
+    }
+
     .parrafos__historia {
         padding: 0 20px;
+    }
+
+    .content__presentacion h3 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.1rem;
+        margin-block: 1rem;
+    }
+
+    .modal-content p {
+        font-size: 13px;
+        margin: 15px 0;
     }
 
     .order-contact {
@@ -2649,12 +2947,6 @@ body {
 
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 15px;
-        margin: 0 auto;
-        width: 90%;
     }
 
     .contact-form input,
@@ -2676,19 +2968,17 @@ body {
         font-size: 14px;
     }
 
+    .title__destacable {
+        font-size: 1.7rem;
+    }
+
+    .contact__section h2 {
+        font-size: 1.7rem;
+    }
+
     .icon-email {
-        font-size: 14px;
+        font-size: 13px;
         padding: 0 5px;
-    }
-
-    .map {
-        width: 100%;
-        height: auto;
-    }
-
-    .map iframe {
-        width: 90%;
-        height: 300px;
     }
 
     .icon-email ion-icon {
@@ -2697,6 +2987,14 @@ body {
 
     .address-school ion-icon {
         display: none;
+    }
+
+    .container__footer {
+        padding: 20px;
+    }
+
+    .list__links a {
+        font-size: 14px;
     }
 
     /* Nivel inicial */
@@ -2721,7 +3019,7 @@ body {
     }
 
     .heading__nivel-inicial {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .arcoiris-img {
@@ -2739,8 +3037,13 @@ body {
         display: none;
     }
 
+    .texto-actividad h3 {
+        text-align: center;
+    }
+
     .texto-actividad p {
         font-size: 13px;
+        text-align: center;
     }
 
     .actividades {
@@ -2793,6 +3096,208 @@ body {
     .section__carrousel p {
         font-size: 1rem;
     }
+
+    /* Nivel primario */
+
+    .heading__hero-nivel-primario {
+        font-size: 2rem;
+        margin-block: 1.5rem;
+    }
+
+    .text__hero-nivel-primario {
+        font-size: 15px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .button__hero-nivel-primario {
+        padding: 10px;
+        font-size: 13.5px;
+    }
+
+    .content__objetivo-primario h2 {
+        font-size: 1.7rem;
+    }
+
+    .content__objetivo-primario ion-icon {
+        font-size: 22px;
+    }
+
+    .content__objetivo-primario p {
+        font-size: 13px;
+    }
+
+    .order__content-uniforme h2 {
+        font-size: 1.7rem;
+    }
+
+    .order__content-uniforme ion-icon {
+        font-size: 22px;
+    }
+
+    .order__list-uniforme h3 {
+        font-size: 18px;
+    }
+
+    .card__uniforme-primario h4 {
+        font-size: 15.5px;
+    }
+
+    .list__uniforme-primario li {
+        font-size: 14px;
+    }
+
+    .list__uniforme-primario {
+        padding: 15px;
+    }
+
+    .galeria__eventos {
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+
+    .galeria__titulo {
+        font-size: 1.5rem;
+    }
+
+    .galeria__titulo ion-icon {
+        font-size: 25px;
+    }
+
+    .galeria__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria__item.grande {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .evento7,
+    .evento8,
+    .evento9 {
+        grid-column: auto;
+    }
+
+    .galeria__descripcion {
+        font-size: 13px;
+    }
+
+    .horarios__nivel-primario h2 {
+        font-size: 1.5rem;
+    }
+
+    .horarios__nivel-primario {
+        margin-block: 1.5rem;
+    }
+
+    .horarios__nivel-primario p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .front {
+        font-size: .9rem;
+        padding: 7px 15px;
+    }
+
+    /* Nivel Secundario */
+    .hero__nivel-secundario {
+        min-height: 50dvh;
+    }
+
+    .content__hero-nivel-secundario {
+        align-items: center;
+    }
+
+    .heading__hero-nivel-secundario {
+        font-size: 2rem;
+    }
+
+    .img-top_diploma {
+        width: 25px;
+        top: 2px;
+        right: 57px;
+    }
+
+    .text__hero-nivel-secundario {
+        font-size: 15px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .button__hero-nivel-secundario {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .button__hero-nivel-secundario ion-icon {
+        font-size: 15px;
+    }
+
+    .book-brain {
+        display: none;
+    }
+
+    .orientaciones__titulo {
+        font-size: 1.5rem;
+    }
+
+    .orientacion h3 {
+        font-size: 1.1rem;
+    }
+
+    .orientacion--naturales::before,
+    .orientacion--sociales::before {
+        top: -125px;
+        height: 125px;
+    }
+
+    .img-ciencias-naturales,
+    .img-ciencias-sociales {
+        width: 30px;
+    }
+
+    .orientaciones {
+        padding: 30px 0;
+    }
+
+    .orientacion {
+        padding: 15px;
+    }
+
+    .orientaciones__contenedor {
+        gap: 2rem;
+    }
+
+    .orientacion-text-info {
+        gap: 2rem;
+    }
+
+    .info--orientacion::before {
+        top: -87px;
+        height: 86px;
+    }
+
+    .orientacion--naturales .img-ciencias-naturales:nth-of-type(2) {
+        bottom: -20px;
+        left: -20px;
+        top: auto;
+        right: auto;
+    }
+
+    .orientacion p {
+        font-size: 13px;
+    }
+
+    .orientacion-text-info p {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    .teacher-explain {
+        width: 200px;
+    }
 }
 
 @media screen and (max-width:375px) {
@@ -2802,21 +3307,36 @@ body {
 
     .hero__text {
         font-size: .9rem;
-        max-width: 256px;
-    }
-
-    .front {
-        font-size: .9rem;
-        padding: 7px 15px;
+        max-width: 250px;
     }
 
     .parrafos__historia {
         padding: 0 30px;
     }
 
+    .content__presentacion span {
+        font-size: 13px;
+    }
+
+    .content__presentacion {
+        gap: .5rem;
+    }
+
+    .content__presentacion h3 {
+        font-size: 1.1rem;
+    }
+
+    .title__destacable {
+        font-size: 1.5rem;
+    }
+
     .button__destacable {
         font-size: .9rem;
         padding: 1rem;
+    }
+
+    .contact__section h2 {
+        font-size: 1.5rem;
     }
 
     .icon-email ion-icon {
@@ -2835,14 +3355,6 @@ body {
         font-size: 0.8rem;
     }
 
-    .container__footer {
-        padding: 20px;
-    }
-
-    .list__links a {
-        font-size: 14px;
-    }
-
     /* Nivel inicial */
     .container-carousel {
         width: 360px;
@@ -2859,5 +3371,95 @@ body {
         margin-bottom: 1rem;
     }
 
+    /* Nivel primario */
+    .heading__hero-nivel-primario {
+        font-size: 1.5rem;
+    }
 
+    .text__hero-nivel-primario {
+        font-size: 13px;
+    }
+
+    .button__hero-nivel-primario {
+        font-size: 13px;
+    }
+
+    .button__hero-nivel-primario ion-icon {
+        font-size: 15px;
+    }
+
+    .objetivo-del-primario {
+        gap: 1rem;
+        min-height: 90dvh;
+    }
+
+    .order__content-uniforme h2 {
+        font-size: 1.5rem;
+    }
+
+    .order__list-uniforme h3 {
+        font-size: 16px;
+    }
+
+    .card__uniforme-primario h4 {
+        font-size: 14px;
+    }
+
+    .list__uniforme-primario li {
+        font-size: 13px;
+    }
+
+    .galeria__titulo {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .horarios__nivel-primario h2 {
+        font-size: 1.3rem;
+    }
+
+    .horarios__nivel-primario p {
+        font-size: 13px;
+    }
+
+    .hero__nivel-primario {
+        min-height: 60dvh;
+    }
+
+    /* Nivel secundario */
+    .heading__hero-nivel-secundario {
+        font-size: 1.8rem;
+    }
+
+    .img-top_diploma {
+        width: 20px;
+        top: 3px;
+        right: 47px;
+    }
+
+    .text__hero-nivel-secundario {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .button__hero-nivel-secundario {
+        font-size: 14px;
+    }
+
+    .content__objetivo-primario h2 {
+        font-size: 1.5rem;
+    }
+
+    .info--orientacion::before {
+        top: -85px;
+        height: 85px;
+    }
+
+    .orientaciones__contenedor {
+        gap: 1rem;
+    }
+
+    .orientacion-text-info {
+        gap: 1rem;
+    }
 }
