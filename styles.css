@@ -2469,6 +2469,430 @@ body {
     }
 }
 
+@media screen and (max-width:768px) {
+
+    .hero__title {
+        font-size: 3rem;
+        max-width: 400px;
+    }
+
+    .hero__text {
+        font-size: 1.1rem;
+        max-width: 400px;
+    }
+
+    .front {
+        font-size: 1rem;
+    }
+
+    .img__presentacion {
+        display: none;
+    }
+
+    .container__presentacion {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .content__presentacion {
+        align-items: center;
+    }
+
+    .order__content {
+        align-items: center;
+        margin: 2.5rem 0;
+        min-height: 0;
+        gap: 2.5rem;
+    }
+
+    .parrafos__historia {
+        align-items: center;
+    }
+
+    .content__presentacion h3 {
+        font-size: 1.5rem;
+    }
+
+    .img-escudo {
+        height: 35px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        text-align: center;
+        max-width: 450px;
+        line-height: 1.6;
+    }
+
+    .title__destacable {
+        font-size: 2rem;
+    }
+
+    .content__destacable {
+        grid-template-columns: 1fr;
+    }
+
+    .button__destacable {
+        font-size: 1rem;
+        padding: 1.3rem;
+    }
+
+    .contact__section h2 {
+        font-size: 2rem;
+    }
+
+    .order-emails {
+        margin: 50px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 500px;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    .lema {
+        font-size: 1rem;
+    }
+
+    .section__links {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .list__links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .end__footer-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .copy {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .by {
+        text-align: center;
+        border-right: none;
+        animation: none;
+    }
+
+    /* Nivel inicial */
+    .container-carousel {
+        width: 700px;
+        height: 500px;
+    }
+
+    .nube-img,
+    .estrella-img {
+        width: 140px;
+    }
+
+    .order__heading-inicial {
+        gap: .5rem;
+    }
+
+    .heading__nivel-inicial {
+        font-size: 3rem;
+    }
+
+    .arcoiris-img {
+        width: 60px;
+        height: 60px;
+        line-height: 0;
+    }
+
+    .paragraph__nivel-inicial {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+
+    .actividades {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .actividades h2 {
+        font-size: 1.7rem;
+    }
+
+    .actividad {
+        padding: 15px 0;
+    }
+
+    .texto-actividad h3 {
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .texto-actividad p {
+        font-size: 14px;
+        max-width: 420px;
+    }
+
+    .texto-actividad {
+        gap: .7rem;
+    }
+
+    .img-kids-actividad {
+        width: 110px;
+        height: 120px;
+    }
+
+    .uniforme__nivel-inicial h2 {
+        font-size: 1.7rem;
+    }
+
+    .uniforme-principal {
+        font-size: 15px;
+    }
+
+    .container__uniforme {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content__info-uniforme h3 {
+        font-size: 1rem;
+    }
+
+    .list__info-uniforme li {
+        font-size: 14px;
+    }
+
+    .text-mochila {
+        font-size: 14px;
+    }
+
+    .list__info-mochila li {
+        padding: 10px;
+    }
+
+    .list__info-mochila li p {
+        font-size: 14px;
+    }
+
+    .list__info-mochila span {
+        padding: 0;
+        width: 30px;
+    }
+
+    .section__carrousel h2 {
+        font-size: 1.7rem;
+    }
+
+    .section__carrousel p {
+        font-size: 1.1rem;
+    }
+
+    .img-nota {
+        display: none;
+    }
+
+    .nota-aclaracion {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .aclaracion-uniforme {
+        max-width: 100%;
+        position: initial;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Nivel primario */
+    .hero__nivel-primario {
+        background-attachment: initial;
+    }
+
+    .heading__hero-nivel-primario {
+        font-size: 3rem;
+    }
+
+    .content__objetivo-primario {
+        margin-top: 2rem;
+    }
+
+    .order__content-objetivo {
+        margin-bottom: 1rem;
+    }
+
+    .content__objetivo-primario h2 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .content__objetivo-primario ion-icon {
+        font-size: 25px;
+    }
+
+    .content__objetivo-primario p {
+        margin: 10px 0;
+        line-height: 1.5;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    .objetivo-del-primario {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .order__content-uniforme {
+        margin-bottom: 1rem;
+    }
+
+    .img-objetivo {
+        max-width: 100%;
+    }
+
+    .order__content-uniforme h2 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .order__content-uniforme ion-icon {
+        font-size: 25px;
+    }
+
+    .order__list-uniforme {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .list__uniforme-primario {
+        padding: 20px;
+    }
+
+    .order__list-uniforme h3 {
+        font-size: 20px;
+    }
+
+    .uniforme__formal,
+    .uniforme__informal {
+        gap: 1rem;
+        margin: 10px 0;
+    }
+
+    .galeria__eventos {
+        margin: 2rem 0;
+    }
+
+    .galeria__titulo {
+        font-size: 2rem;
+    }
+
+    .galeria__titulo ion-icon {
+        font-size: 30px;
+    }
+
+    .horarios__nivel-primario h2 {
+        font-size: 2rem;
+    }
+
+    .horarios__nivel-primario p {
+        margin-top: 1rem;
+        font-size: 18px;
+    }
+
+    /* Nivel secundario */
+    .heading__hero-nivel-secundario {
+        font-size: 3rem;
+    }
+
+    .img-top_diploma {
+        width: 30px;
+        top: 7px;
+        right: 24px;
+    }
+
+    .content__hero-nivel-secundario {
+        gap: 1.5rem;
+    }
+
+    .book-brain {
+        width: 10rem;
+    }
+
+    .text__hero-nivel-secundario {
+        max-width: 465px;
+        font-size: 16px;
+    }
+
+    .button__hero-nivel-secundario {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .teacher-explain {
+        width: 250px;
+    }
+
+    .orientaciones__titulo {
+        font-size: 2rem;
+    }
+
+    /* Linea del titulo */
+    .orientaciones__titulo::after {
+        display: none;
+    }
+
+    .orientaciones__titulo::before {
+        display: none;
+    }
+
+    /* Linea que conecta a la orientacion */
+    .orientacion--naturales::before,
+    .orientacion--sociales::before {
+        top: -131px;
+        height: 131px;
+    }
+
+    .info--orientacion::before {
+        top: -91px;
+        height: 85px;
+    }
+
+    .img-ciencias-naturales,
+    .img-ciencias-sociales {
+        width: 40px;
+    }
+
+    .orientacion h3 {
+        font-size: 1.2rem;
+    }
+
+    .orientacion p {
+        font-size: 15px;
+    }
+
+    .orientacion {
+        padding: 20px;
+    }
+
+    .orientacion-text-info p {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width:515px) {
     .map iframe {
         width: 90%;
