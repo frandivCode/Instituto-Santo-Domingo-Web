@@ -1007,14 +1007,11 @@ body {
 
 
 /* === HTML NIVEL INICIAL === */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 .body-principal {
     background-color: #BFECFF;
 }
 
 .hero__nivel-inicial {
-    min-height: 100vh;
     min-height: 100dvh;
     display: flex;
     justify-content: center;
@@ -1052,7 +1049,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Luckiest Guy", cursive;
 }
 
 .order__heading-inicial {
@@ -1069,16 +1065,16 @@ body {
 }
 
 .arcoiris-img {
-    width: 100px;
+    width: 80px;
     height: auto;
 }
 
 .paragraph__nivel-inicial {
     font-size: 1.5rem;
-    color: #ffaedd;
-    font-weight: 800;
-    text-shadow: 2px 1px 1px #790047;
-    margin-bottom: 1.5rem;
+    color: #f85cb7;
+    font-weight: 600;
+    text-shadow: 2px 3px 1px #ffc4e6;
+    margin-top: 1rem;
 }
 
 .container__main-inicial {
@@ -1089,7 +1085,6 @@ body {
 
 /* Section Actividades*/
 .actividades {
-    min-height: 100vh;
     min-height: 100dvh;
     display: flex;
     flex-flow: column wrap;
@@ -1101,11 +1096,9 @@ body {
 }
 
 .actividades h2 {
-    font-family: "Luckiest Guy", cursive;
     font-size: 2.5rem;
     margin-block: 1rem;
     color: #0f505e;
-    font-weight: 900;
 }
 
 .actividad {
@@ -1151,18 +1144,14 @@ body {
 
 /* Section uniforme */
 .uniforme__nivel-inicial {
-    min-height: 100vh;
     min-height: 100dvh;
     position: relative;
 }
 
 .uniforme__nivel-inicial h2 {
-    font-family: "Luckiest Guy", cursive;
     font-size: 2.5rem;
     color: #0f505e;
-    font-weight: 900;
     text-align: center;
-    margin: .5rem 0;
 }
 
 .uniforme-principal {
@@ -1428,7 +1417,7 @@ body {
 
 /* Slider */
 .section__carrousel {
-    min-height: 100vh;
+    width: 100%;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -1782,7 +1771,6 @@ body {
 /* Galeria */
 .galeria__eventos {
     padding: 2rem 0;
-    min-height: 100vh;
     min-height: 100dvh;
     margin: 3rem 0;
 }
@@ -2156,10 +2144,6 @@ body {
     flex-wrap: wrap;
 }
 
-.hero__historia {
-    min-height: 100dvh;
-}
-
 .hero__title-historia {
     font-size: 2.5rem;
     text-align: center;
@@ -2174,9 +2158,13 @@ body {
     max-width: 100%;
 }
 
+.content__historia {
+    margin: 2rem 0;
+}
+
 .content__historia h2 {
     color: #800020;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
@@ -2189,29 +2177,35 @@ body {
     color: #2c2c2c;
 }
 
-.equipo__list {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.equipo__nivel,
-.equipo__text {
-    padding: 10px;
-}
-
-.equipo__nivel {
-    background-color: #63011a;
-    color: rgb(240, 240, 240);
-    width: 25%;
+.equipo-directivo {
     text-align: center;
+    margin: 3rem 0;
 }
 
-.equipo__text {
-    background-color: #dfdfdf;
-    width: 75%;
-    text-align: left;
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    color: #8b0000;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #333;
+    font-size: 1rem;
 }
 
 /* Botones */
@@ -2361,11 +2355,6 @@ body {
         font-size: 3.5rem;
     }
 
-    .arcoiris-img {
-        width: 80px;
-        height: 80px;
-    }
-
     .paragraph__nivel-inicial {
         font-size: 1.3rem;
         max-width: 600px;
@@ -2405,11 +2394,6 @@ body {
         transform: rotate(0);
         top: -40px;
     }
-
-    /* .container-carousel {
-        width: 900px;
-        height: 600px;
-    } */
 
     .btn-left,
     .btn-right {
@@ -2611,11 +2595,6 @@ body {
     }
 
     /* Nivel inicial */
-    /* .container-carousel {
-        width: 700px;
-        height: 500px;
-    } */
-
     .nube-img,
     .estrella-img {
         width: 140px;
@@ -2638,6 +2617,7 @@ body {
     .paragraph__nivel-inicial {
         font-size: 1.1rem;
         max-width: 500px;
+        margin: 0;
     }
 
     .actividades {
@@ -2708,6 +2688,10 @@ body {
     .list__info-mochila span {
         padding: 0;
         width: 30px;
+    }
+
+    .section__carrousel {
+        min-height: 80dvh;
     }
 
     .section__carrousel h2 {
@@ -2812,6 +2796,10 @@ body {
     .uniforme__informal {
         gap: 1rem;
         margin: 10px 0;
+    }
+
+    .galeria__grid {
+        grid-template-columns: 1fr;
     }
 
     .galeria__eventos {
@@ -2929,6 +2917,11 @@ body {
     .img-kids-actividad {
         display: none;
     }
+
+    .section__carrousel {
+        min-height: 70dvh;
+        margin: 2.5vh 0;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -3029,13 +3022,12 @@ body {
 
     /* Nivel inicial */
     .hero__nivel-inicial {
-        min-height: 70vh;
+        min-height: 60dvh;
     }
 
-    /* .container-carousel {
-        width: 390px;
-        height: 220px;
-    } */
+    .container-carousel {
+        height: 350px;
+    }
 
     .btn-left,
     .btn-right {
@@ -3115,8 +3107,9 @@ body {
     }
 
     .section__carrousel {
-        min-height: 50vh;
-        margin: 25px 0;
+        min-height: 60dvh;
+        margin: 0;
+        padding: 0;
     }
 
     .section__carrousel h2 {
@@ -3125,6 +3118,7 @@ body {
 
     .section__carrousel p {
         font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     /* Nivel primario */
@@ -3328,6 +3322,32 @@ body {
     .teacher-explain {
         width: 200px;
     }
+
+    /* Historia del colegio */
+    .hero__title-historia {
+        font-size: 2rem;
+    }
+
+    .content__historia h2 {
+        font-size: 1.2rem;
+    }
+
+    .content__historia p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .info__historia li {
+        font-size: 14px;
+    }
+
+    .tarjeta h3 {
+        font-size: 1rem;
+    }
+
+    .tarjeta span {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width:375px) {
@@ -3487,6 +3507,24 @@ body {
 
     .orientacion-text-info {
         gap: 1rem;
+    }
+
+    /* Historia del colegio */
+    .hero__title-historia {
+        font-size: 1.7rem;
+        padding-block: 1.5rem;
+    }
+
+    .content__historia {
+        margin: 1.5rem 0;
+    }
+
+    .content__historia h2 {
+        font-size: 1.1rem;
+    }
+
+    .tarjeta span {
+        font-size: 14px;
     }
 }
 
