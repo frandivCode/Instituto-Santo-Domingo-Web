@@ -746,13 +746,8 @@ body {
 }
 
 .order-emails {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
     margin-top: 100px;
+    max-width: 100%;
 }
 
 .contact-info {
@@ -761,6 +756,23 @@ body {
 
 .order-emails p span {
     font-weight: 700;
+}
+
+.map {
+    width: 100%;
+    margin-top: 40px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .icon-email {
@@ -784,7 +796,7 @@ body {
     font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .address-school ion-icon {
@@ -801,21 +813,16 @@ body {
     align-items: center;
 }
 
-.map {
-    width: 100%;
-    margin-top: 40px;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background-color: #dbdbdb;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.458);
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 12px 12px 1px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form label {
@@ -826,6 +833,7 @@ body {
     color: rgb(221, 0, 0);
 }
 
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -835,23 +843,33 @@ body {
     border-radius: 4px;
     font-size: 16px;
     resize: none;
-    background-color: #f3f3f3;
+    background-color: #e7e7e7;
     outline: none;
-    opacity: .8;
+    opacity: .9;
+    transition: all .3s ease;
 }
 
 .contact-form input:focus {
-
-    opacity: 1;
+    background-color: #f0f0f0;
 }
 
 .contact-form textarea:focus {
-
-    opacity: 1;
+    background-color: #f0f0f0;
 }
 
 .contact-form input::placeholder {
     color: black;
+}
+
+.input-error {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+    transition: 0.3s;
+}
+
+.input-error:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
 }
 
 .contact-form button {
@@ -1416,48 +1434,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
-    font-family: "Luckiest Guy", cursive;
+    margin: 5vh 0;
     position: relative;
-}
-
-.img-arcoiris-dos,
-.img-arcoiris-tres {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-}
-
-.img-arcoiris-dos {
-    top: 250px;
-    right: -130px;
-    transform: rotate(27deg);
-}
-
-.img-arcoiris-tres {
-    bottom: 50px;
-    left: -160px;
-    transform: rotate(350deg);
+    padding: 1rem;
+    color: #024250;
 }
 
 .section__carrousel h2 {
     font-size: 2.5rem;
-    color: #024250;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .section__carrousel p {
-    color: #024250;
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .container-carousel {
     position: relative;
-    width: 1000px;
-    height: 600px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -1479,6 +1479,26 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.img-arcoiris-dos,
+.img-arcoiris-tres {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+.img-arcoiris-dos {
+    top: 250px;
+    right: -130px;
+    transform: rotate(27deg);
+}
+
+.img-arcoiris-tres {
+    bottom: 50px;
+    left: -160px;
+    transform: rotate(350deg);
 }
 
 .btn-left,
@@ -2302,6 +2322,8 @@ body {
     }
 }
 
+
+
 /* ============ BREAKPOINTS ============ */
 @media screen and (max-width:1024px) {
     .paragraph {
@@ -2384,10 +2406,10 @@ body {
         top: -40px;
     }
 
-    .container-carousel {
+    /* .container-carousel {
         width: 900px;
         height: 600px;
-    }
+    } */
 
     .btn-left,
     .btn-right {
@@ -2504,6 +2526,7 @@ body {
         margin: 2.5rem 0;
         min-height: 0;
         gap: 2.5rem;
+        padding: 0;
     }
 
     .parrafos__historia {
@@ -2588,10 +2611,10 @@ body {
     }
 
     /* Nivel inicial */
-    .container-carousel {
+    /* .container-carousel {
         width: 700px;
         height: 500px;
-    }
+    } */
 
     .nube-img,
     .estrella-img {
@@ -2894,14 +2917,17 @@ body {
 }
 
 @media screen and (max-width:515px) {
-    .map iframe {
-        width: 90%;
-        height: 300px;
+    .contact-form {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .contact-form {
-        width: 90%;
-        margin: 0 auto;
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img-kids-actividad {
+        display: none;
     }
 }
 
@@ -2945,10 +2971,6 @@ body {
         width: 100%;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
@@ -2961,7 +2983,8 @@ body {
     }
 
     .title_emails {
-        font-size: 15px;
+        font-size: 16px;
+        margin: 0 0 10px 0;
     }
 
     .address-school {
@@ -2977,8 +3000,7 @@ body {
     }
 
     .icon-email {
-        font-size: 13px;
-        padding: 0 5px;
+        font-size: 14px;
     }
 
     .icon-email ion-icon {
@@ -2997,15 +3019,23 @@ body {
         font-size: 14px;
     }
 
+    .lemas-container {
+        padding: 10px;
+    }
+
+    .lema {
+        font-size: .9rem;
+    }
+
     /* Nivel inicial */
     .hero__nivel-inicial {
         min-height: 70vh;
     }
 
-    .container-carousel {
+    /* .container-carousel {
         width: 390px;
         height: 220px;
-    }
+    } */
 
     .btn-left,
     .btn-right {
@@ -3029,8 +3059,8 @@ body {
 
     .paragraph__nivel-inicial {
         margin: 0;
-        font-size: .9rem;
-        max-width: 350px;
+        font-size: 1rem;
+        max-width: 400px;
     }
 
     .img-kids-actividad {
@@ -3347,19 +3377,11 @@ body {
         line-height: 0;
     }
 
-    .lemas-container {
-        padding: 10px;
-    }
-
     .lema {
         font-size: 0.8rem;
     }
 
     /* Nivel inicial */
-    .container-carousel {
-        width: 360px;
-        height: 200px;
-    }
 
     .dot {
         width: 6px;
@@ -3369,6 +3391,10 @@ body {
     .section__carrousel p {
         font-size: .9rem;
         margin-bottom: 1rem;
+    }
+
+    .heading__nivel-inicial {
+        font-size: 1.7rem;
     }
 
     /* Nivel primario */
@@ -3461,5 +3487,19 @@ body {
 
     .orientacion-text-info {
         gap: 1rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .title_emails {
+        font-size: 15px;
+    }
+
+    .icon-email {
+        font-size: 13px;
+    }
+
+    .address-school {
+        font-size: 12px;
     }
 }

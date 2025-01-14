@@ -118,29 +118,49 @@ const errorElement = document.getElementById('error');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
 
+    const name = nameInput.value;
+    const phone = phoneInput.value;
+    const email = emailInput.value;
+
+    let hasError = false; // Flag to check if there are errors
+
+    // Reset errors
+    errorElement.textContent = '';
+    nameInput.classList.remove('input-error');
+    phoneInput.classList.remove('input-error');
+    emailInput.classList.remove('input-error');
+
+    // Validate phone
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone)) {
         errorElement.textContent = 'Número de teléfono inválido. Debe tener 10 dígitos, sin signos.';
-        return;
+        phoneInput.classList.add('input-error');
+        hasError = true;
     }
 
+    // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         errorElement.textContent = 'Email inválido.';
-        return;
+        emailInput.classList.add('input-error');
+        hasError = true;
     }
 
+    // Validate name
     const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     if (!nameRegex.test(name)) {
         errorElement.textContent = 'El campo Nombre y Apellido solo debe contener letras y espacios.';
-        return;
+        nameInput.classList.add('input-error');
+        hasError = true;
     }
 
-    errorElement.textContent = '';
+    if (hasError) {
+        return; // Stop form submission if there are errors
+    }
 
     button.textContent = 'Enviando...';
 
@@ -171,6 +191,7 @@ form.addEventListener('submit', function (event) {
             alert('Hubo un error al enviar tu mensaje: ' + JSON.stringify(err));
         });
 });
+
 
 function openModal(modalId) {
     document.getElementById(modalId).classList.add('open');
