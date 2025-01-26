@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/icon.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <title>Nivel Inicial | Instituto Santo Domingo</title>
 </head>
@@ -97,8 +98,8 @@
                             </li>
 
                             <li>
-                                <a href="galeria-del-colegio.html" class="dropdown__link">
-                                    Galería
+                                <a href="calendario.html" class="dropdown__link">
+                                    Eventos
                                 </a>
                             </li>
                         </ul>
@@ -113,16 +114,14 @@
     <!-- Hero Section -->
     <section class="hero__nivel-inicial">
         <img src="../img-nivel-inicial/nube.png" alt="nube hecha con un crayon" class="nube-img">
-        <div class="content__hero-nivel-inicial">
+        <img src="../img-nivel-inicial/arcoiris.png" alt="arcoiris infantil" class="arcoiris-img">
+        <div class="content__hero-inicial">
             <div class="order__heading-inicial">
-                <img src="../img-nivel-inicial/arcoiris.png" class="arcoiris-img" alt="arcoiris amigable">
                 <h1 class="heading__nivel-inicial">Jardín de Infantes</h1>
-                <img src="../img-nivel-inicial/arcoiris.png" class="arcoiris-img" alt="arcoiris amigable">
+                <p class="paragraph__nivel-inicial">Un espacio lleno de amor, aprendizaje y diversión para los más
+                    pequeños.</p>
             </div>
-            <p class="paragraph__nivel-inicial">"Formamos los cimientos del aprendizaje a través del
-                juego, la creatividad y la
-                exploración."
-            </p>
+            <img src="../img-nivel-inicial/jirafa-amigable.png" alt="Jirafa amigable sentada" class="img__hero-inicial">
         </div>
         <img src="../img-nivel-inicial/estrella.png" alt="estrella hecha con un crayon" class="estrella-img">
     </section>
@@ -142,7 +141,6 @@
                         concentrarse en tareas visuales.</p>
                 </div>
                 <img src="../img-nivel-inicial/kids-drawing.png" alt="Niños pintando" class="img-kids-actividad">
-
             </div>
 
             <div class="actividad hidden">
@@ -195,13 +193,12 @@
 
         <!-- Section Vestimenta -->
         <section class="uniforme__nivel-inicial">
-            <img src="../img-nivel-inicial/bloques-de-construccion.png" alt="bloques de construccion amigables"
-                class="img-bloques">
             <h2>Uniforme</h2>
             <div class="divisor"></div>
-            <p class="uniforme-principal">Pintor con detalles cuadrillé blanco con azul para los varones, rosa para
-                las
-                nenas.</p>
+            <p class="uniforme-principal">Pintor con detalles cuadrillé blanco con <span class="azul">azul para
+                    los varones,</span> <span class="rosa">rosa para
+                    las
+                    nenas.</span></p>
             <div class="container__uniforme">
                 <div class="content__info-uniforme invierno">
                     <h3>En Invierno:</h3>
@@ -223,41 +220,32 @@
                 </div>
             </div>
 
-            <div class="elementos__del-jardin">
-                <p class="text-mochila">Mochila de tela con detalles cuadrillé blanco con azul para los varones y rosa
-                    para las
-                    nenas. En su
-                    interior debe contener lo siguiente:</p>
-                <ul class="list__info-mochila">
-                    <li><span>1</span>
-                        <p>Plato y Vaso de plástico.</p>
-                    </li>
-                    <li><span>2</span>
-                        <p>Taper para la merienda.</p>
-                    </li>
-                    <li><span>3</span>
-                        <p>Mantel y servilleta.</p>
-                    </li>
-                    <li><span>4</span>
-                        <p>Toalla.</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="nota-aclaracion">
-                <img src="../img-nivel-inicial/nota.png" alt="nota con un pin clavado" class="img-nota">
-                <p class="aclaracion-uniforme">
-                    Todas las prendas y los elementos de la mochila deben tener el nombre del/la alumno/a bordado en
-                    LETRA
-                    MAYÚSCULA DE
-                    IMPRENTA.
+            <div class="note">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                    Todas las prendas y elementos deben tener el nombre del alumno/a bordado
+                    en letra mayúscula de imprenta.
                 </p>
             </div>
+
+            <div class="list-container">
+                <h3>¿Qué hay que llevar?</h3>
+                <div class="order-list">
+                    <div class="list-item">
+                        <p>Plato y vaso de plástico.</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Tupper para la merienda.</p>
+                    </div>
+                    <div class="list-item">
+                        <p>Toalla y servilleta.</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <div class="section__carrousel">
-            <img src="../img-nivel-inicial/arcoiris-dos.png" class="img-arcoiris-dos">
-            <img src="../img-nivel-inicial/arcoiris-dos.png" class="img-arcoiris-tres">
             <h2>Galería de los peques</h2>
-            <p>"Momentos inolvidables de nuestros pequeños."</p>
             <div class="container-carousel">
                 <div class="carruseles" id="slider">
                     <section class="slider-section">
@@ -312,7 +300,7 @@
             <div class="list__links">
                 <a href="../index.html" class="scroll-link">Inicio</a>
                 <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
-                <a href="./galeria-del-colegio.html" class="scroll-link">Galería</a>
+                <a href="./calendario.html" class="scroll-link">Eventos</a>
                 <a href="./exalumnos.html" class="scroll-link">Exalumnos</a>
                 <a href="./historia.html" class="scroll-link">Historia</a>
             </div>
@@ -320,15 +308,16 @@
         <div class="divider blue-divider"></div>
         <section class="end__footer-section">
             <div class="copyright">
-                <p class="copy">&copy; <span id="year">2025</span> Todos los derechos
+                <p class="copy">&copy; <span id="year"></span> Todos los derechos
                     reservados.</p>
             </div>
             <div class="footer-logo">
                 <a href="../index.html"><img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" /></a>
             </div>
-            <p class="by">Hecho con <span>❤️</span> por <a href="https://github.com/frandivCode"
-                    target="_blank">frandivCode</a>
-            </p>
+            <div class="copy__by">
+                <ion-icon name="code-slash-outline"></ion-icon>
+                <p class="by">Hecho por <a href="https://github.com/frandivCode" target="_blank">frandivCode</a></p>
+            </div>
         </section>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

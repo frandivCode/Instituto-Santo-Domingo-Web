@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/calendar.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <title>Eventos del Colegio</title>
+</head>
+
+<body>
+    <div class="order__content-calendar">
+        <img src="../assets/ui-logo.png" alt="Flor de Liz" class="logo-ui">
+        <h1 class="heading__events">Eventos del colegio</h1>
+        <img src="../assets/ui-logo.png" alt="Flor de Liz" class="logo-ui">
+    </div>
+    <div id='calendar'></div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let calendarEl = document.getElementById('calendar');
+            let calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                themeSystem: 'bootstrap',
+                locale: 'es',
+                dayHeaderFormat: { weekday: 'long' },
+                eventTimeFormat: { hour: '2-digit', minute: '2-digit', hour12: false },
+                selectable: true,
+                events: [
+                    { title: 'Inicio de Clases', date: '2025-03-01', color: '#2196f3' },
+                    { title: 'Reunión de Padres', date: '2025-03-15', color: '#ff5722' },
+                    { title: 'Feriado Nacional', date: '2025-03-24', color: '#4caf50' },
+                    { title: 'Acto Escolar', date: '2025-03-28', color: '#ffeb3b', textColor: '#000' },
+                    {
+                        title: 'Meeting',
+                        start: '2025-03-12T14:30:00',
+                        backgroundColor: 'green',
+                        borderColor: 'green',
+                        extendedProps: {
+                            status: 'done'
+                        }
+                    }
+                ]
+            });
+            calendar.render();
+            calendar.setOption('height', 700);
+
+        });
+    </script>
+</body>
+
+</html>

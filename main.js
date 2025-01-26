@@ -50,6 +50,9 @@ const observerCards = new IntersectionObserver((entries, observer) => {
     });
 });
 
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = currentYear;
+
 const hiddenCards = document.querySelectorAll('.cards');
 hiddenCards.forEach((el) => observerCards.observe(el));
 const btnLeft = document.querySelector(".btn-left"),
@@ -214,5 +217,3 @@ setInterval(() => {
     lemas[currentIndex].classList.add("active");
 }, 4000);
 
-const currentYear = new Date().getFullYear();
-document.getElementById("year").textContent = currentYear;

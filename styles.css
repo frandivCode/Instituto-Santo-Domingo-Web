@@ -39,7 +39,7 @@ body {
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
-    --black-color: #333333;
+    --black-color: #1d1d1d;
     /* Gris oscuro */
     --black-color-light: hsl(0, 0%, 30%);
     /* Gris medio */
@@ -82,7 +82,7 @@ body {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #333333;
+    background-color: #1d1d1d;
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
     z-index: var(--z-fixed);
 }
@@ -91,7 +91,6 @@ body {
 .nav {
     height: var(--header-height);
 }
-
 
 .nav__burger,
 .nav__close {
@@ -213,7 +212,7 @@ body {
 
 .dropdown__link:hover,
 .dropdown__sublink:hover {
-    background-color: var(--black-color);
+    background-color: var(--black-color-lighten);
 }
 
 .dropdown__menu,
@@ -346,7 +345,7 @@ body {
     padding: .5rem 1rem;
     width: 100%;
     margin: 0 auto;
-    background-color: #1d1d1d;
+    background-color: #333333;
     color: #ffffff;
 }
 
@@ -456,7 +455,6 @@ body {
 }
 
 .hero__text {
-    max-width: 450px;
     font-size: 1.3rem;
     text-align: left;
     font-weight: 500;
@@ -595,7 +593,7 @@ body {
 
 /* Section Presentacion */
 .container__presentacion {
-    min-height: 110vh;
+    min-height: 90vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -605,16 +603,17 @@ body {
 }
 
 .img__presentacion {
-    width: 400px;
+    width: 350px;
     height: auto;
+    object-fit: cover;
 }
 
 .order__content {
     display: flex;
     flex-flow: column wrap;
-    min-height: 600px;
     align-items: start;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     width: 100%;
 }
 
@@ -647,7 +646,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .paragraph {
@@ -660,11 +659,11 @@ body {
 /* Section destacable */
 .container__destacable {
     min-height: 50vh;
-    margin: 2rem 0;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .title__destacable {
@@ -676,21 +675,23 @@ body {
 
 .content__destacable {
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, 350px);
     gap: 1.3rem;
     padding: 1rem;
     justify-content: center;
 }
 
 .button__destacable {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #161616;
-    border-radius: 10px;
-    padding: 1.5rem;
-    font-size: 1.1rem;
+    background-color: #2b2b2b;
+    border-radius: 50px;
+    padding: 1rem;
+    font-size: 1rem;
     font-weight: bold;
+    gap: 1rem;
     text-align: center;
     cursor: pointer;
     color: #fafafa;
@@ -699,6 +700,7 @@ body {
     overflow: hidden;
     transition: color 0.5s ease;
     z-index: 1;
+    box-shadow: 0 3px 5px rgb(100, 100, 100)
 }
 
 .button__destacable::before {
@@ -969,10 +971,18 @@ body {
     color: #3f3f3f;
 }
 
+.copy__by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
 .by {
+    font-family: monospace;
     font-size: .95rem;
     display: block;
-    width: 24ch;
+    width: 22ch;
     border-right: 2px solid black;
     overflow: hidden;
     white-space: nowrap;
@@ -981,7 +991,7 @@ body {
 }
 
 .by a {
-    color: #d3224e;
+    color: #800020;
 }
 
 @keyframes blink {
@@ -1008,7 +1018,7 @@ body {
 
 /* === HTML NIVEL INICIAL === */
 .body-principal {
-    background-color: #BFECFF;
+    background: linear-gradient(135deg, #b1e8ff, #A0D9FF, #78c9ff);
 }
 
 .hero__nivel-inicial {
@@ -1016,24 +1026,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(./img-nivel-inicial/bg-amigable.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
 }
 
+.img__hero-inicial {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
 .nube-img,
-.estrella-img {
-    width: 210px;
+.estrella-img,
+.arcoiris-img {
+    width: 200px;
     height: auto;
     object-fit: cover;
 }
 
 .nube-img {
     position: absolute;
-    top: 50px;
-    right: 150px;
+    top: 20px;
+    right: 100px;
+}
+
+.arcoiris-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(330deg);
 }
 
 .estrella-img {
@@ -1043,38 +1063,37 @@ body {
     filter: drop-shadow(0 0 10px yellow);
 }
 
-.content__hero-nivel-inicial {
-    width: 100%;
+.content__hero-inicial {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .order__heading-inicial {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     gap: 1rem;
-    margin: 1rem 0;
 }
 
 .heading__nivel-inicial {
+    text-align: center;
     font-size: 4rem;
-    color: #ffc4e6;
-    text-shadow: 2px 3px 1px #f85cb7;
-}
-
-.arcoiris-img {
-    width: 80px;
-    height: auto;
+    color: #FF92B5;
+    text-shadow: 3px 3px 1px #0000005e;
 }
 
 .paragraph__nivel-inicial {
-    font-size: 1.5rem;
-    color: #f85cb7;
+    font-size: 1.4rem;
+    color: #686868;
     font-weight: 600;
-    text-shadow: 2px 3px 1px #ffc4e6;
-    margin-top: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .container__main-inicial {
@@ -1090,23 +1109,31 @@ body {
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: start;
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 50px 0;
     position: relative;
 }
 
 .actividades h2 {
     font-size: 2.5rem;
-    margin-block: 1rem;
     color: #0f505e;
 }
 
 .actividad {
-    background-color: #8fd8f7;
+    border-radius: 10px;
+    background-color: #81d9ff;
+    border: 1px solid #6ed2fd;
+    box-shadow: 0 4px 6px #00000057;
+    cursor: pointer;
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding: 10px 0;
+    transition: all .3s ease;
+}
+
+.actividad:hover {
+    transform: translateY(-3px);
 }
 
 .texto-actividad {
@@ -1143,11 +1170,6 @@ body {
 }
 
 /* Section uniforme */
-.uniforme__nivel-inicial {
-    min-height: 100dvh;
-    position: relative;
-}
-
 .uniforme__nivel-inicial h2 {
     font-size: 2.5rem;
     color: #0f505e;
@@ -1155,10 +1177,21 @@ body {
 }
 
 .uniforme-principal {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 1.3rem 0;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 10px;
     text-align: center;
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.azul {
+    color: blue;
+}
+
+.rosa {
+    color: rgb(252, 72, 102);
 }
 
 .divisor {
@@ -1172,7 +1205,7 @@ body {
 .container__uniforme {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 3rem 0;
 }
 
@@ -1318,77 +1351,65 @@ body {
     background: linear-gradient(to bottom, #ff9c2a, #ffd863);
 }
 
-.elementos__del-jardin {
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.text-mochila {
-    margin-bottom: 1rem;
-}
-
-.list__info-mochila {
+.list-container {
     display: flex;
-    align-items: start;
-    justify-content: center;
     flex-direction: column;
-    background-color: #8FD8F7;
+    width: 100%;
+    margin-top: 2.5rem;
 }
 
-.list__info-mochila li {
-    width: 100%;
+.list-container h3 {
+    font-size: 2rem;
+    color: #0f505e;
+    text-align: center;
+}
+
+.order-list {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.list-item {
+    text-align: center;
+    background: #f0f8ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.list-item:hover {
+    transform: scale(1.02);
+}
+
+.list-item i {
+    font-size: 24px;
+    color: #007acc;
+}
+
+.note {
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.356);
+    background: #ffefc3;
+    border-radius: 10px;
     padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.list__info-mochila li p {
-    color: #024250;
-    font-weight: 500;
-    font-size: 1.05rem;
+.note i {
+    font-size: 24px;
+    color: #ffa500;
 }
 
-.list__info-mochila span {
-    background-color: #009bdd;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    text-align: center;
-    border-radius: 50%;
-    padding: 5px;
-    width: 40px;
-    height: auto;
-    font-weight: 600;
-}
-
-.nota-aclaracion {
-    max-width: 600px;
-    margin: 15px 0;
-    padding: 10px;
-    position: relative;
-}
-
-.img-nota {
-    width: 320px;
-    height: auto;
-    position: absolute;
-    top: -60px;
-    left: -180px;
-    object-fit: contain;
-    filter: drop-shadow(1px 2px 5px black);
-    transform: rotate(11deg);
-}
-
-.aclaracion-uniforme {
-    font-weight: 600;
-    max-width: 180px;
-    position: absolute;
-    top: 35px;
-    left: -106px;
-    font-size: 13.5px;
-    line-height: 1.6;
-    transform: rotate(15deg);
+.note p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
 }
 
 .img-bloques {
@@ -1468,26 +1489,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-}
-
-.img-arcoiris-dos,
-.img-arcoiris-tres {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-}
-
-.img-arcoiris-dos {
-    top: 250px;
-    right: -130px;
-    transform: rotate(27deg);
-}
-
-.img-arcoiris-tres {
-    bottom: 50px;
-    left: -160px;
-    transform: rotate(350deg);
 }
 
 .btn-left,
@@ -1933,15 +1934,6 @@ body {
     object-fit: cover;
 }
 
-.img-top_diploma {
-    position: absolute;
-    width: 50px;
-    object-fit: cover;
-    top: 5px;
-    right: -15px;
-    transform: rotate(30deg);
-}
-
 .teacher-explain {
     width: 400px;
     object-fit: cover;
@@ -1987,7 +1979,7 @@ body {
 
 .orientaciones__titulo {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     position: relative;
     display: inline-block;
     color: #800020;
@@ -2004,13 +1996,24 @@ body {
 }
 
 .orientaciones__titulo::before {
-    left: -252px;
-    transform: translateY(-50%);
+    left: -254px;
+    transform: translateY(-100%);
 }
 
 .orientaciones__titulo::after {
-    right: -252px;
+    right: -254px;
     transform: translateY(-100%);
+}
+
+.info--orientacion::before {
+    content: '';
+    position: absolute;
+    top: -114px;
+    left: 50%;
+    width: 2px;
+    height: 114px;
+    background-color: #333;
+    transform: translateX(-50%);
 }
 
 .orientaciones__contenedor {
@@ -2019,8 +2022,8 @@ body {
     position: relative;
     align-items: center;
     min-height: 50vh;
+    flex-flow: row wrap;
 }
-
 
 .orientacion h3 {
     margin-bottom: 10px;
@@ -2032,17 +2035,6 @@ body {
     color: #666;
 }
 
-.orientacion--naturales::before,
-.orientacion--sociales::before {
-    content: '';
-    position: absolute;
-    top: -176px;
-    left: 50%;
-    width: 2px;
-    height: 160px;
-    background-color: #333;
-    transform: translateX(-50%);
-}
 
 .orientacion {
     width: 300px;
@@ -2123,16 +2115,6 @@ body {
     cursor: pointer;
 }
 
-.info--orientacion::before {
-    content: '';
-    position: absolute;
-    top: -90px;
-    left: 50%;
-    width: 2px;
-    height: 75px;
-    background-color: #333;
-    transform: translateX(-50%);
-}
 
 /* === PAGE HISTORIA HMTL  === */
 .historia-del-colegio {
@@ -2159,7 +2141,7 @@ body {
 }
 
 .content__historia {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .content__historia h2 {
@@ -2191,11 +2173,11 @@ body {
     max-width: 600px;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 15px;
-    margin: 10px auto;
+    margin: 15px auto;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
 }
 
 .tarjeta h3 {
@@ -2241,20 +2223,20 @@ body {
 
 .modal-content {
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
 }
 
 .modal-content h2 {
-    margin-block: 2rem;
-    font-size: 1.5rem;
+    margin-block: 1.5rem;
+    font-size: 1.8rem;
     font-family: "Libre Baskerville",
         serif;
 }
 
 .modal-content p {
     margin: 20px 0;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.5;
 }
 
@@ -2316,7 +2298,47 @@ body {
     }
 }
 
+.order__content-calendar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem 0;
+}
 
+.logo-ui {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+}
+
+.heading__events {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 0;
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: #007fff;
+    font-weight: 600;
+}
+
+.fc .fc-toolbar-title {
+    text-transform: uppercase;
+}
+
+#calendar {
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.fc-daygrid-day:hover {
+    background-color: #ffef64;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 /* ============ BREAKPOINTS ============ */
 @media screen and (max-width:1024px) {
@@ -2328,12 +2350,20 @@ body {
         gap: 0;
     }
 
+    .content__presentacion h3 {
+        font-size: 1.7rem;
+    }
+
     .order__content {
-        padding-right: 20px;
+        gap: 2rem;
+    }
+
+    .parrafos__historia {
+        max-width: 440px;
     }
 
     .img__presentacion {
-        width: 350px;
+        width: 300px;
     }
 
     .contact-grid {
@@ -2355,44 +2385,12 @@ body {
         font-size: 3.5rem;
     }
 
-    .paragraph__nivel-inicial {
-        font-size: 1.3rem;
-        max-width: 600px;
-        text-align: center;
-    }
-
     .container__main-inicial {
         padding: 0;
     }
 
-    .img-arcoiris-tres,
-    .img-arcoiris-dos,
-    .img-bloques,
-    .img-crayones {
-        display: none;
-    }
-
     .uniforme-principal {
         font-size: 1.1rem;
-    }
-
-    .nota-aclaracion {
-        max-width: 100%;
-    }
-
-    .img-nota {
-        left: auto;
-        right: -46px;
-        top: -125px;
-        transform: rotate(0);
-        width: 300px;
-    }
-
-    .aclaracion-uniforme {
-        left: auto;
-        right: 8px;
-        transform: rotate(0);
-        top: -40px;
     }
 
     .btn-left,
@@ -2432,11 +2430,6 @@ body {
     /* Nivel secundario */
     .heading__hero-nivel-secundario {
         font-size: 3.5rem;
-    }
-
-    .img-top_diploma {
-        top: 0;
-        right: 30px;
     }
 
     .book-brain {
@@ -2509,7 +2502,7 @@ body {
         align-items: center;
         margin: 2.5rem 0;
         min-height: 0;
-        gap: 2.5rem;
+        gap: 1.5rem;
         padding: 0;
     }
 
@@ -2538,11 +2531,6 @@ body {
 
     .content__destacable {
         grid-template-columns: 1fr;
-    }
-
-    .button__destacable {
-        font-size: 1rem;
-        padding: 1.3rem;
     }
 
     .contact__section h2 {
@@ -2608,18 +2596,6 @@ body {
         font-size: 3rem;
     }
 
-    .arcoiris-img {
-        width: 60px;
-        height: 60px;
-        line-height: 0;
-    }
-
-    .paragraph__nivel-inicial {
-        font-size: 1.1rem;
-        max-width: 500px;
-        margin: 0;
-    }
-
     .actividades {
         align-items: center;
         gap: 1rem;
@@ -2662,6 +2638,7 @@ body {
 
     .container__uniforme {
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
     }
 
@@ -2700,22 +2677,6 @@ body {
 
     .section__carrousel p {
         font-size: 1.1rem;
-    }
-
-    .img-nota {
-        display: none;
-    }
-
-    .nota-aclaracion {
-        padding: 0;
-        margin: 10px 0;
-    }
-
-    .aclaracion-uniforme {
-        max-width: 100%;
-        position: initial;
-        margin: 0;
-        padding: 0;
     }
 
     /* Nivel primario */
@@ -2828,12 +2789,6 @@ body {
         font-size: 3rem;
     }
 
-    .img-top_diploma {
-        width: 30px;
-        top: 7px;
-        right: 24px;
-    }
-
     .content__hero-nivel-secundario {
         gap: 1.5rem;
     }
@@ -2861,6 +2816,11 @@ body {
     }
 
     /* Linea del titulo */
+    .orientaciones__contenedor {
+        flex-flow: column wrap;
+        gap: 3rem;
+    }
+
     .orientaciones__titulo::after {
         display: none;
     }
@@ -2870,15 +2830,9 @@ body {
     }
 
     /* Linea que conecta a la orientacion */
-    .orientacion--naturales::before,
-    .orientacion--sociales::before {
-        top: -131px;
-        height: 131px;
-    }
-
     .info--orientacion::before {
-        top: -91px;
-        height: 85px;
+        top: -50px;
+        height: 50px;
     }
 
     .img-ciencias-naturales,
@@ -2905,13 +2859,42 @@ body {
 }
 
 @media screen and (max-width:515px) {
+    .hero__main {
+        background-position: 45%;
+    }
+
+    .hero__text {
+        max-width: 350px;
+    }
+
+    .modal-content {
+        max-width: 400px;
+    }
+
+    .modal-content p {
+        font-size: 15px;
+    }
+
+    .hero__content {
+        gap: 1.5rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
     .contact-form {
         width: 100%;
         margin: 0 auto;
+        box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.2);
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .order-contact {
+        width: 100%;
     }
 
     .img-kids-actividad {
@@ -2922,28 +2905,30 @@ body {
         min-height: 70dvh;
         margin: 2.5vh 0;
     }
+
+    .texto-actividad h3 {
+        text-align: center;
+    }
+
+    .texto-actividad p {
+        font-size: 13px;
+        text-align: center;
+        max-width: 340px;
+    }
 }
 
 @media screen and (max-width: 425px) {
-    .hero__title {
-        font-size: 2rem;
-    }
-
-    .hero__content {
-        gap: 2rem;
-    }
-
     .paragraph {
         font-size: 13px;
     }
 
     .hero__text {
         font-size: 1rem;
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .parrafos__historia {
-        padding: 0 20px;
+        padding: 0 25px;
     }
 
     .content__presentacion h3 {
@@ -2958,10 +2943,6 @@ body {
     .modal-content p {
         font-size: 13px;
         margin: 15px 0;
-    }
-
-    .order-contact {
-        width: 100%;
     }
 
     .contact-form input,
@@ -3022,7 +3003,7 @@ body {
 
     /* Nivel inicial */
     .hero__nivel-inicial {
-        min-height: 60dvh;
+        min-height: 40dvh;
     }
 
     .container-carousel {
@@ -3044,28 +3025,8 @@ body {
         font-size: 2rem;
     }
 
-    .arcoiris-img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .paragraph__nivel-inicial {
-        margin: 0;
-        font-size: 1rem;
-        max-width: 400px;
-    }
-
     .img-kids-actividad {
         display: none;
-    }
-
-    .texto-actividad h3 {
-        text-align: center;
-    }
-
-    .texto-actividad p {
-        font-size: 13px;
-        text-align: center;
     }
 
     .actividades {
@@ -3119,6 +3080,14 @@ body {
     .section__carrousel p {
         font-size: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .list-container {
+        margin: 1rem 0;
+    }
+
+    .list-item {
+        width: 100%;
     }
 
     /* Nivel primario */
@@ -3238,12 +3207,6 @@ body {
         font-size: 2rem;
     }
 
-    .img-top_diploma {
-        width: 25px;
-        top: 2px;
-        right: 57px;
-    }
-
     .text__hero-nivel-secundario {
         font-size: 15px;
         text-align: center;
@@ -3291,7 +3254,7 @@ body {
     }
 
     .orientaciones__contenedor {
-        gap: 2rem;
+        gap: 3.5rem;
     }
 
     .orientacion-text-info {
@@ -3299,11 +3262,11 @@ body {
     }
 
     .info--orientacion::before {
-        top: -87px;
-        height: 86px;
+        top: -53px;
+        height: 53px;
     }
 
-    .orientacion--naturales .img-ciencias-naturales:nth-of-type(2) {
+    .orientacion--sociales .img-ciencias-sociales:nth-of-type(2) {
         bottom: -20px;
         left: -20px;
         top: auto;
@@ -3356,12 +3319,7 @@ body {
     }
 
     .hero__text {
-        font-size: .9rem;
         max-width: 250px;
-    }
-
-    .parrafos__historia {
-        padding: 0 30px;
     }
 
     .content__presentacion span {
@@ -3382,7 +3340,7 @@ body {
 
     .button__destacable {
         font-size: .9rem;
-        padding: 1rem;
+        padding: .9rem;
     }
 
     .contact__section h2 {
@@ -3477,12 +3435,6 @@ body {
         font-size: 1.8rem;
     }
 
-    .img-top_diploma {
-        width: 20px;
-        top: 3px;
-        right: 47px;
-    }
-
     .text__hero-nivel-secundario {
         font-size: 14px;
         padding: 0 10px;
@@ -3496,17 +3448,13 @@ body {
         font-size: 1.5rem;
     }
 
-    .info--orientacion::before {
-        top: -85px;
-        height: 85px;
-    }
-
     .orientaciones__contenedor {
-        gap: 1rem;
+        gap: 3rem;
     }
 
-    .orientacion-text-info {
-        gap: 1rem;
+    .info--orientacion::before {
+        top: -47px;
+        height: 46px;
     }
 
     /* Historia del colegio */
@@ -3539,5 +3487,14 @@ body {
 
     .address-school {
         font-size: 12px;
+    }
+
+    .img-ciencias-naturales,
+    .img-ciencias-sociales {
+        display: none;
+    }
+
+    .container__main-primario {
+        width: 95%;
     }
 }
