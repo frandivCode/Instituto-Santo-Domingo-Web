@@ -55,63 +55,6 @@ document.getElementById("year").textContent = currentYear;
 
 const hiddenCards = document.querySelectorAll('.cards');
 hiddenCards.forEach((el) => observerCards.observe(el));
-const btnLeft = document.querySelector(".btn-left"),
-    btnRight = document.querySelector(".btn-right"),
-    slider = document.querySelector("#slider"),
-    sliderSection = document.querySelectorAll(".slider-section"),
-    dots = document.querySelectorAll('.dot');
-
-if (btnLeft && btnRight && slider && sliderSection.length > 0 && dots.length > 0) {
-    btnLeft.addEventListener("click", () => moveToLeft());
-    btnRight.addEventListener("click", () => moveToRight());
-
-    setInterval(() => {
-        moveToRight();
-        moveToLeft();
-    }, 4500);
-
-    let operacion = 0,
-        counter = 0,
-        widthImg = 100 / sliderSection.length;
-
-    function moveToRight() {
-        if (counter >= sliderSection.length - 1) {
-            counter = 0;
-            operacion = 0;
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "none";
-        } else {
-            counter++;
-            operacion = operacion + widthImg;
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "all ease .6s";
-        }
-        updateIndicators(counter);
-    }
-
-    function moveToLeft() {
-        if (counter <= 0) {
-            counter = sliderSection.length - 1;
-            operacion = widthImg * (sliderSection.length - 1);
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "none";
-        } else {
-            counter--;
-            operacion = operacion - widthImg;
-            slider.style.transform = `translate(-${operacion}%)`;
-            slider.style.transition = "all ease .6s";
-        }
-        updateIndicators(counter);
-    }
-
-    function updateIndicators(index) {
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    updateIndicators(counter);
-}
 
 emailjs.init('Esfk6SMNHFs8Za8x1');
 const form = document.getElementById('form');

@@ -420,7 +420,7 @@ body {
 
 /* SECTION HERO */
 .hero__main {
-    min-height: 90vh;
+    min-height: 90dvh;
     width: 100%;
     display: flex;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.322)), url('./img/rosario.jpg');
@@ -448,19 +448,17 @@ body {
 .hero__title {
     font-family: "Libre Baskerville", serif;
     text-align: left;
-    font-size: 4rem;
-    text-shadow: 6px 6px 3px rgba(0, 0, 0, 0.2);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     animation: fadeIn 1.5s ease-in-out;
     max-width: 550px;
 }
 
 .hero__text {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
     font-weight: 500;
     font-family: "Georgia", serif;
-    font-style: italic;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
 }
 
 .hero__button {
@@ -593,7 +591,7 @@ body {
 
 /* Section Presentacion */
 .container__presentacion {
-    min-height: 90vh;
+    min-height: 90dvh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -658,7 +656,7 @@ body {
 
 /* Section destacable */
 .container__destacable {
-    min-height: 50vh;
+    min-height: 50dvh;
     display: flex;
     flex-flow: column wrap;
     justify-content: start;
@@ -725,7 +723,7 @@ body {
 /* Section Contacto */
 .contact__section {
     width: 100%;
-    min-height: 120vh;
+    min-height: 120dvh;
 }
 
 .order-contact {
@@ -1018,7 +1016,7 @@ body {
 
 /* === HTML NIVEL INICIAL === */
 .body-principal {
-    background: linear-gradient(135deg, #b1e8ff, #A0D9FF, #78c9ff);
+    background: linear-gradient(135deg, #b1e8ff, #A0D9FF, #48b6ff);
 }
 
 .hero__nivel-inicial {
@@ -1036,8 +1034,7 @@ body {
 }
 
 .nube-img,
-.estrella-img,
-.arcoiris-img {
+.estrella-img {
     width: 200px;
     height: auto;
     object-fit: cover;
@@ -1045,15 +1042,8 @@ body {
 
 .nube-img {
     position: absolute;
-    top: 20px;
-    right: 100px;
-}
-
-.arcoiris-img {
-    position: absolute;
     top: 0;
-    left: 0;
-    transform: rotate(330deg);
+    right: 0;
 }
 
 .estrella-img {
@@ -1082,13 +1072,13 @@ body {
 
 .heading__nivel-inicial {
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     color: #FF92B5;
     text-shadow: 3px 3px 1px #0000005e;
 }
 
 .paragraph__nivel-inicial {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #686868;
     font-weight: 600;
     max-width: 600px;
@@ -1103,7 +1093,7 @@ body {
 }
 
 /* Section Actividades*/
-.actividades {
+.actividades-container {
     min-height: 100dvh;
     display: flex;
     flex-flow: column wrap;
@@ -1114,21 +1104,21 @@ body {
     position: relative;
 }
 
-.actividades h2 {
+.actividades-container h2 {
     font-size: 2.5rem;
     color: #0f505e;
 }
 
 .actividad {
     border-radius: 10px;
-    background-color: #81d9ff;
-    border: 1px solid #6ed2fd;
-    box-shadow: 0 4px 6px #00000057;
+    background-color: #75d4fd;
+    border: 1px solid #58cdff;
+    box-shadow: -5px 5px 5px #3fc5ff;
     cursor: pointer;
     display: flex;
     width: 100%;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 20px;
     transition: all .3s ease;
 }
 
@@ -1140,12 +1130,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: all .3s ease;
 }
 
 .texto-actividad h3 {
-    font-size: 1.3rem;
-    color: #1D3557;
+    font-size: 1.4rem;
+    color: #031530;
 }
 
 .img-crayones {
@@ -1153,8 +1142,8 @@ body {
     height: auto;
     position: absolute;
     z-index: 1;
-    top: 30px;
-    right: -80px;
+    top: 2px;
+    right: -100px;
 }
 
 .texto-actividad p {
@@ -1205,7 +1194,7 @@ body {
 .container__uniforme {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 3rem 0;
 }
 
@@ -1213,7 +1202,7 @@ body {
     position: relative;
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     cursor: pointer;
     overflow: hidden;
@@ -1375,8 +1364,8 @@ body {
 .list-item {
     text-align: center;
     background: #f0f8ff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -1398,7 +1387,7 @@ body {
     background: #ffefc3;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .note i {
@@ -1410,16 +1399,6 @@ body {
     margin: 0;
     font-size: 16px;
     color: #333;
-}
-
-.img-bloques {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    bottom: -30px;
-    right: -112px;
-    z-index: 1;
 }
 
 .fade-in {
@@ -1436,115 +1415,8 @@ body {
     }
 }
 
-/* Slider */
-.section__carrousel {
-    width: 100%;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh 0;
-    position: relative;
-    padding: 1rem;
-    color: #024250;
-}
-
-.section__carrousel h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.section__carrousel p {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.container-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 100vw;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.carruseles {
-    width: 700%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.slider-section {
-    width: calc(100% / 7);
-    height: 100%;
-}
-
-.slider-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.btn-left,
-.btn-right {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #ffffff93;
-    transform: translate(0, -50%);
-    transition: .5s ease;
-    user-select: none;
-}
-
-.btn-left:hover,
-.btn-right:hover {
-    background-color: #333333d4;
-    color: #fff;
-}
-
-.btn-left {
-    left: 15px;
-}
-
-.btn-right {
-    right: 15px;
-}
-
-.slider-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 8px;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: #0a3e7a;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #258bff;
-}
-
 .bg-footer-principal {
-    background: linear-gradient(to bottom, rgba(165, 214, 255, 0.603), rgba(165, 215, 255, 0.6)), url(./img-nivel-inicial/bg-amigable-infantil.jpg);
+    background: linear-gradient(to bottom, rgba(165, 214, 255, 0.603), rgba(113, 190, 253, 0.6)), url(./img-nivel-inicial/bg-amigable-infantil.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1553,85 +1425,46 @@ body {
 /* === HTML NIVEL PRIMARIO === */
 
 .hero__nivel-primario {
-    min-height: 100vh;
     min-height: 100dvh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.100)), url(./img-nivel-primario/bg-hero-section.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.658)), url(./img-nivel-primario/bg-hero-section.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
 }
 
 .content__hero-nivel-primario {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
-    min-height: 60vh;
     font-family: "Libre Baskerville", serif;
+    gap: 1.5rem;
 }
 
 .heading__hero-nivel-primario {
     color: #fff;
-    font-size: 4rem;
-    margin-block: 2rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .text__hero-nivel-primario {
     color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 600;
     animation: fadeIn 1.7s ease-in-out;
+    text-align: center;
 }
 
-.button__hero-nivel-primario {
-    margin-top: 1rem;
+.heading__principal-h2 {
+    font-size: clamp(1.45rem, 3vw, 2.5rem);
+    text-align: center;
+    color: #800020;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    font-weight: 500;
     gap: .5rem;
-    padding: 15px;
-    cursor: pointer;
-    user-select: none;
-    touch-action: manipulation;
-    outline: solid 2px rgb(255, 255, 255);
-    border-radius: 50px;
-    border: none;
-    box-shadow: 1px 1px 15px 0#fff;
-    text-align: center;
-    transition: all .3s ease-in-out;
-    animation: fadeIn 1.9s ease-in-out;
-}
-
-.button__hero-nivel-primario:hover {
-    background-color: #dddddd;
-}
-
-.button__hero-nivel-primario ion-icon {
-    font-size: 18px;
-    border-radius: 50%;
-    transition: all .5s ease;
-    transform: rotate(90deg);
-    animation: señalamiento 1s ease-in-out infinite normal;
-}
-
-
-@keyframes señalamiento {
-    0% {
-        transform: rotate(90deg) translateX(0px);
-    }
-
-    50% {
-        transform: rotate(90deg) translateX(-2px);
-    }
-
-    100% {
-        transform: rotate(90deg) translateX(0px);
-    }
 }
 
 /* Section Objetivo */
@@ -1643,7 +1476,6 @@ body {
 }
 
 .objetivo-del-primario {
-    min-height: 100vh;
     min-height: 100dvh;
     width: 100%;
     display: flex;
@@ -1658,19 +1490,6 @@ body {
 
 .order__content-objetivo {
     margin-bottom: 1.5rem;
-}
-
-.content__objetivo-primario h2 {
-    font-size: 2.5rem;
-    text-align: left;
-    color: #800020;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-.content__objetivo-primario ion-icon {
-    font-size: 35px;
 }
 
 .content__objetivo-primario p {
@@ -1702,21 +1521,6 @@ body {
 
 .order__content-uniforme {
     margin-bottom: 2rem;
-}
-
-.order__content-uniforme h2 {
-    text-align: left;
-    font-size: 2.5rem;
-    color: #800020;
-    letter-spacing: .3px;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-.order__content-uniforme ion-icon {
-    font-size: 35px;
-
 }
 
 .order__list-uniforme {
@@ -1776,19 +1580,10 @@ body {
     margin: 3rem 0;
 }
 
-.galeria__titulo {
+.galeria-heading {
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
-    text-align: center;
-    align-items: center;
-    gap: .5rem;
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-    color: #800020;
-}
-
-.galeria__titulo ion-icon {
-    font-size: 35px;
 }
 
 /* Grid estilo bento */
@@ -1822,6 +1617,10 @@ body {
     grid-column: 1/2;
 }
 
+.evento-7 {
+    grid-column: 1/4;
+}
+
 .evento8 {
     grid-column: 2/4;
 }
@@ -1832,6 +1631,12 @@ body {
 
 .galeria__item:hover img {
     transform: scale(1.1);
+}
+
+.heading__bento-gallery {
+    font-size: 2.5rem;
+    color: #0f505e;
+    text-align: center;
 }
 
 .galeria__descripcion {
@@ -1857,17 +1662,6 @@ body {
 
 .horarios__nivel-primario {
     text-align: left;
-    margin-block: 4rem;
-}
-
-.horarios__nivel-primario h2 {
-    color: #800020;
-    letter-spacing: .3px;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: .5rem;
 }
 
 .horarios__nivel-primario p {
@@ -1880,7 +1674,6 @@ body {
 /* === HTML NIVEL SECUNDARIO === */
 
 .hero__nivel-secundario {
-    min-height: 100vh;
     min-height: 100dvh;
     width: 100%;
     background-image: url(./img-nivel-secundario/blob-scene-haikei.svg);
@@ -2127,7 +1920,7 @@ body {
 }
 
 .hero__title-historia {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     text-align: center;
     padding-block: 2rem;
     font-family: "Libre Baskerville", serif;
@@ -2371,18 +2164,13 @@ body {
     }
 
     /* Nivel inicial */
-    .nube-img {
-        top: 0;
-        right: 0;
+    .img-crayones {
+        display: none;
     }
 
     .nube-img,
     .estrella-img {
         width: 180px;
-    }
-
-    .heading__nivel-inicial {
-        font-size: 3.5rem;
     }
 
     .container__main-inicial {
@@ -2409,22 +2197,12 @@ body {
     }
 
     /* Nivel primario */
-    .heading__hero-nivel-primario {
-        font-size: 3.5rem;
-    }
-
-    .content__objetivo-primario p {
-        max-width: 450px;
-        font-size: 15px;
-    }
-
     .container__main-primario {
         padding: 0;
     }
 
     .img-objetivo {
         width: 400px;
-        max-width: 100%;
     }
 
     /* Nivel secundario */
@@ -2470,13 +2248,8 @@ body {
 
 @media screen and (max-width:768px) {
 
-    .hero__title {
-        font-size: 3rem;
-        max-width: 400px;
-    }
-
     .hero__text {
-        font-size: 1.1rem;
+
         max-width: 400px;
     }
 
@@ -2592,11 +2365,19 @@ body {
         gap: .5rem;
     }
 
-    .heading__nivel-inicial {
-        font-size: 3rem;
+    .order__heading-inicial {
+        align-items: center;
     }
 
-    .actividades {
+    .paragraph__nivel-inicial {
+        text-align: center;
+    }
+
+    .img__hero-inicial {
+        display: none;
+    }
+
+    .actividades-container {
         align-items: center;
         gap: 1rem;
     }
@@ -2610,12 +2391,12 @@ body {
     }
 
     .texto-actividad h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: start;
     }
 
     .texto-actividad p {
-        font-size: 14px;
+        font-size: 15px;
         max-width: 420px;
     }
 
@@ -2647,6 +2428,10 @@ body {
     }
 
     .list__info-uniforme li {
+        font-size: 15px;
+    }
+
+    .note p {
         font-size: 14px;
     }
 
@@ -2667,25 +2452,9 @@ body {
         width: 30px;
     }
 
-    .section__carrousel {
-        min-height: 80dvh;
-    }
-
-    .section__carrousel h2 {
-        font-size: 1.7rem;
-    }
-
-    .section__carrousel p {
-        font-size: 1.1rem;
-    }
-
     /* Nivel primario */
     .hero__nivel-primario {
         background-attachment: initial;
-    }
-
-    .heading__hero-nivel-primario {
-        font-size: 3rem;
     }
 
     .content__objetivo-primario {
@@ -2694,11 +2463,6 @@ body {
 
     .order__content-objetivo {
         margin-bottom: 1rem;
-    }
-
-    .content__objetivo-primario h2 {
-        font-size: 2rem;
-        justify-content: center;
     }
 
     .content__objetivo-primario ion-icon {
@@ -2721,19 +2485,11 @@ body {
         justify-content: center;
         gap: 2rem;
         margin-bottom: 3rem;
+        min-height: 0;
     }
 
     .order__content-uniforme {
         margin-bottom: 1rem;
-    }
-
-    .img-objetivo {
-        max-width: 100%;
-    }
-
-    .order__content-uniforme h2 {
-        font-size: 2rem;
-        justify-content: center;
     }
 
     .order__content-uniforme ion-icon {
@@ -2759,28 +2515,11 @@ body {
         margin: 10px 0;
     }
 
-    .galeria__grid {
-        grid-template-columns: 1fr;
-    }
-
     .galeria__eventos {
         margin: 2rem 0;
     }
 
-    .galeria__titulo {
-        font-size: 2rem;
-    }
-
-    .galeria__titulo ion-icon {
-        font-size: 30px;
-    }
-
-    .horarios__nivel-primario h2 {
-        font-size: 2rem;
-    }
-
     .horarios__nivel-primario p {
-        margin-top: 1rem;
         font-size: 18px;
     }
 
@@ -2856,6 +2595,18 @@ body {
         padding: 20px;
         font-size: 15px;
     }
+
+    .hero__nivel-inicial {
+        min-height: 60vh;
+    }
+
+    .heading__principal-h2 {
+        justify-content: center;
+    }
+
+    .horarios__nivel-primario p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width:515px) {
@@ -2879,10 +2630,6 @@ body {
         gap: 1.5rem;
     }
 
-    .hero__title {
-        font-size: 2rem;
-    }
-
     .contact-form {
         width: 100%;
         margin: 0 auto;
@@ -2901,19 +2648,47 @@ body {
         display: none;
     }
 
-    .section__carrousel {
-        min-height: 70dvh;
-        margin: 2.5vh 0;
-    }
-
     .texto-actividad h3 {
         text-align: center;
+        font-size: 1rem;
     }
 
     .texto-actividad p {
-        font-size: 13px;
+        font-size: 14px;
         text-align: center;
         max-width: 340px;
+    }
+
+    .container__uniforme {
+        margin: 1.5rem 0;
+    }
+
+    .container__main-primario {
+        width: 95%;
+    }
+
+    .galeria__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria__item.grande {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .evento7,
+    .evento8,
+    .evento9 {
+        grid-column: auto;
+    }
+
+    .container__footer {
+        padding: 25px;
+    }
+
+    .objetivo-del-primario {
+        margin-bottom: 1.5rem;
+        gap: 1rem;
     }
 }
 
@@ -2923,7 +2698,6 @@ body {
     }
 
     .hero__text {
-        font-size: 1rem;
         max-width: 300px;
     }
 
@@ -2985,10 +2759,6 @@ body {
         display: none;
     }
 
-    .container__footer {
-        padding: 20px;
-    }
-
     .list__links a {
         font-size: 14px;
     }
@@ -3002,10 +2772,6 @@ body {
     }
 
     /* Nivel inicial */
-    .hero__nivel-inicial {
-        min-height: 40dvh;
-    }
-
     .container-carousel {
         height: 350px;
     }
@@ -3018,18 +2784,14 @@ body {
 
     .nube-img,
     .estrella-img {
-        width: 100px;
-    }
-
-    .heading__nivel-inicial {
-        font-size: 2rem;
+        width: 120px;
     }
 
     .img-kids-actividad {
         display: none;
     }
 
-    .actividades {
+    .actividades-container {
         margin: 15px 0;
     }
 
@@ -3067,21 +2829,6 @@ body {
         font-size: 13px;
     }
 
-    .section__carrousel {
-        min-height: 60dvh;
-        margin: 0;
-        padding: 0;
-    }
-
-    .section__carrousel h2 {
-        font-size: 1.5rem;
-    }
-
-    .section__carrousel p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
     .list-container {
         margin: 1rem 0;
     }
@@ -3091,37 +2838,8 @@ body {
     }
 
     /* Nivel primario */
-
-    .heading__hero-nivel-primario {
-        font-size: 2rem;
-        margin-block: 1.5rem;
-    }
-
-    .text__hero-nivel-primario {
-        font-size: 15px;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-
-    .button__hero-nivel-primario {
-        padding: 10px;
-        font-size: 13.5px;
-    }
-
-    .content__objetivo-primario h2 {
-        font-size: 1.7rem;
-    }
-
     .content__objetivo-primario ion-icon {
         font-size: 22px;
-    }
-
-    .content__objetivo-primario p {
-        font-size: 13px;
-    }
-
-    .order__content-uniforme h2 {
-        font-size: 1.7rem;
     }
 
     .order__content-uniforme ion-icon {
@@ -3151,42 +2869,20 @@ body {
 
     .galeria__titulo {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .galeria__titulo ion-icon {
         font-size: 25px;
     }
 
-    .galeria__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria__item.grande {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .evento7,
-    .evento8,
-    .evento9 {
-        grid-column: auto;
-    }
-
     .galeria__descripcion {
         font-size: 13px;
     }
 
-    .horarios__nivel-primario h2 {
-        font-size: 1.5rem;
-    }
-
-    .horarios__nivel-primario {
-        margin-block: 1.5rem;
-    }
-
     .horarios__nivel-primario p {
         font-size: 14px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .front {
@@ -3287,10 +2983,6 @@ body {
     }
 
     /* Historia del colegio */
-    .hero__title-historia {
-        font-size: 2rem;
-    }
-
     .content__historia h2 {
         font-size: 1.2rem;
     }
@@ -3314,10 +3006,6 @@ body {
 }
 
 @media screen and (max-width:375px) {
-    .hero__title {
-        font-size: 1.8rem;
-    }
-
     .hero__text {
         max-width: 250px;
     }
@@ -3359,47 +3047,7 @@ body {
         font-size: 0.8rem;
     }
 
-    /* Nivel inicial */
-
-    .dot {
-        width: 6px;
-        height: 6px;
-    }
-
-    .section__carrousel p {
-        font-size: .9rem;
-        margin-bottom: 1rem;
-    }
-
-    .heading__nivel-inicial {
-        font-size: 1.7rem;
-    }
-
     /* Nivel primario */
-    .heading__hero-nivel-primario {
-        font-size: 1.5rem;
-    }
-
-    .text__hero-nivel-primario {
-        font-size: 13px;
-    }
-
-    .button__hero-nivel-primario {
-        font-size: 13px;
-    }
-
-    .button__hero-nivel-primario ion-icon {
-        font-size: 15px;
-    }
-
-    .objetivo-del-primario {
-        gap: 1rem;
-        min-height: 90dvh;
-    }
-
-    .order__content-uniforme h2 {
-        font-size: 1.5rem;
-    }
 
     .order__list-uniforme h3 {
         font-size: 16px;
@@ -3413,13 +3061,13 @@ body {
         font-size: 13px;
     }
 
+    .content__objetivo-primario p {
+        font-size: 13px;
+    }
+
     .galeria__titulo {
         font-size: 1.3rem;
         margin-bottom: 1rem;
-    }
-
-    .horarios__nivel-primario h2 {
-        font-size: 1.3rem;
     }
 
     .horarios__nivel-primario p {
@@ -3444,10 +3092,6 @@ body {
         font-size: 14px;
     }
 
-    .content__objetivo-primario h2 {
-        font-size: 1.5rem;
-    }
-
     .orientaciones__contenedor {
         gap: 3rem;
     }
@@ -3459,7 +3103,6 @@ body {
 
     /* Historia del colegio */
     .hero__title-historia {
-        font-size: 1.7rem;
         padding-block: 1.5rem;
     }
 

@@ -114,7 +114,6 @@
     <!-- Hero Section -->
     <section class="hero__nivel-inicial">
         <img src="../img-nivel-inicial/nube.png" alt="nube hecha con un crayon" class="nube-img">
-        <img src="../img-nivel-inicial/arcoiris.png" alt="arcoiris infantil" class="arcoiris-img">
         <div class="content__hero-inicial">
             <div class="order__heading-inicial">
                 <h1 class="heading__nivel-inicial">Jardín de Infantes</h1>
@@ -128,7 +127,7 @@
 
     <!-- Actividades del Jardín -->
     <main class="container__main-inicial">
-        <section class="actividades">
+        <section class="actividades-container">
             <h2 class="heading__actividad">Actividades Escolares</h2>
             <img src="../img-nivel-inicial/crayones.png" alt="crayones" class="img-crayones">
             <div class="actividad hidden">
@@ -229,7 +228,7 @@
             </div>
 
             <div class="list-container">
-                <h3>¿Qué hay que llevar?</h3>
+                <h2>¿Qué hay que llevar?</h2>
                 <div class="order-list">
                     <div class="list-item">
                         <p>Plato y vaso de plástico.</p>
@@ -242,51 +241,69 @@
                     </div>
                 </div>
             </div>
-
         </section>
-        <div class="section__carrousel">
-            <h2>Galería de los peques</h2>
-            <div class="container-carousel">
-                <div class="carruseles" id="slider">
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-1.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-2.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-3.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-4.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-5.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-6.jpg">
-                    </section>
-                    <section class="slider-section">
-                        <img src="../img-nivel-inicial/event-7.jpg">
-                    </section>
+        <!-- Galeria -->
+        <section class="galeria__eventos">
+            <h2 class="heading__bento-gallery">Galeria de los Peques</h2>
+            <div class="divisor"></div>
+            <div class="galeria__grid">
+                <div class="galeria__item">
+                    <img src="../img-nivel-inicial/event-1.jpg" alt="Evento 1" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Celebramos nuestra pasión por los libros, una jornada llena de
+                            cuentos, aventuras y
+                            conocimiento compartido.</p>
+                    </div>
                 </div>
-                <div class="btn-left">
-                    <ion-icon name="arrow-back-outline"></ion-icon>
+                <div class="galeria__item">
+                    <img src="../img-nivel-inicial/event-2.jpg" alt="Evento 2" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Honramos nuestras raíces en el Día de la Tradición, recordando las costumbres y valores que
+                            nos unen como comunidad.</p>
+                    </div>
                 </div>
-                <div class="btn-right">
-                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                <div class="galeria__item">
+                    <img src="../img-nivel-inicial/event-3.jpg" alt="Evento 3" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Un día especial para celebrar el esfuerzo y dedicación de nuestros estudiantes, con
+                            actividades llenas de diversión y
+                            compañerismo.</p>
+                    </div>
+                </div>
+                <div class="galeria__item">
+                    <img src="../img-nivel-inicial/event-4.jpg" alt="Evento 4" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>La jornada de Fraternidades nos unió en un espíritu de colaboración, aprendizaje y
+                            solidaridad entre todos los
+                            niveles educativos.</p>
+                    </div>
+                </div>
+                <div class="galeria__item grande">
+                    <img src="../img-nivel-inicial/event-5.jpg" alt="Evento 5" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Reflexionamos juntos durante la Semana Santa, reviviendo momentos significativos de nuestra
+                            fe con actividades
+                            espirituales y artísticas.</p>
+                    </div>
+                </div>
+                <div class="galeria__item">
+                    <img src="../img-nivel-inicial/event-6.jpg" alt="Evento 6" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Cerramos el año con la Muestra de Fin de Año, donde exhibimos el talento y esfuerzo de
+                            nuestros estudiantes en
+                            diversas áreas.</p>
+                    </div>
+                </div>
+                <div class="galeria__item evento-7">
+                    <img src="../img-nivel-inicial/event-7.jpg" alt="Evento 7" loading="lazy">
+                    <div class="galeria__descripcion">
+                        <p>Conmemoramos el Día de la Diversidad Cultural, celebrando la riqueza y variedad de las
+                            culturas que forman nuestra
+                            identidad.</p>
+                    </div>
                 </div>
             </div>
-            <div class="slider-indicators">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-                <span class="dot" data-index="3"></span>
-                <span class="dot" data-index="4"></span>
-                <span class="dot" data-index="5"></span>
-                <span class="dot" data-index="6"></span>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer class="container__footer bg-footer-principal">
