@@ -128,49 +128,55 @@
 
     <main class="container__main">
         <section class="container__presentacion" id="elcolegio">
-            <img src="./img/imagen-del-santo-domingo.jpg" alt="santo domingo de guzman" class="img__presentacion">
+            <img src="./img/imagen-del-santo-domingo.jpg" alt="santo domingo de guzman"
+                class="img__presentacion animate" data-animation="fade-left" data-delay="600">
             <div class="order__content">
                 <div class="content__presentacion">
-                    <span>Hermanas Dominicas</span>
+                    <p class="animate" data-animation="fade-down" data-delay="400">Hermanas Dominicas</p>
                     <div class="escudo__container">
-                        <img src="./assets/ui-logo.png" class="img-escudo" alt="imagen-del-escudo-del-colegio" />
-                        <h3>Instituto Santo Domingo</h3>
-                        <img src="./assets/ui-logo.png" class="img-escudo" alt="imagen-del-escudo-del-colegio" />
+                        <img src="./assets/ui-logo.png" class="img-escudo animate" alt="imagen-del-escudo-del-colegio"
+                            data-animation="fade-right" data-delay="500" />
+                        <h3 class="animate" data-animation="fade-right" data-delay="500">Instituto Santo Domingo</h3>
+                        <img src="./assets/ui-logo.png" class="img-escudo animate" alt="imagen-del-escudo-del-colegio"
+                            data-animation="fade-right" data-delay="500" />
                     </div>
-                    <div class="separador"></div>
+                    <div class="separador animate" data-animation="fade-left" data-delay="500"></div>
                 </div>
-                <div class="parrafos__historia">
-                    <p class="paragraph-one paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptate
-                        suscipit quos perferendis non
-                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
-                        totam, maxime quia officia quidem.
-                    </p>
-                    <p class="paragraph-two paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptate
-                        suscipit quos perferendis non
-                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
-                        totam, maxime quia officia quidem.
-                    </p>
-                    <p class="paragraph-three paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptate
-                        suscipit quos perferendis non
-                        nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
-                        totam, maxime quia officia quidem.
-                    </p>
-                </div>
+                <p class="paragraph animate" data-animation="fade-down" data-delay="400">Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit.
+                    Voluptate
+                    suscipit quos perferendis non
+                    nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                    totam, maxime quia officia quidem.
+                </p>
+                <p class="paragraph animate" data-animation="fade-down" data-delay="600">Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit.
+                    Voluptate
+                    suscipit quos perferendis non
+                    nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                    totam, maxime quia officia quidem.
+                </p>
+                <p class="paragraph animate" data-animation="fade-down" data-delay="800">Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit.
+                    Voluptate
+                    suscipit quos perferendis non
+                    nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
+                    totam, maxime quia officia quidem.
+                </p>
             </div>
         </section>
 
         <section class="container__destacable" id="caracterizacion">
-            <h3 class="title__destacable">¿Qué nos caracteriza?</h3>
+            <h3 class="title__destacable animate" data-animation="fade-down" data-delay="200">¿Qué nos caracteriza?</h3>
             <div class="content__destacable">
-                <button class="button__destacable" onclick="openModal('modalObjetivo')"> Objetivo del Colegio</button>
-                <button class="button__destacable" onclick="openModal('modalNivelAcademico')"> Nivel Académico</button>
-                <button class="button__destacable" onclick="openModal('modalFormacionIntegral')"> Formación intregal de
-                    la persona</button>
-                <button class="button__destacable" onclick="openModal('modalPreparacion')"> Preparar el corazón y la
-                    inteligencia</button>
+                <button class="button__destacable animate" onclick="openModal('modalObjetivo')"
+                    data-animation="fade-down" data-delay="400"> Objetivo del Colegio</button>
+                <button class="button__destacable animate" onclick="openModal('modalNivelAcademico')"
+                    data-animation="fade-down" data-delay="500"> Nivel Académico</button>
+                <button class="button__destacable animate" onclick="openModal('modalFormacionIntegral')"
+                    data-animation="fade-down" data-delay="600"> Formación intregal de la persona</button>
+                <button class="button__destacable animate" onclick="openModal('modalPreparacion')"
+                    data-animation="fade-down" data-delay="700"> Preparar el corazón y la inteligencia</button>
             </div>
         </section>
         <!-- Modals -->
@@ -236,26 +242,31 @@
         </div>
         <section class="contact__section" id="contacto">
             <div class="order-contact">
-                <h2>Contacto</h2>
-                <div class="separador"></div>
+                <h2 class="animate" data-animation="fade-down" data-delay="200">Contacto</h2>
+                <div class="separador animate" data-animation="fade-left" data-delay="200"></div>
             </div>
             <div class="contact-grid">
                 <div class="order-emails">
                     <div class="contact-info">
-                        <p class="title_emails">E-mails:</p>
-                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Inicial:</span>
+                        <p class="title_emails animate" data-animation="fade-right" data-delay="400">E-mails:</p>
+                        <p class="icon-email animate" data-animation="fade-up" data-delay="500"><ion-icon
+                                name="mail-outline"></ion-icon><span>Nivel Inicial:</span>
                             direccioninicial@gmail.com</p>
-                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Primario:</span>
+                        <p class="icon-email animate" data-animation="fade-up" data-delay="600"><ion-icon
+                                name="mail-outline"></ion-icon><span>Nivel Primario:</span>
                             direccionprimario@gmail.com</p>
-                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Secundario:</span>
+                        <p class="icon-email animate" data-animation="fade-up" data-delay="700"><ion-icon
+                                name="mail-outline"></ion-icon><span>Nivel Secundario:</span>
                             direccionsecundario@gmail.com</p>
-                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Terciario:</span>
+                        <p class="icon-email animate" data-animation="fade-up" data-delay="800"><ion-icon
+                                name="mail-outline"></ion-icon><span>Nivel Terciario:</span>
                             direccionterciario@gmail.com</p>
-                        <p class="address-school"><ion-icon name="location-outline"></ion-icon>José Ignacio Peralta 249
+                        <p class="address-school animate" data-animation="fade-up" data-delay="1000"><ion-icon
+                                name="location-outline"></ion-icon>José Ignacio Peralta 249
                             |
                             Villa de Soto | Córdoba</p>
                     </div>
-                    <div class="map">
+                    <div class="map animate" data-animation="fade-left" data-delay="1200">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214.0678446114159!2d-64.98681865831617!3d-30.856280767375726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f100.0!3m3!1m2!1s0x942dcbd69e1b242f%3A0xacdbf063c63adb27!2sInstituto%20Santo%20Domingo!5e0!3m2!1ses-419!2sar!4v1733944440637!5m2!1ses-419!2sar"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -264,7 +275,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="form">
+                <form class="contact-form animate" id="form" data-animation="fade-right" data-delay="1400">
                     <label for="name">Nombre y Apellido <span class="red-asterisco">*</span></label>
                     <input type="text" id="name" name="name" placeholder="Ingresa tu nombre y apellido" required>
 

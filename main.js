@@ -28,6 +28,58 @@ document.querySelectorAll('.scroll-link').forEach(link => {
         }
     });
 });
+
+class AnimationObserver {
+    constructor(options = {}) {
+        this.options = {
+            threshold: 0.2,
+            ...options
+        };
+
+        this.handleIntersection = this.handleIntersection.bind(this); // Enlazar el método
+        this.observer = new IntersectionObserver(this.handleIntersection, this.options);
+        this.elements = new Map();
+    }
+
+    handleIntersection(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const delay = parseInt(element.dataset.delay) || 0; // Convertir a número
+
+                setTimeout(() => {
+                    element.classList.add('activado');
+                }, delay);
+
+                this.observer.unobserve(element);
+            }
+        });
+    }
+
+    observe(element) {
+        this.observer.observe(element);
+    }
+
+    observeAll(elements) {
+        elements.forEach(element => this.observe(element));
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animationObserver = new AnimationObserver();
+    const animatedElements = document.querySelectorAll('.animate');
+    animationObserver.observeAll(animatedElements);
+});
+
+function addAnimation(element, animation = 'fade-up', delay = 0) {
+    element.classList.add('animate');
+    element.dataset.animation = animation;
+    element.dataset.delay = delay;
+
+    const observer = new AnimationObserver();
+    observer.observe(element);
+}
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -50,11 +102,11 @@ const observerCards = new IntersectionObserver((entries, observer) => {
     });
 });
 
-const currentYear = new Date().getFullYear();
-document.getElementById("year").textContent = currentYear;
-
 const hiddenCards = document.querySelectorAll('.cards');
 hiddenCards.forEach((el) => observerCards.observe(el));
+
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = currentYear;
 
 emailjs.init('Esfk6SMNHFs8Za8x1');
 const form = document.getElementById('form');
@@ -159,4 +211,3 @@ setInterval(() => {
 
     lemas[currentIndex].classList.add("active");
 }, 4000);
-

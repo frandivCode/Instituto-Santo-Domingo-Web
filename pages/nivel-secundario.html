@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/icon.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../styles.css">
     <title>Nivel Secundario | Instituto Santo Domingo</title>
 </head>
@@ -116,17 +117,19 @@
         <div class="order__content-nivel-secundario">
             <div class="content__hero-nivel-secundario">
                 <h1 class="heading__hero-nivel-secundario">Nivel Secundario</h1>
-                <p class="text__hero-nivel-secundario">"Formamos estudiantes íntegros, preparados para enfrentar los
+                <p class="text__hero-nivel-secundario">"Formamos estudiantes íntegros,
+                    preparados para enfrentar los
                     desafíos con una base sólida de valores."
                 </p>
                 <a href="#orientaciones" class="scroll-link">
-                    <button class="button__hero-nivel-secundario">Orientaciones<ion-icon
+                    <button class="button__hero-nivel-secundario">Ver Orientaciones<ion-icon
                             name="arrow-forward-outline"></ion-icon>
                     </button>
                 </a>
             </div>
             <div class="img__right-egreso">
-                <img src="../img-nivel-secundario/book.png" alt="Icono animado de un diploma" class="book-brain">
+                <img src="../img-nivel-secundario/book.png" alt="Icono animado de un diploma" class="book-brain animate"
+                    data-animation="fade-right" data-delay="800">
             </div>
         </div>
     </section>
@@ -135,37 +138,41 @@
         <section class="objetivo-del-primario" id="objetivo">
             <div class="content__objetivo-primario">
                 <div class="order__content-objetivo">
-                    <h2 class="hidden">Objetivo <ion-icon name="checkmark-circle"></ion-icon></h2>
-                    <div class="separador hidden"></div>
+                    <h2 class="heading__principal-h2 animate" data-animation="fade-left" data-delay="200">Nuestro
+                        Objetivo <ion-icon name="checkmark-circle"></ion-icon>
+                    </h2>
+                    <div class="separador animate" data-animation="fade-left" data-delay="200"></div>
                 </div>
-                <p class="hidden">
-                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                <p class="animate" data-animation="fade-down" data-delay="400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
                     tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
                     doloremque deserunt? Fugiat, fugit neque.
                 </p>
-                <p class="hidden">
-                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                <p class="animate" data-animation="fade-down" data-delay="600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
                     tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
                     doloremque deserunt? Fugiat, fugit neque.
                 </p>
-                <p class="hidden">
-                    – Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
+                <p class="animate" data-animation="fade-down" data-delay="800">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum eligendi incidunt porro ut
                     tenetur vero exercitationem ipsam laboriosam sit officiis error excepturi, impedit voluptatum
                     doloremque deserunt? Fugiat, fugit neque.
                 </p>
             </div>
-            <img src="../img-nivel-secundario/profesor-explicando.png" alt="niña mirando atentamente su cuaderno"
-                class="hidden teacher-explain">
+            <img src="../img-nivel-secundario/profesor-explicando.png"
+                alt="Profesor explicandole a sus alumnos frente del pizarrón" class="animate teacher-explain"
+                data-animation="fade-right" data-delay="1000">
         </section>
         <section class="uniforme__nivel-primario">
             <div class="order__content-uniforme">
-                <h2 class="hidden">Uniformes<ion-icon name="shirt"></ion-icon></h2>
-                <div class="separador"></div>
+                <h2 class="heading__principal-h2 animate" data-animation="fade-left" data-delay="200">Uniformes<ion-icon
+                        name="shirt"></ion-icon></h2>
+                <div class="separador animate" data-animation="fade-left" data-delay="200"></div>
             </div>
             <div class="order__list-uniforme">
                 <div class="uniforme__formal">
-                    <h3>Uniforme Formal</h3>
-                    <div class="card__uniforme-primario cards">
+                    <h3 class="animate" data-animation="fade-up" data-delay="500">Uniforme Formal</h3>
+                    <div class="card__uniforme-primario animate" data-animation="fade-down" data-delay="600">
                         <h4>Varones</h4>
                         <ul class="list__uniforme-primario">
                             <li>Camisa blanca, corbata cuadrillé.</li>
@@ -176,7 +183,7 @@
                             <li>Zapatos mocasín negro y medias bordo.</li>
                         </ul>
                     </div>
-                    <div class="card__uniforme-primario cards">
+                    <div class="card__uniforme-primario animate" data-animation="fade-down" data-delay="800">
                         <h4>Mujeres</h4>
                         <ul class="list__uniforme-primario">
                             <li>Camisa blanca, corbata cuadrillé.</li>
@@ -189,8 +196,8 @@
                     </div>
                 </div>
                 <div class="uniforme__informal">
-                    <h3>Uniforme Informal</h3>
-                    <div class="card__uniforme-primario cards">
+                    <h3 class="animate" data-animation="fade-up" data-delay="500">Uniforme Informal</h3>
+                    <div class="card__uniforme-primario animate" data-animation="fade-down" data-delay="1000">
                         <h4>Mujeres</h4>
                         <ul class="list__uniforme-primario">
                             <li>Remera blanca o gris con el logo del colegio.</li>
@@ -201,7 +208,7 @@
                             <li>Zapatillas</li>
                         </ul>
                     </div>
-                    <div class="card__uniforme-primario cards">
+                    <div class="card__uniforme-primario animate" data-animation="fade-down" data-delay="1200">
                         <h4>Varones</h4>
                         <ul class="list__uniforme-primario">
                             <li>Remera blanca o gris con el logo del colegio.</li>
@@ -218,9 +225,10 @@
 
         <!-- Orientación -->
         <section class="orientaciones" id="orientaciones">
-            <h2 class="orientaciones__titulo">Nuestras Orientaciones</h2>
+            <h2 class="orientaciones__titulo animate" data-animation="fade-down" data-delay="200">Nuestras Orientaciones
+            </h2>
             <div class="orientaciones__contenedor">
-                <div class="orientacion orientacion--naturales">
+                <div class="orientacion orientacion--naturales animate" data-animation="fade-left" data-delay="400">
                     <h3>Ciencias Naturales</h3>
                     <img src="../img-nivel-secundario/gravity.png" class="img-ciencias-naturales">
                     <img src="../img-nivel-secundario/research.png" class="img-ciencias-naturales">
@@ -231,7 +239,7 @@
                         investigación
                         científica.</p>
                 </div>
-                <div class="orientacion orientacion--sociales">
+                <div class="orientacion orientacion--sociales animate" data-animation="fade-right" data-delay="600">
                     <h3>Ciencias Sociales</h3>
                     <img src="../img-nivel-secundario/redes-sociales.png" class="img-ciencias-sociales">
                     <img src="../img-nivel-secundario/radio.png" class="img-ciencias-sociales">
@@ -245,9 +253,11 @@
         </section>
 
         <div class="horarios__nivel-primario">
-            <h2>Horario de Ingreso <ion-icon name="time"></ion-icon></h2>
-            <div class="separador"></div>
-            <p>Turno Mañana: 07:00hs a 12:30hs.</p>
+            <h2 class="heading__principal-h2 animate" data-animation="fade-left" data-delay="200">Horario de Ingreso
+                <ion-icon name="time"></ion-icon>
+            </h2>
+            <div class="separador animate" data-animation="fade-left" data-delay="200"></div>
+            <p class="animate" data-animation="fade-up" data-delay="400">Turno Mañana: 07:00hs a 12:30hs.</p>
         </div>
         <!-- Agregar section si se solicita -->
     </main>
