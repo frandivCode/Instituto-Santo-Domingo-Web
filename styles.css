@@ -34,6 +34,42 @@ body {
     width: 100%;
 }
 
+.container__icon-wpp {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-wpp {
+    z-index: 1000;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 35px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.icon-wpp:hover {
+    background-color: #0cbb4c;
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #25D366;
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
 :root {
     --header-height: 3.5rem;
 
@@ -516,7 +552,7 @@ body {
     min-height: 100dvh;
     width: 100%;
     display: flex;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.322)), url('./img/rosario.jpg');
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.322)), url('./img/rosario.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -694,7 +730,6 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fafafa;
     padding: 3rem 1rem;
 }
 
@@ -722,7 +757,7 @@ body {
 }
 
 .content__presentacion p {
-    font-size: 17px;
+    font-size: clamp(.9rem, 2vw, 17px);
     color: #800020;
 }
 
@@ -733,9 +768,9 @@ body {
     gap: .5rem;
 }
 
-.content__presentacion h3 {
+.content__presentacion h2 {
     font-family: "Libre Baskerville", serif;
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
     font-style: italic;
     font-weight: 400;
 }
@@ -816,7 +851,9 @@ body {
 /* Section Contacto */
 .contact__section {
     width: 100%;
-    min-height: 120dvh;
+    min-height: 100dvh;
+    background-color: #f5f5f5;
+    padding: 2rem 0;
 }
 
 .order-contact {
@@ -827,7 +864,7 @@ body {
 }
 
 .contact__section h2 {
-    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     color: #800020;
 }
 
@@ -983,7 +1020,8 @@ body {
 /* Section footer */
 .container__footer {
     width: 100%;
-    padding: 50px;
+    max-width: 100%;
+    padding: 50px 25px;
 }
 
 .section__links {
@@ -991,7 +1029,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 .social__icons {
@@ -1543,6 +1581,7 @@ body {
     text-align: center;
     animation: fadeInUp 0.8s ease-out 0.6s forwards;
     opacity: 0;
+    padding: 0 1rem;
 }
 
 .heading__principal-h2 {
@@ -1756,26 +1795,28 @@ body {
 
 .hero__nivel-secundario {
     min-height: 100dvh;
-    width: 100%;
     background: url(./img-nivel-secundario/blob-scene-haikei.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .order__content-nivel-secundario {
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
+    gap: 1rem;
     align-items: center;
+    width: 100%;
 }
 
 .content__hero-nivel-secundario {
     display: flex;
     flex-flow: column wrap;
     align-items: start;
-    justify-content: center;
     gap: 1.5rem;
     position: relative;
 }
@@ -1789,8 +1830,8 @@ body {
 }
 
 .text__hero-nivel-secundario {
-    max-width: 550px;
-    font-size: 18px;
+    max-width: 500px;
+    font-size: clamp(.9rem, 2.5vw, 1.125rem);
     line-height: 1.5;
     color: #333;
     font-weight: 500;
@@ -1805,13 +1846,13 @@ body {
     justify-content: center;
 }
 
-.book-brain {
-    width: 15rem;
+.childrens-school {
+    width: 25rem;
     height: auto;
     object-fit: cover;
 }
 
-.teacher-explain {
+.egreso-de-alumno {
     width: 400px;
     object-fit: cover;
     height: auto;
@@ -1821,11 +1862,11 @@ body {
 .button__hero-nivel-secundario {
     background-color: #9B1C2B;
     color: white;
-    font-size: 17px;
+    font-size: clamp(14px, 2vw, 18px);
+    padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
     font-weight: 500;
-    padding: 10px 20px;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px 10px 25px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1833,11 +1874,12 @@ body {
     transition: all 0.3s ease;
     animation: fadeInUp 0.8s ease-out 0.9s forwards;
     opacity: 0;
+    letter-spacing: .5px;
+    cursor: pointer;
 }
 
 .button__hero-nivel-secundario:hover {
-    background-color: #7a0e18;
-    cursor: pointer;
+    background-color: #7e1723;
 }
 
 .button__hero-nivel-secundario ion-icon {
@@ -1974,8 +2016,9 @@ body {
 .hero__title-historia {
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-align: center;
-    padding-block: 2rem;
+    padding-block: 3rem;
     font-family: "Libre Baskerville", serif;
+    color: #800020;
 }
 
 .img-del-colegio {
@@ -1989,19 +2032,25 @@ body {
     margin: 4rem 0;
 }
 
-.content__historia h2 {
-    color: #800020;
-    font-size: clamp(1.3rem, 4vw, 1.7rem);
-    margin-bottom: 15px;
+.block-historia {
+    margin-bottom: 40px;
 }
 
-.content__historia p {
-    line-height: 1.6;
+.content__historia h2 {
+    color: #800020;
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    margin-bottom: 15px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.block-historia p {
+    line-height: 1.8;
     margin-bottom: 21px;
     max-width: 750px;
     text-align: left;
-    font-size: 15.5px;
+    font-size: clamp(14px, 2vw, 17px);
     color: #2c2c2c;
+    font-family: "Libre Baskerville", serif;
 }
 
 .equipo-directivo {
@@ -2030,11 +2079,12 @@ body {
 .tarjeta h3 {
     color: #8b0000;
     margin-bottom: 10px;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
 }
 
 .tarjeta p {
     color: #333;
-    font-size: 1rem;
+    font-size: clamp(.9rem, 2vw, 1.05rem);
 }
 
 /* Botones */
@@ -2240,20 +2290,24 @@ body {
     }
 
     /* Nivel secundario */
-    .heading__hero-nivel-secundario {
-        font-size: 3.5rem;
+    .childrens-school {
+        width: 18rem;
     }
 
-    .book-brain {
-        width: 12rem;
-    }
-
-    .teacher-explain {
+    .egreso-de-alumno {
         width: 350px;
+    }
+
+    .content__objetivo-primario p {
+        max-width: 450px;
     }
 }
 
 @media screen and (max-width:768px) {
+    .separador {
+        display: none;
+    }
+
     .hero__text {
         max-width: 400px;
     }
@@ -2453,10 +2507,6 @@ body {
         font-size: 25px;
     }
 
-    .separador {
-        display: none;
-    }
-
     .objetivo-del-primario {
         flex-direction: column;
         justify-content: center;
@@ -2497,29 +2547,36 @@ body {
     }
 
     /* Nivel secundario */
-    .heading__hero-nivel-secundario {
-        font-size: 3rem;
+    .hero__nivel-secundario {
+        min-height: 50dvh;
+    }
+
+    .childrens-school {
+        display: none;
+    }
+
+    .heading__principal-h2 {
+        justify-content: center;
+    }
+
+    .horarios__nivel-primario p {
+        text-align: center;
+    }
+
+    .order__content-nivel-secundario {
+        justify-content: center;
     }
 
     .content__hero-nivel-secundario {
-        gap: 1.5rem;
-    }
-
-    .book-brain {
-        width: 10rem;
+        gap: 1.1rem;
+        padding: 0 1.1rem;
     }
 
     .text__hero-nivel-secundario {
-        max-width: 465px;
-        font-size: 16px;
+        max-width: 450px;
     }
 
-    .button__hero-nivel-secundario {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .teacher-explain {
+    .egreso-de-alumno {
         display: none;
     }
 
@@ -2594,13 +2651,13 @@ body {
     .texto-actividad h3 {
         text-align: center;
     }
-}
 
-@media screen and (max-width: 425px) {
     .content__presentacion {
         align-items: center;
     }
+}
 
+@media screen and (max-width: 425px) {
     .hero__text {
         max-width: 300px;
     }
@@ -2657,10 +2714,6 @@ body {
 
     .lemas-container {
         padding: 10px;
-    }
-
-    .lema {
-        font-size: .9rem;
     }
 
     /* Nivel inicial */
@@ -2766,60 +2819,6 @@ body {
         font-size: .9rem;
         padding: 7px 15px;
     }
-
-    /* Nivel Secundario */
-    .hero__nivel-secundario {
-        min-height: 50dvh;
-    }
-
-    .content__hero-nivel-secundario {
-        align-items: center;
-    }
-
-    .heading__hero-nivel-secundario {
-        font-size: 2rem;
-    }
-
-    .text__hero-nivel-secundario {
-        font-size: 15px;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    .button__hero-nivel-secundario {
-        font-size: 15px;
-        padding: 10px;
-    }
-
-    .button__hero-nivel-secundario ion-icon {
-        font-size: 15px;
-    }
-
-    .book-brain {
-        display: none;
-    }
-
-    /* Historia del colegio */
-    .content__historia h2 {
-        font-size: 1.2rem;
-    }
-
-    .content__historia p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .info__historia li {
-        font-size: 14px;
-    }
-
-    .tarjeta h3 {
-        font-size: 1rem;
-    }
-
-    .tarjeta span {
-        font-size: 15px;
-    }
 }
 
 @media screen and (max-width:375px) {
@@ -2871,20 +2870,6 @@ body {
         min-height: 60dvh;
     }
 
-    /* Nivel secundario */
-    .heading__hero-nivel-secundario {
-        font-size: 1.8rem;
-    }
-
-    .text__hero-nivel-secundario {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .button__hero-nivel-secundario {
-        font-size: 14px;
-    }
-
     /* Historia del colegio */
     .hero__title-historia {
         padding-block: 1.5rem;
@@ -2892,14 +2877,6 @@ body {
 
     .content__historia {
         margin: 1.5rem 0;
-    }
-
-    .content__historia h2 {
-        font-size: 1.1rem;
-    }
-
-    .tarjeta span {
-        font-size: 14px;
     }
 }
 
