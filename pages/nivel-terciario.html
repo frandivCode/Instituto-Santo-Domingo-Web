@@ -1,15 +1,361 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="../assets/icon.png" type="image/png" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Nivel Terciario | Instituto Santo Domingo</title>
 </head>
 
 <body>
-    <h2>hola</h2>
+    <div class="container__icon-wpp">
+        <!-- Cambiar el numero por el de inscripcion de el terciario -->
+        <a href="https://wa.me/3549529746?text=Hola,%20quiero%20hacer%20una%20consulta!" target="_blank"><ion-icon
+                name="logo-whatsapp" class="icon-wpp pulse"
+                aria-label="Chatea por WhatsApp con nosotros por si tienes alguna consulta"></ion-icon></a>
+    </div>
+    <header class="header">
+        <div class="info__header">
+            <div class="cellphone-emergency">
+                <ion-icon name="call-outline"></ion-icon>
+                <span>03549 480-523</span>
+            </div>
+            <div class="icons-nav">
+                <a href="https://www.facebook.com/instituto.santodomingo" target="_blank"><ion-icon name="logo-facebook"
+                        title="Facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/isd_comunicacion/" target="_blank"><ion-icon name="logo-instagram"
+                        title="Instagram"></ion-icon></a>
+            </div>
+        </div>
+        <nav class="nav container">
+            <div class="nav__data">
+                <img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" />
+                <!-- Menu hamburguesa   -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Inicio</a></li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Niveles <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="nivel-inicial.html" class="dropdown__link">
+                                    Inicial
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="nivel-primario.html" class="dropdown__link">
+                                    Primario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="nivel-secundario.html" class="dropdown__link">
+                                    Secundario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    Terciario
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#caracterizacion" class="nav__link scroll-link">¿Qué nos caracteriza?</a>
+                    </li>
+
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link">
+                            Institucional <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="exalumnos.html" class="dropdown__link">
+                                    Ex alumnos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="../index.html#elcolegio" class="dropdown__link scroll-link">
+                                    El colegio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="historia.html" class="dropdown__link">
+                                    Historia
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="calendario.html" class="dropdown__link">
+                                    Eventos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../index.html#contacto" class="nav__link scroll-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero__nivel-terciario">
+        <div class="order__content-terciario">
+            <div class="hero__content-terciario">
+                <h1>Formamos <span>futuros docentes</span> con <span>pasión</span> y <span>compromiso</span>.</h1>
+                <p>
+                    <span class="hover-container">
+                        <span class="icon-container">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </span>
+                        <span class="text">Descubre</span>
+                    </span>
+                    nuestros profesorados en <span>Educación Tecnológica</span> y <span>Educación Primaria.</span>
+                </p>
+            </div>
+            <img src="../img-nivel-terciario/undraw_educator_6dgp.svg" alt="Profesor enseñando a sus alumnos"
+                class="img-educator animate" data-animation="fade-down" data-delay="800">
+        </div>
+        <div class="container-profesorados">
+            <div class="card-profesorados animate" data-animation="fade-down" data-delay="400">
+                <span>Duración: 4 años</span>
+                <h3>Profesorado en Educación Tecnológica</h3>
+                <p>Forma parte del futuro con una carrera enfocada en innovación y enseñanza de tecnología.</p>
+                <a href="#" class="btn-profesorados" role="button">Ver más información</a>
+            </div>
+
+            <div class="card-profesorados animate" data-animation="fade-down" data-delay="400">
+                <span>Duración: 4 años</span>
+                <h3>Profesorado en Educación Primaria</h3>
+                <p>Prepara a las futuras generaciones con una formación integral y didáctica.</p>
+                <a href="#" class="btn-profesorados" role="button">Ver más información</a>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="presentacion__nivel-terciario">
+            <div class="section__info-ofrecimiento">
+                <div class="container-ofrecimiento">
+                    <div class="content__info-ofrecimiento">
+                        <h2 class="animate" data-animation="fade-left" data-delay="200">¿Qué Ofrecemos?</h2>
+                        <p class="animate" data-animation="fade-down" data-delay="400">Formación docente de calidad,
+                            enfocada en el desarrollo integral de futuros
+                            profesionales en la educación. Contamos con un equipo de docentes altamente capacitados y un
+                            entorno
+                            de aprendizaje
+                            dinámico y participativo.</p>
+                    </div>
+                    <p class="aclaracion-del-colegio animate" data-animation="fade-up" data-delay="600">Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Minima
+                        modi
+                        a
+                        labore deserunt autem laboriosam
+                    </p>
+                </div>
+                <div class="container__razones-elegirnos">
+                    <!-- Razon 1 -->
+                    <div class="content-razones">
+                        <img src="../img-nivel-terciario/educacion-con-valores.png" alt="Icono de educacion con valores"
+                            class="img-razones animate" data-animation="fade-down" data-delay="700">
+                        <h3 class="animate" data-animation="fade-down" data-delay="800">Educación con valores</h3>
+                        <p class="animate" data-animation="fade-up" data-delay="850">Formamos estudiantes con
+                            principios éticos y compromiso social, fomentando el respeto, la
+                            solidaridad y la responsabilidad</p>
+                    </div>
+                    <!-- Razon 2 -->
+                    <div class="content-razones">
+                        <img src="../img-nivel-terciario/Formacion-practica.png"
+                            alt="Icono de formación práctica educativa" class="img-razones animate"
+                            data-animation="fade-down" data-delay="800">
+                        <h3 class="animate" data-animation="fade-down" data-delay="900">Formación práctica</h3>
+                        <p class="animate" data-animation="fade-up" data-delay="950">Aprendizaje basado en la
+                            experiencia, con actividades y proyectos que preparan a los
+                            estudiantes para el mundo real.</p>
+                    </div>
+                    <!-- Razon 3 -->
+                    <div class="content-razones">
+                        <img src="../img-nivel-terciario/certificado-oficial.png" alt="Icono de un certificado"
+                            class="img-razones animate" data-animation="fade-down" data-delay="900">
+                        <h3 class="animate" data-animation="fade-down" data-delay="1000">Titulo oficial</h3>
+                        <p class="animate" data-animation="fade-up" data-delay="1050">Título reconocido que garantizan
+                            una educación de calidad y abren puertas a nuevas
+                            oportunidades académicas y
+                            laborales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="plan__de-estudios">
+            <div class="content__heading-plan">
+                <img src="../img-nivel-terciario/books_3771417.png" alt="icono de libros apilados"
+                    class="elements-educativos element-one">
+                <img src="../img-nivel-terciario/computer_3067287.png" alt="icono de una computadora de escritorio"
+                    class="elements-educativos element-two">
+                <img src="../img-nivel-terciario/light-bulb_4898388.png" alt="icono de un foco iluminado por ideas"
+                    class="elements-educativos element-three">
+                <img src="../img-nivel-terciario/settings_1156371.png" alt="icono de dos engranajes"
+                    class="elements-educativos element-four">
+                <h2 class="animate" data-animation="fade-down" data-delay="200">Conocé más sobre los
+                    <span>Profesorados</span>
+                </h2>
+                <p class="animate" data-animation="fade-up" data-delay="400">Descubre la carrera que
+                    <span>marcará</span> tu camino.
+                </p>
+            </div>
+            <div class="container__plan-de-estudio">
+                <div class="card__plan-de-estudio animate" data-animation="fade-left" data-delay="600">
+                    <img src="../img-nivel-terciario/Coding workshop-pana.svg" alt="Educación Tecnológica">
+                    <div class="info__plan-de-estudio">
+                        <div class="header__plan-de-estudio">
+                            <span>Profesorado Educación Tecnológica</span>
+                            <div>
+                                <h3><ion-icon name="document-text-outline"></ion-icon>Plan de Estudio</h3>
+                                <a href="#" class="btn-profesorados-plan" download role="button"
+                                    aria-label="Botón para descargar el plan de estudios">
+                                    <box-icon name='download' type='solid' color='#ffffff'
+                                        class="downloading"></box-icon>
+                                    <span id="buttonText">Descargar plan</span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="grid__list-plan">
+                            <li>Programación aplicada a la enseñanza</li>
+                            <li>Diseño digital para educación</li>
+                            <li>Metodologías innovadoras</li>
+                            <li>Uso de herramientas tecnológicas</li>
+                            <li>Robótica educativa</li>
+                            <li>Realidad aumentada en la enseñanza</li>
+                            <li>Didáctica de la tecnología</li>
+                            <li>Didáctica de la tecnología</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__plan-de-estudio animate" data-animation="fade-right" data-delay="800">
+                    <img src="../img-nivel-terciario/Teaching-pana.svg" alt="Educación Primaria">
+                    <div class="info__plan-de-estudio">
+                        <div class="header__plan-de-estudio">
+                            <span>Profesorado Educación Primaria</span>
+                            <div>
+                                <h3><ion-icon name="document-text-outline"></ion-icon>Plan de Estudio</h3>
+                                <a href="#" class="btn-profesorados-plan" download role="button"
+                                    aria-label="Botón para descargar el plan de estudios">
+                                    <box-icon name='download' type='solid' color='#ffffff'
+                                        class="downloading"></box-icon>
+                                    <span id="buttonText">Descargar plan</span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="grid__list-plan">
+                            <li>Pedagogías activas</li>
+                            <li>Inclusión educativa</li>
+                            <li>Didácticas innovadoras</li>
+                            <li>Desarrollo integral del niño</li>
+                            <li>Psicología del aprendizaje</li>
+                            <li>Evaluación educativa</li>
+                            <li>TIC en educación</li>
+                            <li>TIC en educación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-inscripcion">
+            <div class="radial-gradient"></div>
+            <h2 class="animate" data-animation="fade-up" data-delay="200">Proceso de Inscripción</h2>
+            <div class="container__pasos-info">
+                <img src="../img-nivel-terciario/Checklist.jpg"
+                    alt="Hombre sosteniendo un cuaderno con opciones marcadas simulando un proceso de inscripcion"
+                    class="img-inscripcion animate" data-animation="fade-left" data-delay="400">
+                <div class="container__pasos-inscripcion animate" data-animation="fade-right" data-delay="600">
+                    <ul class="timeline">
+                        <li>
+                            <div class="content__pasos-inscripcion">
+                                <h3><ion-icon name="checkbox-outline"></ion-icon> Completar el formulario de inscripción
+                                </h3>
+                                <p>Llena el formulario con tus <b>datos personales</b>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content__pasos-inscripcion">
+                                <h3><ion-icon name="checkbox-outline"></ion-icon> Presentar la documentación requerida
+                                </h3>
+                                <p>Entrega los <b>documentos</b> necesarios en la institución.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content__pasos-inscripcion">
+                                <h3><ion-icon name="checkbox-outline"></ion-icon> Entrevista o reunión informativa</h3>
+                                <p><b>Asiste</b> a una charla informativa sobre el programa.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content__pasos-inscripcion">
+                                <h3><ion-icon name="checkbox-outline"></ion-icon> Confirmación de inscripción</h3>
+                                <p><b>Recibirás</b> una confirmación por correo electrónico.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="container__button-inscripcion">
+                        <button class="button-inscripcion">Inscribirme ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container__footer">
+        <section class="section__links">
+            <div class="social__icons">
+                <a href="https://www.facebook.com/instituto.santodomingo" target="_blank"><ion-icon
+                        name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/isd_comunicacion" target="_blank"><ion-icon
+                        name="logo-instagram"></ion-icon></a>
+            </div>
+            <div class="list__links">
+                <a href="../index.html" class="scroll-link">Inicio</a>
+                <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
+                <a href="./calendario.html" class="scroll-link">Eventos</a>
+                <a href="./exalumnos.html" class="scroll-link">Exalumnos</a>
+                <a href="./historia.html" class="scroll-link">Historia</a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section class="end__footer-section">
+            <div class="copyright">
+                <p class="copy">&copy; <span id="year"></span> Instituto Santo Domingo.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../assets/logo-colegio.png" alt="logo-colegio" class="logo" /></a>
+            </div>
+            <div class="copy__by">
+                <ion-icon name="code-slash-outline"></ion-icon>
+                <p class="by">Hecho por <a href="https://github.com/frandivCode" target="_blank">frandivCode</a></p>
+            </div>
+        </section>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../main.js" defer></script>
 </body>
 
 </html>

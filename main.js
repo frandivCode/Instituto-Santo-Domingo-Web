@@ -190,7 +190,6 @@ form.addEventListener('submit', function (event) {
         });
 });
 
-
 function openModal(modalId) {
     document.getElementById(modalId).classList.add('open');
 }
