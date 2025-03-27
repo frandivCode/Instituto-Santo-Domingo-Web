@@ -141,7 +141,24 @@ body {
     animation: fade-right 0.6s ease forwards;
 }
 
-/* Keyframes */
+[data-animation="fade-in"].activado {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-up {
     0% {
         opacity: 0;
@@ -854,7 +871,7 @@ body {
 .contact__section {
     width: 100%;
     min-height: 100dvh;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     padding: 2rem 0;
 }
 
@@ -893,7 +910,7 @@ body {
 .map {
     width: 100%;
     margin-top: 40px;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
     position: relative;
     border-radius: 15px;
@@ -912,7 +929,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: start;
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 16px;
     gap: 2px;
 }
@@ -939,7 +956,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 500px 450px;
+    grid-template-columns: 500px 500px;
     gap: 20px;
     width: 100%;
     justify-content: space-around;
@@ -955,7 +972,7 @@ body {
     padding: 20px;
     background-color: #fafafa;
     border-radius: 10px;
-    box-shadow: 7px 7px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form label {
@@ -981,16 +998,14 @@ body {
     transition: all .3s ease;
 }
 
-.contact-form input:focus {
-    background-color: #f0f0f0;
-}
-
+.contact-form input:focus,
 .contact-form textarea:focus {
     background-color: #f0f0f0;
+    border: 1px solid #5c5c5c;
 }
 
 .contact-form input::placeholder {
-    color: black;
+    color: rgb(88, 88, 88);
 }
 
 .input-error {
@@ -2241,6 +2256,12 @@ body {
     gap: 7rem;
 }
 
+.hero__content-terciario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 .order__content-terciario {
     width: 90%;
     margin: 0 auto;
@@ -2253,16 +2274,27 @@ body {
     color: #212529;
     text-align: left;
     font-size: clamp(2rem, 4vw, 4rem);
-    max-width: clamp(300px, 80vw, 700px);
-    animation: fadeInUp 0.8s ease-in-out 0.3s forwards;
+    max-width: clamp(500px, 80vw, 700px);
+    animation: fadeInUp 0.6s ease-in-out 0.3s forwards;
     opacity: 0;
     line-height: 1.2;
 }
 
-.img-educator {
-    width: 600px;
-    height: auto;
-    object-fit: cover;
+.hero__content-terciario p {
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    text-align: left;
+    font-weight: 500;
+    animation: fadeInUp 0.6s ease-in-out 0.6s forwards;
+    opacity: 0;
+    margin-top: 30px;
+    max-width: clamp(500px, 45vw, 700px);
+    color: #343a40;
+    line-height: 2;
+}
+
+.btn-inscripcion-transition {
+    animation: fadeInUp 0.6s ease-in-out 0.9s forwards;
+    opacity: 0;
 }
 
 .hero__content-terciario h1>span {
@@ -2270,16 +2302,12 @@ body {
     font-style: italic;
 }
 
-.hero__content-terciario p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    text-align: left;
-    font-weight: 500;
-    animation: fadeInUp 0.8s ease-in-out 0.6s forwards;
-    opacity: 0;
-    margin-top: 30px;
-    max-width: clamp(300px, 60vw, 700px);
-    color: #343a40;
-    line-height: 2;
+.img-educator {
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    width: clamp(300px, 70%, 600px);
+    display: block;
 }
 
 .hero__content-terciario p>span {
@@ -2327,7 +2355,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #e9ecef;
-    border-radius: 50px;
+    border-radius: 30px;
     box-shadow: inset 0 3px 10px #565d63;
     padding: 40px;
     gap: 2rem;
@@ -2360,21 +2388,25 @@ body {
 .card-profesorados span {
     display: block;
     width: 100%;
-    font-size: 16px;
+    font-size: clamp(14.5px, 1.5vw, 16px);
 }
 
 .card-profesorados h3 {
-    font-size: clamp(1.25rem, 3vw, 1.4rem);
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+}
+
+.card-profesorados p {
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 .btn-profesorados {
     background-color: #6c757d;
     color: white;
     font-size: clamp(14px, 2vw, 16px);
-    padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 20px);
+    padding: clamp(12px, 2vw, 16px) clamp(25px, 4vw, 30px);
     font-weight: 500;
     border: none;
-    border-radius: 25px 10px 25px 10px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2418,19 +2450,20 @@ body {
 
 .content__info-ofrecimiento p {
     font-size: clamp(1rem, 2vw, 1.3rem);
-    max-width: clamp(300px, 60vw, 600px);
+    max-width: clamp(500px, 60vw, 600px);
     text-align: left;
     font-weight: 500;
-    margin-top: 40px;
+    margin-top: 25px;
     color: #f8f9fa;
     line-height: 1.8;
 }
 
 .aclaracion-del-colegio {
-    color: #f8f9fa;
+    color: #f8f9fae0;
     line-height: 1.7;
     font-size: clamp(.9rem, 2vw, 1rem);
-    max-width: clamp(300px, 60vw, 600px);
+    max-width: clamp(500px, 60vw, 600px);
+    font-style: italic;
 }
 
 /* Segunda columna */
@@ -2523,7 +2556,7 @@ body {
 .content__heading-plan h2 {
     font-size: clamp(1.7rem, 4vw, 3.5rem);
     text-align: center;
-    max-width: clamp(650px, 50%, 800px);
+    max-width: clamp(500px, 50%, 800px);
     margin: 30px auto;
     color: #212529;
     line-height: 1.3;
@@ -2549,9 +2582,9 @@ body {
 
 .container__plan-de-estudio {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     gap: 50px;
     padding: 20px;
     width: 100%;
@@ -2564,25 +2597,23 @@ body {
     border-radius: 8px;
     overflow: hidden;
     width: 100%;
-    max-width: 700px;
+    max-width: 85%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-    flex: 1 1 500px;
 }
 
 .card__plan-de-estudio img {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 400px;
     object-fit: contain;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.199);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 .info__plan-de-estudio {
-    padding: 20px;
+    padding: 20px 35px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 
 .header__plan-de-estudio {
@@ -2635,58 +2666,51 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    transition: background .3s ease-in-out transform .3 ease-in-out;
+    transition: background .3s ease-in-out;
     letter-spacing: .5px;
     cursor: pointer;
-    background-color: #6c757d;
+    background-color: #343A40;
 }
 
 .btn-profesorados-plan:hover {
     background-color: #7e1723;
 }
 
-@keyframes downloader {
-    0% {
-        transform: translateY(-1px);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(2px);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-.downloading {
-    animation: downloader 1.2s ease-in-out infinite;
-}
-
-.grid__list-plan {
+.grid__plan-de-estudio {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 0;
-    list-style: none;
-    text-align: left;
-    padding-top: 15px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    row-gap: 35px;
+    column-gap: 150px;
 }
 
-.grid__list-plan li {
-    background: #dee2e6;
-    padding: 8px 12px;
-    border-radius: 5px;
-    color: #212529;
-    font-size: 15px;
-    font-weight: 500;
-    width: 100%;
+.columnas__anio-de-carrera {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.columnas__anio-de-carrera span {
+    color: #7e1723;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 18px);
+    margin: 0 0 5px 25px;
+}
+
+.unidad__de-estudio li {
+    text-align: left;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(0.9rem, 1.7vw, 1.05rem);
+    letter-spacing: 0.3px;
+}
+
+.unidad__de-estudio li ion-icon {
+    color: #076b2b;
+    font-size: 20px;
 }
 
 /* Section de inscripcion */
@@ -2697,7 +2721,7 @@ body {
     background-size: cover;
     padding: 50px 20px;
     border-radius: 100px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 95%;
     margin: 50px auto;
     min-height: 100dvh;
@@ -2705,47 +2729,91 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
-.container-inscripcion h2 {
-    font-size: clamp(1.7rem, 4vw, 4rem);
-    text-align: center;
-    margin: 0 0 30px 0;
+.llamado-inscripcion {
+    margin-bottom: 5rem;
+}
+
+.llamado-inscripcion :first-child {
+    font-size: clamp(1.3rem, 2.5vw, 2.5rem);
     color: #212529;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.llamado-inscripcion :nth-child(2) {
+    text-align: center;
+    font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+    line-height: 1.3;
+    color: #800020;
+    text-transform: uppercase;
+    max-width: 700px;
+}
+
+.requisitos-inscripcion {
+    font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+    text-align: left;
+    margin-bottom: 10px;
+    color: #800020;
     line-height: 1.3;
 }
 
 .container__pasos-info {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
     gap: 30px;
     height: 100%;
     padding: 0 1rem;
     flex: 1;
+    width: 100%;
 }
 
-.order__content-left-inscripcion {
+.datos__inscripcion {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
 }
 
-.img-inscripcion {
-    width: 600px;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
+.informacion-inscripciones {
+    margin: 15px 0;
+}
+
+.informacion-inscripciones h3 {
+    color: #800020;
+    border-bottom: 1px solid #800020;
+    width: fit-content;
+    margin-bottom: 15px;
+    line-height: 1;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+.informacion-inscripciones p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 500;
+}
+
+.informacion-inscripciones p ion-icon {
+    font-size: 20px;
+    color: #800020;
+}
+
+.informacion-inscripciones p>span {
+    font-weight: bold;
 }
 
 .container__pasos-inscripcion {
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
+    width: 600px;
     text-align: left;
-
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -2756,11 +2824,12 @@ body {
 }
 
 .content__pasos-inscripcion h3 {
-    font-size: clamp(1.1rem, 3vw, 1.2rem);
+    font-size: clamp(1rem, 3vw, 1.1rem);
     display: flex;
     align-items: center;
     gap: .5rem;
     color: #343a40;
+    font-weight: 500;
 }
 
 .content__pasos-inscripcion h3 ion-icon {
@@ -2784,18 +2853,13 @@ body {
 .timeline li {
     display: flex;
     align-items: start;
-    margin-bottom: 20px;
-}
-
-.container__button-inscripcion {
-    margin-top: 20px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 .button-inscripcion {
     color: white;
     font-size: clamp(14px, 2vw, 16px);
-    padding: clamp(9px, 1.5vw, 12px) clamp(16px, 3vw, 25px);
+    padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 30px);
     font-weight: 600;
     border: none;
     border-radius: 50px;
@@ -2806,7 +2870,8 @@ body {
     transition: all .3s ease-in-out;
     letter-spacing: .5px;
     cursor: pointer;
-    background: #6c757d;
+    background: #343A40;
+    margin-top: 15px;
 }
 
 .button-inscripcion:hover {
@@ -2867,6 +2932,66 @@ body {
 
     .content__objetivo-primario p {
         max-width: 450px;
+    }
+
+    /* Nivel Terciario */
+    .hero__content-terciario p {
+        line-height: 1.6;
+    }
+
+    .container-profesorados {
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .card-profesorados {
+        max-width: 100%;
+    }
+
+    .section__info-ofrecimiento {
+        padding: 3rem 0;
+        gap: 5.5rem;
+    }
+
+    .element-one {
+        left: 150px;
+    }
+
+    .element-two {
+        right: 150px;
+    }
+
+    .element-three {
+        left: 215px;
+    }
+
+    .element-four {
+        right: 215px;
+    }
+
+    .grid__plan-de-estudio {
+        column-gap: 55px;
+    }
+
+    .card__plan-de-estudio {
+        max-width: 100%;
+    }
+
+    .container__pasos-info {
+        flex-direction: column-reverse;
+    }
+
+    .container__pasos-inscripcion {
+        width: 100%;
+    }
+
+    .container__button-inscripcion {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container__button-inscripcion button {
+        width: 50%;
     }
 }
 
@@ -3157,13 +3282,73 @@ body {
     }
 
     /* Nivel terciario */
-    .card__plan-de-estudio {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .hero__nivel-terciario {
+        padding: 3rem 0;
+        gap: 4rem;
+    }
+
+    .hero__content-terciario p {
+        margin-top: 20px;
     }
 
     .container__plan-de-estudio {
-        gap: 20px;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .icon-container ion-icon {
+        display: none;
+    }
+
+    .elements-educativos {
+        width: 40px;
+    }
+
+    .element-one {
+        left: 110px;
+    }
+
+    .element-two {
+        right: 110px;
+    }
+
+    .element-three {
+        left: 160px;
+        bottom: 60px;
+    }
+
+    .element-four {
+        right: 160px;
+        bottom: 60px;
+    }
+
+    .card__plan-de-estudio img {
+        max-height: 300px;
+    }
+
+    .info__plan-de-estudio {
+        padding: 15px;
+    }
+
+    .grid__plan-de-estudio {
+        grid-template-columns: 1fr;
+    }
+
+    .llamado-inscripcion {
+        margin-bottom: 3rem;
+    }
+
+    .container__button-inscripcion button {
+        width: 75%;
+        padding: 15px 0;
+    }
+
+    .timeline li {
+        margin-bottom: 10px;
+    }
+
+    .container-inscripcion {
+        border-radius: 50px;
     }
 }
 
@@ -3191,7 +3376,6 @@ body {
     .contact-form {
         width: 100%;
         margin: 0 auto;
-        box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.2);
     }
 
     .contact-grid {
@@ -3231,6 +3415,88 @@ body {
 
     .content__presentacion {
         align-items: center;
+    }
+
+    /* Nivel terciario */
+    .img-educator {
+        display: none;
+    }
+
+    .hero__content-terciario {
+        align-items: center;
+    }
+
+    .hero__content-terciario h1 {
+        text-align: center;
+    }
+
+    .hero__content-terciario p {
+        text-align: center;
+    }
+
+    .container-profesorados {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .btn-profesorados {
+        width: 100%;
+    }
+
+    .section__info-ofrecimiento {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    .container-ofrecimiento {
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .hero__nivel-terciario {
+        padding: 1.5rem 0;
+        gap: 2rem;
+    }
+
+    .plan__de-estudios {
+        padding: 1.5rem;
+    }
+
+    .elements-educativos {
+        display: none;
+    }
+
+    .content__heading-plan h2 {
+        margin: 10px 0;
+    }
+
+    .content__heading-plan p {
+        margin: 10px 0;
+    }
+
+    .card__plan-de-estudio img {
+        max-height: 250px;
+    }
+
+    .grid__plan-de-estudio {
+        padding: 20px;
+    }
+
+    .container__pasos-info {
+        padding: 0;
+    }
+
+    .container__button-inscripcion button {
+        width: 100%;
+    }
+
+    .llamado-inscripcion {
+        margin-bottom: 1.5rem;
+    }
+
+    .container-inscripcion {
+        padding: 25px;
     }
 }
 

@@ -7,7 +7,6 @@
     <link rel="icon" href="./assets/icon.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Instituto Santo Domingo | Hermanas Dominicas</title>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
@@ -254,18 +253,18 @@
                                 name="mail-outline"></ion-icon><b>isdsoto@yahoo.com.ar</b></p>
                         <p class="icon-email animate" data-animation="fade-up" data-delay="600"><ion-icon
                                 name="mail-outline"></ion-icon><span>Nivel Inicial:</span>
-                            direccioninicial@gmail.com</p>
+                            isdnivelinicial@gmail.com</p>
                         <p class="icon-email animate" data-animation="fade-up" data-delay="700"><ion-icon
                                 name="mail-outline"></ion-icon><span>Nivel Primario:</span>
-                            direccionprimario@gmail.com</p>
+                            isdnivelprimario@gmail.com</p>
                         <p class="icon-email animate" data-animation="fade-up" data-delay="800"><ion-icon
                                 name="mail-outline"></ion-icon><span>Nivel Secundario:</span>
-                            direccionsecundario@gmail.com</p>
+                            isdnivelsecundario@gmail.com</p>
                         <p class="icon-email animate" data-animation="fade-up" data-delay="900"><ion-icon
                                 name="mail-outline"></ion-icon><span>Nivel Terciario:</span>
-                            direccionterciario@gmail.com</p>
+                            isdnivelsuperior@gmail.com</p>
                         <p class="address-school animate" data-animation="fade-up" data-delay="1000"><ion-icon
-                                name="location-outline"></ion-icon>José Ignacio Peralta 249
+                                name="location-outline"></ion-icon>José Ignacio Peralta 251
                             |
                             Villa de Soto | Córdoba</p>
                     </div>
@@ -280,10 +279,10 @@
 
                 <form class="contact-form animate" id="form" data-animation="fade-right" data-delay="1400">
                     <label for="name">Nombre y Apellido <span class="red-asterisco">*</span></label>
-                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre y apellido" required>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tú Nombre y Apellido" required>
 
                     <label for="subject">Tipo de Asunto <span class="red-asterisco">*</span></label>
-                    <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    <input type="text" id="subject" name="subject" placeholder="Escribe un Asunto" required>
 
                     <label for="type">Tipo de Consulta</label>
                     <select id="type" name="type" required>
@@ -294,14 +293,14 @@
                     </select>
 
                     <label for="phone">Teléfono <span class="red-asterisco">*</span></label>
-                    <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Ingresa tú teléfono" required>
 
                     <label for="email">Email <span class="red-asterisco">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="ejemplode@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tú Email" required>
 
                     <label for="message">Mensaje <span class="red-asterisco">*</span></label>
-                    <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..."
-                        required></textarea>
+                    <textarea id="message" name="message" rows="5" maxlength="250" minlength="10"
+                        placeholder="Dejanos un mensaje..." required></textarea>
 
                     <button type="submit" id="button">Enviar</button>
                     <p id="error" class="error"></p>
@@ -346,7 +345,8 @@
             </div>
         </section>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

@@ -124,7 +124,7 @@ form.addEventListener('submit', function (event) {
     const phone = phoneInput.value;
     const email = emailInput.value;
 
-    let hasError = false; // Flag to check if there are errors
+    let hasError = false;
 
     // Reset errors
     errorElement.textContent = '';
