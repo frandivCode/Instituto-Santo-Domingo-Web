@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/icon.png" type="image/png" />
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <title>Nivel Terciario | Instituto Santo Domingo</title>
 </head>
 
 <body>
     <div class="container__icon-wpp">
-        <!-- Cambiar el numero por el de inscripcion de el terciario -->
-        <a href="https://wa.me/3549529746?text=Hola,%20quiero%20hacer%20una%20consulta!" target="_blank"><ion-icon
-                name="logo-whatsapp" class="icon-wpp pulse"
+        <a href="https://wa.me/3549592883?text=Hola,%20quiero%20inscribirme%20a%20la%20carrera!%20Quisiera%20más%20información%20sobre%20las%20siguientes%20opciones:%0A-%20Carrera%20de%20Educación%20Tecnológica%0A-%20Carrera%20de%20Educación%20Primaria
+" target="_blank"><ion-icon name="logo-whatsapp" class="icon-wpp pulse"
                 aria-label="Chatea por WhatsApp con nosotros por si tienes alguna consulta"></ion-icon></a>
     </div>
     <header class="header">
@@ -86,12 +85,6 @@
 
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="exalumnos.html" class="dropdown__link">
-                                    Ex alumnos
-                                </a>
-                            </li>
-
-                            <li>
                                 <a href="../index.html#elcolegio" class="dropdown__link scroll-link">
                                     El colegio
                                 </a>
@@ -143,14 +136,14 @@
                 <span>Duración: 4 años</span>
                 <h3>Profesorado en Educación Tecnológica</h3>
                 <p>Forma parte del futuro con una carrera enfocada en innovación y enseñanza de tecnología.</p>
-                <a href="#" class="btn-profesorados" role="button">Ver más información</a>
+                <a href="#first-profesorado" class="btn-profesorados scroll-link" role="button">Ver más información</a>
             </div>
 
             <div class="card-profesorados animate" data-animation="fade-down">
                 <span>Duración: 4 años</span>
                 <h3>Profesorado en Educación Primaria</h3>
                 <p>Prepara a las futuras generaciones con una formación integral y didáctica.</p>
-                <a href="#" class="btn-profesorados" role="button">Ver más información</a>
+                <a href="#second-profesorado" class="btn-profesorados scroll-link" role="button">Ver más información</a>
             </div>
         </div>
     </section>
@@ -230,7 +223,8 @@
                         <div class="header__plan-de-estudio">
                             <span>Profesorado Educación Tecnológica</span>
                             <div>
-                                <h3><ion-icon name="document-text-outline"></ion-icon>Plan de Estudio</h3>
+                                <h3 id="first-profesorado"><ion-icon name="document-text-outline"></ion-icon>Plan de
+                                    Estudio</h3>
                                 <a href="#" class="btn-profesorados-plan" download role="button"
                                     aria-label="Botón para descargar el plan de estudios">
                                     <box-icon name='download' type='solid' color='#ffffff'
@@ -327,13 +321,14 @@
                     </div>
                 </div>
 
-                <div class="card__plan-de-estudio   ">
+                <div class="card__plan-de-estudio">
                     <img src="../img-nivel-terciario/Teaching-pana.svg" alt="Educación Primaria">
                     <div class="info__plan-de-estudio">
                         <div class="header__plan-de-estudio">
                             <span>Profesorado Educación Primaria</span>
                             <div>
-                                <h3><ion-icon name="document-text-outline"></ion-icon>Plan de Estudio</h3>
+                                <h3 id="second-profesorado"><ion-icon name="document-text-outline"></ion-icon>Plan de
+                                    Estudio</h3>
                                 <a href="#" class="btn-profesorados-plan" download role="button"
                                     aria-label="Botón para descargar el plan de estudios">
                                     <box-icon name='download' type='solid' color='#ffffff'
@@ -495,7 +490,9 @@
                         </li>
                     </ul>
                     <div class="container__button-inscripcion">
-                        <button class="button-inscripcion">Inscribirme ahora</button>
+                        <a href="https://wa.me/3549592883?text=Hola,%20quiero%20inscribirme%20a%20la%20carrera!%20Quisiera%20más%20información%20sobre%20las%20siguientes%20opciones:%0A-%20Carrera%20de%20Educación%20Tecnológica%0A-%20Carrera%20de%20Educación%20Primaria"
+                            target="_blank" aria-label="Boton para Inscribirse"><button
+                                class="button-inscripcion">Inscribirme ahora</button></a>
                     </div>
                 </div>
             </div>
@@ -513,7 +510,6 @@
                 <a href="../index.html" class="scroll-link">Inicio</a>
                 <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
                 <a href="./calendario.html" class="scroll-link">Eventos</a>
-                <a href="./exalumnos.html" class="scroll-link">Exalumnos</a>
                 <a href="./historia.html" class="scroll-link">Historia</a>
             </div>
         </section>

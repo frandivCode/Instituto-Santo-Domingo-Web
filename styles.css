@@ -513,7 +513,7 @@ body {
 
 .icons-nav {
     display: flex;
-    gap: .5rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -529,7 +529,7 @@ body {
 
 .icons-nav ion-icon {
     color: white;
-    font-size: 23px;
+    font-size: 25px;
     background-color: #800020;
     border-radius: 50%;
     padding: 5px;
@@ -568,10 +568,11 @@ body {
     min-height: 100dvh;
     width: 100%;
     display: flex;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.322)), url('./img/rosario.webp');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/foto-del-frente-del-colegio.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero__content {
@@ -579,33 +580,30 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-}
-
-.img-escudo {
-    height: 50px;
-    width: auto;
-    object-fit: cover;
+    gap: 1.5rem;
 }
 
 .hero__title {
     font-family: "Libre Baskerville", serif;
     text-align: left;
-    font-size: clamp(2rem, 4vw, 4rem);
-    max-width: clamp(300px, 80vw, 1200px);
+    font-size: clamp(2rem, 4.5vw, 5rem);
+    max-width: clamp(500px, 80vw, 1200px);
     animation: fadeInUp 0.8s ease-in-out 0.3s forwards;
     opacity: 0;
+    color: rgba(255, 255, 255, 0.774);
+    -webkit-text-stroke: 1px #ffffff;
 }
 
 .hero__text {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.05rem, 2.5vw, 1.5rem);
     text-align: left;
-    font-weight: 500;
-    font-family: "Georgia", serif;
+    font-weight: 600;
+    font-family: "Libre Baskerville", serif;
     animation: fadeInUp 0.8s ease-in-out 0.6s forwards;
     opacity: 0;
+    color: #fff;
 }
 
 .hero__button {
@@ -750,7 +748,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
 }
 
 .img__presentacion {
@@ -790,7 +788,7 @@ body {
 
 .content__presentacion h2 {
     font-family: "Libre Baskerville", serif;
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-size: clamp(2rem, 3vw, 2.5rem);
     font-style: italic;
     font-weight: 400;
 }
@@ -895,7 +893,7 @@ body {
 }
 
 .order-emails {
-    margin-top: 100px;
+    margin-top: 50px;
     max-width: 100%;
 }
 
@@ -904,7 +902,7 @@ body {
 }
 
 .order-emails p span {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .map {
@@ -1054,12 +1052,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .social__icons ion-icon {
     cursor: pointer;
-    font-size: 23px;
+    font-size: 25px;
     color: #ffffff;
     background-color: #800020;
     border-radius: 50%;
@@ -1226,7 +1224,7 @@ body {
 
 .heading__nivel-inicial {
     text-align: center;
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2rem, 4.5vw, 5rem);
     color: #FF82AA;
     text-shadow: 3px 3px 1px #0000005e;
     animation: fadeInUp 0.8s ease-out 0.3s forwards;
@@ -1234,7 +1232,7 @@ body {
 }
 
 .paragraph__nivel-inicial {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.05rem, 2.5vw, 1.5rem);
     color: #5a5a5a;
     font-weight: 600;
     max-width: 550px;
@@ -1247,15 +1245,12 @@ body {
 .container__main-inicial {
     width: 90%;
     margin: 0 auto;
-    padding: 0 100px;
 }
 
 /* Section Actividades*/
 .actividades-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 50px 0;
     position: relative;
@@ -1265,12 +1260,13 @@ body {
     border-radius: 10px;
     background-color: #75d4fd;
     border: 1px solid #58cdff;
-    box-shadow: 0 5px 5px #1aa6e2;
+    box-shadow: 3px 3px 3px #3ebef5;
     cursor: pointer;
     display: flex;
     width: 100%;
     justify-content: space-around;
-    padding: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1rem, 2vw, 1.2rem);
+    gap: 2rem;
 }
 
 .texto-actividad {
@@ -1285,19 +1281,10 @@ body {
     text-align: start;
 }
 
-.img-crayones {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    top: 2px;
-    right: -100px;
-}
-
 .texto-actividad p {
-    max-width: 650px;
     color: #1D3557;
     font-weight: 500;
+    font-size: clamp(14px, 15px, 16px);
 }
 
 .img-kids-actividad {
@@ -1308,13 +1295,35 @@ body {
 
 /* Section uniforme */
 .uniforme-principal {
-    font-size: 1.1rem;
+    font-size: clamp(14px, 2vw, 1.1rem);
     padding: 1rem;
     border-radius: 10px;
-    text-align: center;
     background-color: #f0f8ff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    width: 75%;
+    text-align: center;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: #fae19c;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 75%;
+}
+
+.uniformes__aclaracion {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 20px;
 }
 
 .azul {
@@ -1333,11 +1342,25 @@ body {
     border-radius: 2px;
 }
 
+
+.note ion-icon {
+    font-size: 25px;
+    color: #000000;
+}
+
+.note p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
 .container__uniforme {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 3rem 0;
+    width: 100%;
 }
 
 .content__info-uniforme {
@@ -1506,26 +1529,6 @@ body {
     cursor: pointer;
 }
 
-.note {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    background: #ffefc3;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.note ion-icon {
-    font-size: 25px;
-    color: #000000;
-}
-
-.note p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-}
 
 .fade-in {
     animation: fadeIn 2s ease-in;
@@ -1704,7 +1707,6 @@ body {
 /* Galeria */
 .galeria__eventos {
     padding: 2rem 0;
-    margin: 3rem 0;
 }
 
 .galeria-heading {
@@ -2007,6 +2009,46 @@ body {
 }
 
 /* === PAGE HISTORIA HMTL  === */
+.hero__historia {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/foto-de-costado-del-colegio.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content__hero-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero__title-historia {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    color: #ffffff;
+    animation: fadeInUp 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.hero__text-historia {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    color: #ffffff;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
 .historia-del-colegio {
     width: 90%;
     margin: 0 auto;
@@ -2014,21 +2056,6 @@ body {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-}
-
-.hero__title-historia {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    text-align: center;
-    padding-block: 3rem;
-    font-family: "Libre Baskerville", serif;
-    color: #800020;
-}
-
-.img-del-colegio {
-    width: 900px;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
 }
 
 .content__historia {
@@ -2490,7 +2517,7 @@ body {
     font-size: clamp(.9rem, 2vw, 1rem);
     color: #f8f9fa;
     line-height: 1.6;
-    max-width: clamp(300px, 60vw, 600px);
+    max-width: clamp(500px, 60vw, 600px);
 }
 
 .img-razones {
@@ -2889,10 +2916,6 @@ body {
     }
 
     /* Nivel inicial */
-    .img-crayones {
-        display: none;
-    }
-
     .nube-img,
     .estrella-img {
         width: 180px;
@@ -2902,14 +2925,13 @@ body {
         padding: 0;
     }
 
-    .uniforme-principal {
-        font-size: 1.1rem;
+    .actividades-container {
+        grid-template-columns: 1fr;
     }
 
-    .btn-left,
-    .btn-right {
-        font-size: 1.2rem;
-        padding: 10px;
+    .uniforme-principal,
+    .note {
+        width: 100%;
     }
 
     /* Nivel primario */
@@ -3024,10 +3046,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .order-emails {
-        margin: 50px 0;
-    }
-
     .contact-grid {
         grid-template-columns: 500px;
         gap: 50px;
@@ -3047,8 +3065,8 @@ body {
 
     .list__links {
         flex-direction: column;
-        gap: 1rem;
         align-items: start;
+        margin-bottom: 10px;
     }
 
     .end__footer-section {
@@ -3091,6 +3109,10 @@ body {
         gap: .5rem;
     }
 
+    .texto-actividad {
+        gap: .8rem;
+    }
+
     .order__heading-inicial {
         align-items: center;
     }
@@ -3103,41 +3125,10 @@ body {
         display: none;
     }
 
-    .actividades-container {
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .img-kids-actividad {
-        display: none;
-    }
-
-    .texto-actividad p {
-        font-size: 15px;
-        max-width: 420px;
-    }
-
-    .texto-actividad {
-        gap: .7rem;
-    }
-
-    .img-kids-actividad {
-        width: 110px;
-        height: 120px;
-    }
-
-    .uniforme__nivel-inicial h2 {
-        font-size: 1.7rem;
-    }
-
-    .uniforme-principal {
-        font-size: 15px;
-    }
-
     .container__uniforme {
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .content__info-uniforme h3 {
@@ -3232,10 +3223,6 @@ body {
     .uniforme__informal {
         gap: 1rem;
         margin: 10px 0;
-    }
-
-    .galeria__eventos {
-        margin: 0;
     }
 
     /* Nivel secundario */
@@ -3386,12 +3373,6 @@ body {
         width: 100%;
     }
 
-    .texto-actividad p {
-        font-size: 14px;
-        text-align: center;
-        max-width: 340px;
-    }
-
     .container__uniforme {
         margin: 1.5rem 0;
     }
@@ -3407,10 +3388,6 @@ body {
     .objetivo-del-primario {
         margin-bottom: 1.5rem;
         gap: 1rem;
-    }
-
-    .texto-actividad h3 {
-        text-align: center;
     }
 
     .content__presentacion {
@@ -3450,7 +3427,7 @@ body {
     }
 
     .container-ofrecimiento {
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
     }
 
@@ -3497,6 +3474,10 @@ body {
 
     .container-inscripcion {
         padding: 25px;
+    }
+
+    .container__razones-elegirnos {
+        gap: 2rem;
     }
 }
 
@@ -3583,17 +3564,8 @@ body {
         margin: 15px 0;
     }
 
-    .texto-actividad {
-        padding: 0 10px;
-    }
-
     .uniforme__nivel-inicial h2 {
         font-size: 1.5rem;
-    }
-
-    .uniforme-principal {
-        margin: 1rem 0;
-        font-size: 14px;
     }
 
     .content__info-uniforme {

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/icon.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <title>Nivel Inicial | Instituto Santo Domingo</title>
 </head>
@@ -84,12 +85,6 @@
 
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="exalumnos.html" class="dropdown__link">
-                                    Ex alumnos
-                                </a>
-                            </li>
-
-                            <li>
                                 <a href="../index.html#elcolegio" class="dropdown__link scroll-link">
                                     El colegio
                                 </a>
@@ -132,17 +127,14 @@
 
     <!-- Actividades del Jardín -->
     <main class="container__main-inicial">
+        <h2 class="heading__subtitle animate" data-animation="fade-down" data-delay="200">Actividades Escolares</h2>
         <section class="actividades-container">
-            <h2 class="heading__subtitle animate" data-animation="fade-down" data-delay="200">Actividades Escolares</h2>
-            <img src="../img-nivel-inicial/crayones.webp" alt="crayones" class="img-crayones">
             <div class="actividad animate" data-animation="fade-left" data-delay="400">
                 <div class="texto-actividad">
                     <h3>Arte y Pintura</h3>
-                    <p>La pintura y el arte permiten a los niños expresar su creatividad mientras desarrollan
-                        habilidades
-                        motoras finas. A través de las diferentes técnicas y colores, aprenden a coordinar sus
-                        movimientos y a
-                        concentrarse en tareas visuales.</p>
+                    <p>La pintura y el arte estimulan la creatividad y desarrollan la motricidad fina, ayudando a los
+                        niños a coordinar
+                        movimientos y enfocarse en tareas visuales.</p>
                 </div>
                 <img src="../img-nivel-inicial/kids-drawing.webp" alt="Niños pintando" class="img-kids-actividad">
             </div>
@@ -150,9 +142,8 @@
             <div class="actividad animate" data-animation="fade-left" data-delay="450">
                 <div class="texto-actividad">
                     <h3>Juegos al Aire Libre</h3>
-                    <p>El juego al aire libre favorece la actividad física y socialización. Actividades como carreras o
-                        juegos
-                        en grupo permiten que los niños mejoren su coordinación motriz y aprendan a trabajar en equipo.
+                    <p>Jugar al aire libre fomenta la actividad física y la socialización, mejorando la coordinación y
+                        el trabajo en equipo.
                     </p>
                 </div>
                 <img src="../img-nivel-inicial/children-playing.webp" alt="Niños jugando al aire libre"
@@ -162,10 +153,8 @@
             <div class="actividad animate" data-animation="fade-left" data-delay="500">
                 <div class="texto-actividad">
                     <h3>Lectura y Cuentos</h3>
-                    <p>Escuchar cuentos fomenta la imaginación, la concentración y el desarrollo del lenguaje. Al
-                        escuchar
-                        historias, los niños expanden su vocabulario y entienden conceptos de manera divertida y
-                        educativa.</p>
+                    <p>Escuchar cuentos estimula la imaginación, la concentración y el lenguaje, ayudando a los niños a
+                        ampliar su vocabulario</p>
                 </div>
                 <img src="../img-nivel-inicial/kids-reading.webp" alt="Niños escuchando cuentos"
                     class="img-kids-actividad">
@@ -174,23 +163,10 @@
             <div class="actividad animate" data-animation="fade-left" data-delay="550">
                 <div class="texto-actividad">
                     <h3>Merienda Saludable</h3>
-                    <p>Fomentamos hábitos saludables desde pequeños. La merienda es un momento especial donde, además de
-                        compartir y disfrutar,
-                        aprendemos la importancia de una alimentación equilibrada.</p>
+                    <p>La merienda es un momento especial para compartir y aprender sobre una alimentación equilibrada
+                        desde pequeños.</p>
                 </div>
                 <img src="../img-nivel-inicial/merienda-saludable.webp" alt="Merienda Saludable"
-                    class="img-kids-actividad">
-            </div>
-
-            <div class="actividad animate" data-animation="fade-left" data-delay="600">
-                <div class="texto-actividad">
-                    <h3>Ciencias y Naturaleza</h3>
-                    <p>Explorar la naturaleza es una forma increíble de fomentar la curiosidad. Los niños pueden
-                        observar plantas,
-                        animales y el entorno natural, aprendiendo sobre el ciclo de la vida y cómo cuidar el medio
-                        ambiente.</p>
-                </div>
-                <img src="../img-nivel-inicial/children-nature.webp" alt="Niños observando plantas"
                     class="img-kids-actividad">
             </div>
         </section>
@@ -199,11 +175,20 @@
         <section class="uniforme__nivel-inicial">
             <h2 class="heading__subtitle animate" data-animation="fade-down" data-delay="200">Uniforme</h2>
             <div class="divisor"></div>
-            <p class="uniforme-principal animate" data-animation="fade-down" data-delay="400">Pintor con detalles
-                cuadrillé blanco con <span class="azul">azul para
-                    los varones,</span> <span class="rosa">rosa para
-                    las
-                    nenas.</span></p>
+            <div class="uniformes__aclaracion">
+                <p class="uniforme-principal animate" data-animation="fade-down" data-delay="400">Pintor con detalles
+                    cuadrillé blanco con <span class="azul">azul para
+                        los varones,</span> <span class="rosa">rosa para
+                        las
+                        nenas.</span></p>
+                <div class="note animate" data-animation="fade-up" data-delay="1000">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    <p>
+                        Todas las prendas y elementos deben tener el nombre del alumno/a bordado
+                        en letra mayúscula de imprenta.
+                    </p>
+                </div>
+            </div>
             <div class="container__uniforme">
                 <div class="content__info-uniforme invierno animate" data-animation="fade-left" data-delay="600">
                     <h3>En Invierno:</h3>
@@ -223,14 +208,6 @@
                     </ul>
                     <div class="sun-container"></div>
                 </div>
-            </div>
-
-            <div class="note animate" data-animation="fade-up" data-delay="1000">
-                <ion-icon name="information-circle-outline"></ion-icon>
-                <p>
-                    Todas las prendas y elementos deben tener el nombre del alumno/a bordado
-                    en letra mayúscula de imprenta.
-                </p>
             </div>
 
             <div class="list-container">
@@ -325,7 +302,6 @@
                 <a href="../index.html" class="scroll-link">Inicio</a>
                 <a href="../index.html#elcolegio" class="scroll-link">El colegio</a>
                 <a href="./calendario.html" class="scroll-link">Eventos</a>
-                <a href="./exalumnos.html" class="scroll-link">Exalumnos</a>
                 <a href="./historia.html" class="scroll-link">Historia</a>
             </div>
         </section>

@@ -84,11 +84,6 @@
                         </div>
 
                         <ul class="dropdown__menu">
-                            <li>
-                                <a href="./pages/exalumnos.html" class="dropdown__link">
-                                    Ex alumnos
-                                </a>
-                            </li>
 
                             <li>
                                 <a href="#elcolegio" class="dropdown__link scroll-link">
@@ -122,41 +117,36 @@
             <p class="hero__text">
                 "Formando corazones con fé, conocimiento y amor"
             </p>
-            <button class="hero__button">
-                <span class="shadow"></span>
-                <span class="edge"></span>
-                <span class="front text"><a href="#caracterizacion" class="scroll-link">Saber Más</a></span>
-            </button>
         </div>
     </section>
 
     <main class="container__main">
         <section class="container__presentacion" id="elcolegio">
             <img src="./img/imagen-del-santo-domingo.webp" alt="santo domingo de guzman"
-                class="img__presentacion animate" data-animation="fade-left" data-delay="600">
+                class="img__presentacion animate" data-animation="fade-in" data-delay="300">
             <div class="order__content">
                 <div class="content__presentacion">
-                    <p class="animate" data-animation="fade-down" data-delay="400">Hermanas Dominicas</p>
+                    <p class="animate" data-animation="fade-in" data-delay="200">Hermanas Dominicas</p>
                     <div class="escudo__container">
-                        <h2 class="animate" data-animation="fade-right" data-delay="500">Sobre el Colegio</h2>
+                        <h2 class="animate" data-animation="fade-down" data-delay="300">Sobre el Colegio</h2>
                     </div>
-                    <div class="separador animate" data-animation="fade-left" data-delay="500"></div>
+                    <div class="separador animate" data-animation="fade-right" data-delay="300"></div>
                 </div>
-                <p class="paragraph animate" data-animation="fade-down" data-delay="400">Lorem ipsum dolor sit, amet
+                <p class="paragraph animate" data-animation="fade-down">Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit.
                     Voluptate
                     suscipit quos perferendis non
                     nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
                     totam, maxime quia officia quidem.
                 </p>
-                <p class="paragraph animate" data-animation="fade-down" data-delay="600">Lorem ipsum dolor sit, amet
+                <p class="paragraph animate" data-animation="fade-down">Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit.
                     Voluptate
                     suscipit quos perferendis non
                     nobis nulla distinctio optio vitae reprehenderit mollitia asperiores odit tempore excepturi sint
                     totam, maxime quia officia quidem.
                 </p>
-                <p class="paragraph animate" data-animation="fade-down" data-delay="800">Lorem ipsum dolor sit, amet
+                <p class="paragraph animate" data-animation="fade-down">Lorem ipsum dolor sit, amet
                     consectetur adipisicing elit.
                     Voluptate
                     suscipit quos perferendis non
@@ -169,14 +159,14 @@
         <section class="container__destacable" id="caracterizacion">
             <h3 class="title__destacable animate" data-animation="fade-down" data-delay="200">¿Qué nos caracteriza?</h3>
             <div class="content__destacable">
-                <button class="button__destacable animate" onclick="openModal('modalObjetivo')"
-                    data-animation="fade-down" data-delay="400"> Objetivo del Colegio</button>
+                <button class="button__destacable animate" onclick="openModal('modalObjetivo')" data-animation="fade-in"
+                    data-delay="400"> Objetivo del Colegio</button>
                 <button class="button__destacable animate" onclick="openModal('modalNivelAcademico')"
-                    data-animation="fade-down" data-delay="500"> Nivel Académico</button>
+                    data-animation="fade-in" data-delay="500"> Nivel Académico</button>
                 <button class="button__destacable animate" onclick="openModal('modalFormacionIntegral')"
-                    data-animation="fade-down" data-delay="600"> Formación intregal de la persona</button>
+                    data-animation="fade-in" data-delay="600"> Formación intregal de la persona</button>
                 <button class="button__destacable animate" onclick="openModal('modalPreparacion')"
-                    data-animation="fade-down" data-delay="700"> Preparar el corazón y la inteligencia</button>
+                    data-animation="fade-in" data-delay="700"> Preparar el corazón y la inteligencia</button>
             </div>
         </section>
         <!-- Modals -->
@@ -248,27 +238,21 @@
             <div class="contact-grid">
                 <div class="order-emails">
                     <div class="contact-info">
-                        <p class="title_emails animate" data-animation="fade-right" data-delay="400">E-mails:</p>
-                        <p class="icon-email animate" data-animation="fade-up" data-delay="500"><ion-icon
-                                name="mail-outline"></ion-icon><b>isdsoto@yahoo.com.ar</b></p>
-                        <p class="icon-email animate" data-animation="fade-up" data-delay="600"><ion-icon
-                                name="mail-outline"></ion-icon><span>Nivel Inicial:</span>
+                        <p class="title_emails">E-mails:</p>
+                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><b>isdsoto@yahoo.com.ar</b></p>
+                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Inicial:</span>
                             isdnivelinicial@gmail.com</p>
-                        <p class="icon-email animate" data-animation="fade-up" data-delay="700"><ion-icon
-                                name="mail-outline"></ion-icon><span>Nivel Primario:</span>
+                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Primario:</span>
                             isdnivelprimario@gmail.com</p>
-                        <p class="icon-email animate" data-animation="fade-up" data-delay="800"><ion-icon
-                                name="mail-outline"></ion-icon><span>Nivel Secundario:</span>
+                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Secundario:</span>
                             isdnivelsecundario@gmail.com</p>
-                        <p class="icon-email animate" data-animation="fade-up" data-delay="900"><ion-icon
-                                name="mail-outline"></ion-icon><span>Nivel Terciario:</span>
+                        <p class="icon-email"><ion-icon name="mail-outline"></ion-icon><span>Nivel Terciario:</span>
                             isdnivelsuperior@gmail.com</p>
-                        <p class="address-school animate" data-animation="fade-up" data-delay="1000"><ion-icon
-                                name="location-outline"></ion-icon>José Ignacio Peralta 251
+                        <p class="address-school"><ion-icon name="location-outline"></ion-icon>José Ignacio Peralta 251
                             |
                             Villa de Soto | Córdoba</p>
                     </div>
-                    <div class="map animate" data-animation="fade-left" data-delay="1200">
+                    <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214.0678446114159!2d-64.98681865831617!3d-30.856280767375726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f100.0!3m3!1m2!1s0x942dcbd69e1b242f%3A0xacdbf063c63adb27!2sInstituto%20Santo%20Domingo!5e0!3m2!1ses-419!2sar!4v1733944440637!5m2!1ses-419!2sar"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -277,7 +261,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form animate" id="form" data-animation="fade-right" data-delay="1400">
+                <form class="contact-form" id="form">
                     <label for="name">Nombre y Apellido <span class="red-asterisco">*</span></label>
                     <input type="text" id="name" name="name" placeholder="Ingresa tú Nombre y Apellido" required>
 
@@ -327,7 +311,6 @@
                 <a href="#home" class="scroll-link">Inicio</a>
                 <a href="#elcolegio" class="scroll-link">El colegio</a>
                 <a href="./pages/calendario.html" class="scroll-link">Eventos</a>
-                <a href="./pages/exalumnos.html" class="scroll-link">Exalumnos</a>
                 <a href="./pages/historia.html" class="scroll-link">Historia</a>
             </div>
         </section>
